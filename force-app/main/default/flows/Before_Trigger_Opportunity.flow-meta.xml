@@ -1,0 +1,1055 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <assignments>
+        <description>Reference: Field Update - Increase Sales Date by 1</description>
+        <name>Increase_Sales_Date_by_1</name>
+        <label>Increase Sales Date by 1</label>
+        <locationX>383</locationX>
+        <locationY>951</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.CloseDate</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fmlaSalesDateBy1</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Property_State_to_TX_and_TN</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Reference: Field Update - Oppt IRA Cash to SD IRA Cash</description>
+        <name>Oppty_IRA_Cash_to_SD_IRA_Cash</name>
+        <label>Update Lender to SD IRA Cash</label>
+        <locationX>772</locationX>
+        <locationY>954</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Lender__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>SD-IRA Cash</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Oppty_Cash_to_Cash</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Reference: Immediate Action - Set Oppty Type:  Existing</description>
+        <name>Set_Oppty_Type_Existing_Business</name>
+        <label>Set Oppty Type: Existing Business</label>
+        <locationX>1112</locationX>
+        <locationY>1182</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Type</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Existing Business</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_House_Number_Closed</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Reference: Immediate Action - Set Oppty Type: New Business</description>
+        <name>Set_Oppty_Type_New_Business</name>
+        <label>Set Oppty Type: New Business</label>
+        <locationX>1110</locationX>
+        <locationY>952</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Type</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>New Business</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Additional_House_Closes</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Reference: Immediate Action</description>
+        <name>Stage_Update_Waiting_to_Cloe</name>
+        <label>Stage Update - Waiting to Cloe</label>
+        <locationX>1483</locationX>
+        <locationY>48</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.StageName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Waiting To Close</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Reference: Immediate Action</description>
+        <name>Stage_Updated_Contract_Executed</name>
+        <label>Stage Updated - Contract Executed</label>
+        <locationX>1484</locationX>
+        <locationY>278</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.StageName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Appraisal/HI</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Contract_Waiting_to_Close</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Reference: Immediate Action</description>
+        <name>Stage_Updated_Contract_Out_Title</name>
+        <label>Stage Updated - Contract Out/Title</label>
+        <locationX>1487</locationX>
+        <locationY>506</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.StageName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Contract Out/ Title</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Contract_Executed</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Reference: Before Triggered Flow - Opportunity: Update Addendum Notes - V12
+Immediate Action: Update Addendum Notes</description>
+        <name>Update_Addendum_Notes</name>
+        <label>Update Addendum Notes</label>
+        <locationX>382</locationX>
+        <locationY>502</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Addendum_Notes__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fmlaAddendumNotes</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Cancellation_Date</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Reference: Immediate Action - Update Appraisal Status</description>
+        <name>Update_Appraisal_Status</name>
+        <label>Update Appraisal Status</label>
+        <locationX>1487</locationX>
+        <locationY>742</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Appraisal_Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>TBD</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Contract_Out_Title</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Reference: Field Update - Update Cancellation Date</description>
+        <name>Update_Cancel_Date</name>
+        <label>Update Cancel Date</label>
+        <locationX>384</locationX>
+        <locationY>732</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Cancel_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_the_Sales_Date_No_Saturdays</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Reference: Immediate Action - Update Project</description>
+        <name>Update_Cancel_Date_Investor</name>
+        <label>Update Cancel Date - Investor</label>
+        <locationX>1109</locationX>
+        <locationY>736</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Cancel_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>First_House_Closes</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Reference: Immediate Action - Update House #</description>
+        <name>Update_House</name>
+        <label>Update House #</label>
+        <locationX>1487</locationX>
+        <locationY>955</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.House_Number__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fmlaNextHouseNumber</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_from_Insurance</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Reference: Field Update - Oppt Cash to Cash</description>
+        <name>Update_Lender_to_Cash</name>
+        <label>Update Lender  to Cash</label>
+        <locationX>762</locationX>
+        <locationY>737</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Lender__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Cash</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Opportunity_Contract_Executed</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Reference: Immediate Action - Update Opp from House</description>
+        <name>Update_Opp_from_House</name>
+        <label>Update Opp from House</label>
+        <locationX>1105</locationX>
+        <locationY>503</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Bathrooms__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.House__r.Bathrooms__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Bedrooms__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.House__r.Bedrooms__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Car_Storage__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.House__r.Car_Storage_Parking__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.House_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.House__r.House_Type__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Market__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.House__r.Market__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Square_Ft__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.House__r.Sq_Feet__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Year_Built__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.House__r.Year_Built__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Investor_Opp_Cancelled</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Reference: Field Update - Update Property State to TX
+Reference: Field Update - Update Property State to TN</description>
+        <name>Update_Property_State</name>
+        <label>Update Property State</label>
+        <locationX>379</locationX>
+        <locationY>1185</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Property_Zip_Code__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>fmlaPropertyState</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Oppt_IRA_Cash_to_SD_IRA_Cash</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Reference: Immediate Action - Update stage</description>
+        <name>Update_Stage</name>
+        <label>Update Stage</label>
+        <locationX>749</locationX>
+        <locationY>281</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.StageName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Under Contract - Sent to Title</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Buy_Prop_Management_Opp_is_Created</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <description>Reference: Field Update - Opportunity Contract Executed Sent
+Reference: Field Update - Update Contract Status</description>
+        <name>Update_Utility_Contract_Date_and_Contract_Status</name>
+        <label>Update Utility Contract Date and Contract Status</label>
+        <locationX>761</locationX>
+        <locationY>510</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Util_Contract_Executed__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Contract_Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Executed</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Buy_Opp_Stage</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>Reference: PB Opp House Number Update</description>
+        <name>Additional_House_Closes</name>
+        <label>Additional House Closes</label>
+        <locationX>909</locationX>
+        <locationY>1064</locationY>
+        <defaultConnector>
+            <targetReference>Update_House_Number_Closed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>YesAdditionalHouseCloses</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed - Investor</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.Properties_Closed__c</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <numberValue>2.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Oppty_Type_Existing_Business</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Reference: PB - Update Opp close date o Assessment</description>
+        <name>Buy_Prop_Management_Opp_is_Created</name>
+        <label>Buy/Prop Management Opp is Created</label>
+        <locationX>909</locationX>
+        <locationY>377</locationY>
+        <defaultConnector>
+            <targetReference>Investor_Opp_Cancelled</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>YesBuyPropOppCreated</name>
+            <conditionLogic>1 AND (2 OR 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.House__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Buy</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Property_Management</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Opp_from_House</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Reference: PB - Closing Actions</description>
+        <name>Contract_Executed</name>
+        <label>Contract Executed</label>
+        <locationX>1300</locationX>
+        <locationY>395</locationY>
+        <defaultConnector>
+            <targetReference>Contract_Waiting_to_Close</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>YesContracExecuted</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Investor</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Contract_Executed__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Stage_Updated_Contract_Executed</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Reference: PB - Closing Actions</description>
+        <name>Contract_Out_Title</name>
+        <label>Contract Out/Title</label>
+        <locationX>1300</locationX>
+        <locationY>618</locationY>
+        <defaultConnector>
+            <targetReference>Contract_Executed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>YesContractOutTitle</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Investor</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Original_Contract_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Stage_Updated_Contract_Out_Title</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Reference: PB - Closings Actions</description>
+        <name>Contract_Waiting_to_Close</name>
+        <label>Contract Waiting to Close</label>
+        <locationX>1299</locationX>
+        <locationY>159</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>YesContractWaitingToClose</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Investor</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Closing_Docs_Signed_by_Seller__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Reviewed</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Stage_Update_Waiting_to_Cloe</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Reference: PB Opp House Number Update</description>
+        <name>First_House_Closes</name>
+        <label>First House Closes</label>
+        <locationX>908</locationX>
+        <locationY>849</locationY>
+        <defaultConnector>
+            <targetReference>Additional_House_Closes</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>YesFIrstHouseCloses</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed - Investor</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.Properties_Closed__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>1.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Oppty_Type_New_Business</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Reference: Update Opp close date o Assessment</description>
+        <name>Investor_Opp_Cancelled</name>
+        <label>Investor Opp Cancelled</label>
+        <locationX>910</locationX>
+        <locationY>614</locationY>
+        <defaultConnector>
+            <targetReference>First_House_Closes</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>YesInvestorOppCancelled</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Investor</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Cancelled</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Cancel_Date_Investor</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Reference: WFR - Opportunity Contract Executed</description>
+        <name>Opportunity_Contract_Executed</name>
+        <label>Opportunity Contract Executed</label>
+        <locationX>546</locationX>
+        <locationY>615</locationY>
+        <defaultConnector>
+            <targetReference>Update_Buy_Opp_Stage</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>YesContractExecuted</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Contract_Executed__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Util_Contract_Executed__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Listings</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Utility_Contract_Date_and_Contract_Status</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Reference: Before Triggered Flow - Opportunity: Update Addendum Notes - V12</description>
+        <name>Opportunity_Update_Addendum_Notes</name>
+        <label>Opportunity: Update Addendum Notes</label>
+        <locationX>188</locationX>
+        <locationY>394</locationY>
+        <defaultConnector>
+            <targetReference>Update_Cancellation_Date</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>YesUpdateAddendumNotes</name>
+            <conditionLogic>1 AND (2 OR 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Addendum_Notes__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Closing_Costs_Credits_Post_Appraisal__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Price_Reduction_Flat_Fee_Post_Appraisal__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Addendum_Notes</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Reference: WFR - Oppt IRA Cash to SD IRA Cash</description>
+        <name>Oppt_IRA_Cash_to_SD_IRA_Cash</name>
+        <label>Oppt IRA Cash to SD IRA Cash</label>
+        <locationX>549</locationX>
+        <locationY>1068</locationY>
+        <defaultConnector>
+            <targetReference>Oppty_Cash_to_Cash</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>YesIRACashtoSDIRACash</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Purchase_Method__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>SD-IRA Cash</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>HOT: Contract-Won</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Oppty_IRA_Cash_to_SD_IRA_Cash</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Reference: WFR - Oppt Cash to Cash</description>
+        <name>Oppty_Cash_to_Cash</name>
+        <label>Oppty Cash to Cash</label>
+        <locationX>547</locationX>
+        <locationY>850</locationY>
+        <defaultConnector>
+            <targetReference>Opportunity_Contract_Executed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>YesCashToCash</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Purchase_Method__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Cash</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>HOT: Contract-Won</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Lender_to_Cash</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Combining 2 WFRs into one
+Reference: WFR - Property State to TX
+Reference: WFR - Property State to TN</description>
+        <name>Property_State_to_TX_and_TN</name>
+        <label>Property State to TX and TN</label>
+        <locationX>191</locationX>
+        <locationY>1060</locationY>
+        <defaultConnector>
+            <targetReference>Oppt_IRA_Cash_to_SD_IRA_Cash</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>YesPropertyStateTXTN</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Property_Zip_Code__c</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>7</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Property_Zip_Code__c</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>3</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Property_State</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Reference: PB - Update Opp Close Date o Assessment</description>
+        <name>Update_Buy_Opp_Stage</name>
+        <label>Update Buy Opp Stage</label>
+        <locationX>548</locationX>
+        <locationY>385</locationY>
+        <defaultConnector>
+            <targetReference>Buy_Prop_Management_Opp_is_Created</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>YesUpdateBuyOppStage</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Contract_Accepted_Date__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Contract_Accepted_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Buy</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Stage</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Reference: WFR - Update Cancellation Date</description>
+        <name>Update_Cancellation_Date</name>
+        <label>Update Cancellation Date</label>
+        <locationX>188</locationX>
+        <locationY>615</locationY>
+        <defaultConnector>
+            <targetReference>Update_the_Sales_Date_No_Saturdays</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>YesUpdateCancellationDate</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Cancel_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Cancelled</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.IsClosed</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Cancel_Date</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Reference: PB - Opp House Number Update</description>
+        <name>Update_from_Insurance</name>
+        <label>Update from Insurance</label>
+        <locationX>1301</locationX>
+        <locationY>849</locationY>
+        <defaultConnector>
+            <targetReference>Contract_Out_Title</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>YesUpdateFromInsurance</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Appraisal_Status__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Contract_Executed__c</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <dateValue>2017-12-07</dateValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Purchase_Method__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Conventional</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Appraisal_Status</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Reference: PB - Opp House Number Update</description>
+        <name>Update_House_Number_Closed</name>
+        <label>Update House Number Closed</label>
+        <locationX>1301</locationX>
+        <locationY>1071</locationY>
+        <defaultConnector>
+            <targetReference>Update_from_Insurance</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>YesUpdateHouseNumber</name>
+            <conditionLogic>(4 AND 1) OR (2 AND 3 AND 4)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed - Investor</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed - Won</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Property_Management</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.House_Number__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_House</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Reference: WFR - Update the Sales Date - No Saturdays</description>
+        <name>Update_the_Sales_Date_No_Saturdays</name>
+        <label>Update the Sales Date - No Saturdays</label>
+        <locationX>190</locationX>
+        <locationY>841</locationY>
+        <defaultConnector>
+            <targetReference>Property_State_to_TX_and_TN</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>YesSalesDateNoSaturdays</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CloseDate</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <dateValue>2015-01-01</dateValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>HOT: Contract-Won</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>fmlaCloseDateDay</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Saturday</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Increase_Sales_Date_by_1</targetReference>
+            </connector>
+            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>Contains converted Work Flow Rules and Process Builder, and existing before trigger flows.  Each decision element is either a WFR, PB or before triggered flow criteria and the associated actions.
+10/18/2024 - Removed Market field update when Project is changed on opportunity.  There is a apex class running that interferes with this update.  Moving to the after trigger flow.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>fmlaAddendumNotes</name>
+        <dataType>String</dataType>
+        <expression>IF(NOT(ISBLANK({!$Record.Closing_Costs_Credits_Post_Appraisal__c})), 
+&quot;Seller to Pay &quot;&amp;TEXT({!$Record.Closing_Costs_Credits_Post_Appraisal__c})&amp;&quot;% towards buyer&apos;s closing costs or prepaids&quot;, &quot;&quot;) &amp;BR()&amp;
+IF(NOT(ISBLANK({!$Record.Price_Reduction_Flat_Fee_Post_Appraisal__c})), 
+&quot;Price Reduction/Flat Fee of: $&quot;&amp;TEXT({!$Record.Price_Reduction_Flat_Fee_Post_Appraisal__c}), &quot;&quot;)</expression>
+    </formulas>
+    <formulas>
+        <name>fmlaCloseDateDay</name>
+        <dataType>String</dataType>
+        <expression>CASE( WEEKDAY({!$Record.CloseDate}), 
+1, &quot;Sunday&quot;,
+2, &quot;Monday&quot;,
+3, &quot;Tuesday&quot;,
+4, &quot;Wednesday&quot;,
+5, &quot;Thursday&quot;,
+6, &quot;Friday&quot;,
+7, &quot;Saturday&quot;,
+&quot;Unknown&quot;
+)</expression>
+    </formulas>
+    <formulas>
+        <name>fmlaNextHouseNumber</name>
+        <dataType>Number</dataType>
+        <expression>{!$Record.Account.Properties_Closed__c} + 1</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>fmlaPropertyState</name>
+        <dataType>String</dataType>
+        <expression>IF(BEGINS({!$Record.Property_Zip_Code__c}, &quot;7&quot;), &quot;TX&quot;, &quot;TN&quot;)</expression>
+    </formulas>
+    <formulas>
+        <name>fmlaSalesDateBy1</name>
+        <dataType>Date</dataType>
+        <expression>{!$Record.CloseDate} + 1</expression>
+    </formulas>
+    <interviewLabel>Before Trigger Opportunity {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Before Trigger Opportunity</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>70</locationX>
+        <locationY>125</locationY>
+        <connector>
+            <targetReference>Opportunity_Update_Addendum_Notes</targetReference>
+        </connector>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

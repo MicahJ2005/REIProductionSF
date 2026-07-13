@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <environments>Default</environments>
+    <formulas>
+        <name>AddendumNotes</name>
+        <dataType>String</dataType>
+        <expression>IF(NOT(ISBLANK({!$Record.Closing_Costs_Credits_Post_Appraisal__c})), 
+&quot;Seller to Pay &quot;&amp;TEXT({!$Record.Closing_Costs_Credits_Post_Appraisal__c})&amp;&quot;% towards buyer&apos;s closing costs or prepaids&quot;, &quot;&quot;) &amp;BR()&amp;
+IF(NOT(ISBLANK({!$Record.Price_Reduction_Flat_Fee_Post_Appraisal__c})), 
+&quot;Price Reduction/Flat Fee of: $&quot;&amp;TEXT({!$Record.Price_Reduction_Flat_Fee_Post_Appraisal__c}), &quot;&quot;)</expression>
+    </formulas>
+    <interviewLabel>Opportunity: Update Addendum Notes {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity: Update Addendum Notes</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Notes</name>
+        <label>Update Notes</label>
+        <locationX>176</locationX>
+        <locationY>311</locationY>
+        <inputAssignments>
+            <field>Addendum_Notes__c</field>
+            <value>
+                <elementReference>AddendumNotes</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Notes</targetReference>
+        </connector>
+        <filterLogic>1 AND ( 2 OR 3)</filterLogic>
+        <filters>
+            <field>Addendum_Notes__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Closing_Costs_Credits_Post_Appraisal__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Price_Reduction_Flat_Fee_Post_Appraisal__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

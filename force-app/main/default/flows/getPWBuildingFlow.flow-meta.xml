@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>getPWBuildingsAPI</name>
+        <label>getPWBuildingsAPI</label>
+        <locationX>182</locationX>
+        <locationY>134</locationY>
+        <actionName>PropertywareAPIEast.getBuildingsUsingGET</actionName>
+        <actionType>externalService</actionType>
+        <connector>
+            <targetReference>Is_Success</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Create_Fault_Exception_Log</targetReference>
+        </faultConnector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>lastModifiedDateTimeStart</name>
+            <value>
+                <elementReference>yesterdayDateTime</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>lastModifiedDateTimeEnd</name>
+            <value>
+                <elementReference>currentDateTime</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>includeCustomFields</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <nameSegment>PropertywareAPIEast.getBuildingsUsingGET</nameSegment>
+        <offset>0</offset>
+        <outputParameters>
+            <assignToReference>PWBuildingCollection</assignToReference>
+            <name>200</name>
+        </outputParameters>
+        <outputParameters>
+            <assignToReference>responseCode</assignToReference>
+            <name>responseCode</name>
+        </outputParameters>
+        <outputParameters>
+            <assignToReference>errorResponse</assignToReference>
+            <name>400Exc</name>
+        </outputParameters>
+        <outputParameters>
+            <assignToReference>errorResponse</assignToReference>
+            <name>401Exc</name>
+        </outputParameters>
+        <outputParameters>
+            <assignToReference>errorResponse</assignToReference>
+            <name>403Exc</name>
+        </outputParameters>
+        <outputParameters>
+            <assignToReference>defaultException</assignToReference>
+            <name>defaultExc</name>
+        </outputParameters>
+    </actionCalls>
+    <apiVersion>63.0</apiVersion>
+    <decisions>
+        <name>Is_Success</name>
+        <label>Is Success?</label>
+        <locationX>182</locationX>
+        <locationY>242</locationY>
+        <defaultConnectorLabel>Error</defaultConnectorLabel>
+        <rules>
+            <name>Success</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>responseCode</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>200.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Loop_Thru_Buildings</targetReference>
+            </connector>
+            <label>Success</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>currentDateTime</name>
+        <dataType>String</dataType>
+        <expression>TEXT(
+  YEAR(
+    DATEVALUE({!$Flow.CurrentDateTime})
+  )
+)
+&amp; &quot;-&quot;
+&amp; LPAD(
+  TEXT(
+    MONTH(
+      DATEVALUE({!$Flow.CurrentDateTime})
+    )
+  ),
+  2,
+  &quot;0&quot;
+)
+&amp; &quot;-&quot;
+&amp; LPAD(
+  TEXT(
+    DAY(
+      DATEVALUE({!$Flow.CurrentDateTime})
+    )
+  ),
+  2,
+  &quot;0&quot;
+)
+&amp; &quot;T&quot;
+&amp; LPAD(
+  TEXT(
+    FLOOR(
+      (
+        {!$Flow.CurrentDateTime}
+        -
+        DATETIMEVALUE(
+          TEXT(
+            DATEVALUE({!$Flow.CurrentDateTime})
+          )
+          &amp; &quot; 00:00:00&quot;
+        )
+      ) * 24
+    )
+  ),
+  2,
+  &quot;0&quot;
+)
+&amp; &quot;:&quot;
+&amp; LPAD(
+  TEXT(
+    FLOOR(
+      MOD(
+        (
+          {!$Flow.CurrentDateTime}
+          -
+          DATETIMEVALUE(
+            TEXT(
+              DATEVALUE({!$Flow.CurrentDateTime})
+            )
+            &amp; &quot; 00:00:00&quot;
+          )
+        ) * 24,
+        1
+      ) * 60
+    )
+  ),
+  2,
+  &quot;0&quot;
+)
+&amp; &quot;:&quot;
+&amp; LPAD(
+  TEXT(
+    FLOOR(
+      MOD(
+        MOD(
+          (
+            {!$Flow.CurrentDateTime}
+            -
+            DATETIMEVALUE(
+              TEXT(
+                DATEVALUE({!$Flow.CurrentDateTime})
+              )
+              &amp; &quot; 00:00:00&quot;
+            )
+          ) * 24,
+          1
+        ) * 60,
+        1
+      ) * 60
+    )
+  ),
+  2,
+  &quot;0&quot;
+)
+&amp; &quot;Z&quot;</expression>
+    </formulas>
+    <formulas>
+        <name>DateTimeToday</name>
+        <dataType>DateTime</dataType>
+        <expression>NOW()</expression>
+    </formulas>
+    <formulas>
+        <name>DateTimeYesterday</name>
+        <dataType>DateTime</dataType>
+        <expression>NOW() - 1</expression>
+    </formulas>
+    <formulas>
+        <name>yesterdayDateTime</name>
+        <dataType>String</dataType>
+        <expression>TEXT(YEAR(DATEVALUE({!$Flow.CurrentDateTime} - 1)))
+&amp; &quot;-&quot; &amp;
+LPAD(TEXT(MONTH(DATEVALUE({!$Flow.CurrentDateTime} - 1))), 2, &quot;0&quot;)
+&amp; &quot;-&quot; &amp;
+LPAD(TEXT(DAY(DATEVALUE({!$Flow.CurrentDateTime} - 1))), 2, &quot;0&quot;)
+&amp; &quot;T&quot; &amp;
+LPAD(
+  TEXT(
+    FLOOR(
+      (
+        ({!$Flow.CurrentDateTime} - 1) -
+        DATETIMEVALUE(
+          DATE(
+            YEAR(DATEVALUE({!$Flow.CurrentDateTime} - 1)),
+            MONTH(DATEVALUE({!$Flow.CurrentDateTime} - 1)),
+            DAY(DATEVALUE({!$Flow.CurrentDateTime} - 1))
+          )
+        )
+      ) * 24
+    )
+  ),
+  2,
+  &quot;0&quot;
+)
+&amp; &quot;:&quot; &amp;
+LPAD(
+  TEXT(
+    FLOOR(
+      MOD(
+        (
+          ({!$Flow.CurrentDateTime} - 1) -
+          DATETIMEVALUE(
+            DATE(
+              YEAR(DATEVALUE({!$Flow.CurrentDateTime} - 1)),
+              MONTH(DATEVALUE({!$Flow.CurrentDateTime} - 1)),
+              DAY(DATEVALUE({!$Flow.CurrentDateTime} - 1))
+            )
+          )
+        ) * 24,
+        1
+      ) * 60
+    )
+  ),
+  2,
+  &quot;0&quot;
+)
+&amp; &quot;:&quot; &amp;
+LPAD(
+  TEXT(
+    FLOOR(
+      MOD(
+        MOD(
+          (
+            ({!$Flow.CurrentDateTime} - 1) -
+            DATETIMEVALUE(
+              DATE(
+                YEAR(DATEVALUE({!$Flow.CurrentDateTime} - 1)),
+                MONTH(DATEVALUE({!$Flow.CurrentDateTime} - 1)),
+                DAY(DATEVALUE({!$Flow.CurrentDateTime} - 1))
+              )
+            )
+          ) * 24,
+          1
+        ) * 60,
+        1
+      ) * 60
+    )
+  ),
+  2,
+  &quot;0&quot;
+)
+&amp; &quot;Z&quot;</expression>
+    </formulas>
+    <interviewLabel>getPWBuildingFlow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>getPWBuildingFlow</label>
+    <loops>
+        <name>Loop_Thru_Buildings</name>
+        <label>Loop Thru Buildings</label>
+        <locationX>50</locationX>
+        <locationY>350</locationY>
+        <collectionReference>PWBuildingCollection</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Fault_Exception_Log</name>
+        <label>Create Fault Exception Log</label>
+        <locationX>578</locationX>
+        <locationY>242</locationY>
+        <inputAssignments>
+            <field>Error__c</field>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Exception__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>getPWBuildingsAPI</targetReference>
+        </connector>
+    </start>
+    <status>Draft</status>
+    <variables>
+        <name>defaultException</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>errorResponse</name>
+        <apexClass>ExternalService__PropertywareAPIEast_ErrorResponse</apexClass>
+        <dataType>Apex</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>PWBuildingCollection</name>
+        <apexClass>ExternalService__PropertywareAPIEast_BuildingDTO</apexClass>
+        <dataType>Apex</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>responseCode</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+    </variables>
+</Flow>

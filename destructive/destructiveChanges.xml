@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>RoofstockAPICallout</members>
+        <members>RoofstockHouseUploadController</members>
+        <members>RoofstockAPICalloutTest</members>
+        <members>RoofstockHouseUploadControllerTest</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>RoofstockHouseUpload</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
+    <version>60.0</version>
+</Package>

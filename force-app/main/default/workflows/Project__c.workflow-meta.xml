@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <rules>
+        <fullName>Approved with Deposit%2FWaiting to Close %28DFW%2FHOU%2FLIT%2FOKC%2FTUL%2FSAN%29</fullName>
+        <actions>
+            <name>Approved_with_Deposit_Waiting_to_Close_DFW_HOU_LIT_OKC_TUL_SAN</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Project__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Move Out,Renovation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Application_Status__c</field>
+            <operation>equals</operation>
+            <value>Approved With Deposit/Waiting To Close</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Market__c</field>
+            <operation>equals</operation>
+            <value>DFW,HOU,LIT,OKC,TUL,SAN,WME</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Approved with Deposit%2FWaiting to Close Premier Markets</fullName>
+        <actions>
+            <name>Approved_with_Deposit_Waiting_to_Close_Premier_Markets</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Project__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Move Out,Renovation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Application_Status__c</field>
+            <operation>equals</operation>
+            <value>Approved With Deposit/Waiting To Close</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Market__c</field>
+            <operation>equals</operation>
+            <value>MEM,STL,BHM,HSV,TUS,BNA,JKT</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>EmailProjectMgr</fullName>
+        <actions>
+            <name>Project_Need_List</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Project__c.Project_Status__c</field>
+            <operation>equals</operation>
+            <value>Need List</value>
+        </criteriaItems>
+        <description>Emails Project Manager when Project Status is set to Need List</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Project %28All Cities%29 - Lease Closed</fullName>
+        <actions>
+            <name>Lease_Closed_Email</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Project__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Move Out,Renovation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Application_Status__c</field>
+            <operation>equals</operation>
+            <value>Lease Closed</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Project - Approved Deposit</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Project__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Move Out,Renovation</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Project - Lease Closed</fullName>
+        <actions>
+            <name>Project_Lease_Closed</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Project__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Move Out,Renovation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Rental_Status__c</field>
+            <operation>equals</operation>
+            <value>Lease Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>House__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Managed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Lease_Closing__c</field>
+            <operation>greaterThan</operation>
+            <value>LAST 10 DAYS</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Project - MEM After Pix Status Change</fullName>
+        <actions>
+            <name>After_Pix_Status_Change_DFW</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Project__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Move Out,Renovation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Market__c</field>
+            <operation>notEqual</operation>
+            <value>MEM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.After_Pix__c</field>
+            <operation>equals</operation>
+            <value>AP In Progress,AP Completed,All Marketing Pics Taken</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Project ALA New Vacancy Alert</fullName>
+        <actions>
+            <name>Project_ALA_New_Vacancy_Alert</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Project__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Move Out</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Market__c</field>
+            <operation>equals</operation>
+            <value>BHM,TUS,HSV</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Project_Status__c</field>
+            <operation>equals</operation>
+            <value>Waiting Owner Approval</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Project AUS Move Out List Needed</fullName>
+        <actions>
+            <name>Project_AUS_Move_Out_List_Needed</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Project__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Move Out</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Project_Status__c</field>
+            <operation>equals</operation>
+            <value>Need List</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Market__c</field>
+            <operation>equals</operation>
+            <value>AUS</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Project CJ New Vacancy Alert</fullName>
+        <actions>
+            <name>Project_CJ_New_Vacancy_Alert</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Project__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Move Out</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Investor__c</field>
+            <operation>equals</operation>
+            <value>CJ</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Project_Status__c</field>
+            <operation>equals</operation>
+            <value>Waiting Owner Approval</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Project DFW Move House to Rental Sheet</fullName>
+        <actions>
+            <name>Project_New_Available_Rental_DFW</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Project_Ren_MO_Move_Up_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Project_Ren_MO_Ready_to_Show</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Project__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Move Out,Renovation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Project_Status__c</field>
+            <operation>equals</operation>
+            <value>Ready to Show</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Market__c</field>
+            <operation>equals</operation>
+            <value>DFW,LIT,OKC,TUL,STL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Application_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Approved With Deposit/Waiting To Close,Lease Closed</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Project DFW New Vacancy Alert</fullName>
+        <actions>
+            <name>Project_DFW_New_Vacancy_Alert</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Project__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Move Out</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Market__c</field>
+            <operation>equals</operation>
+            <value>DFW</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Project_Status__c</field>
+            <operation>equals</operation>
+            <value>Waiting Owner Approval</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Project HOU Move House to Rental Sheet</fullName>
+        <actions>
+            <name>Project_New_Available_Rental_HOU</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Project_Ren_MO_Move_Up_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Project_Ren_MO_Ready_to_Show</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Project__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Move Out,Renovation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Project_Status__c</field>
+            <operation>equals</operation>
+            <value>Ready to Show</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Market__c</field>
+            <operation>equals</operation>
+            <value>HOU,SAN</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Application_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Approved With Deposit/Waiting To Close,Lease Closed</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Project HOU New Vacancy Alert</fullName>
+        <actions>
+            <name>Project_HOU_New_Vacancy_Alert</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Project__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Move Out</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Market__c</field>
+            <operation>equals</operation>
+            <value>HOU</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Project_Status__c</field>
+            <operation>equals</operation>
+            <value>Waiting Owner Approval</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Project MEM Move House to Rental Sheet</fullName>
+        <actions>
+            <name>Project_New_Available_Rental_MEM</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Project_Ren_MO_Move_Up_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Project_Ren_MO_Ready_to_Show</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Project__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Move Out,Renovation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Project_Status__c</field>
+            <operation>equals</operation>
+            <value>Ready to Show</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Market__c</field>
+            <operation>equals</operation>
+            <value>MEM,JKT,WME</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Application_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Approved With Deposit/Waiting To Close,Lease Closed</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Project MEM New Coming Soon Move Out</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Project__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Move Out</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Project_Status__c</field>
+            <operation>equals</operation>
+            <value>Started</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Market__c</field>
+            <operation>equals</operation>
+            <value>MEM</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Project MEM New Vacancy Alert</fullName>
+        <actions>
+            <name>Project_MEM_New_Vacancy_Alert</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Project__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Move Out</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Market__c</field>
+            <operation>equals</operation>
+            <value>MEM,JKT,WME</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Project_Status__c</field>
+            <operation>equals</operation>
+            <value>Waiting Owner Approval</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Investor__c</field>
+            <operation>notEqual</operation>
+            <value>CJ</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Project Mark Scope In Progress</fullName>
+        <actions>
+            <name>Project_Scope_to_In_Progress</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Project__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Move Out,Renovation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.After_Pix__c</field>
+            <operation>equals</operation>
+            <value>AP Completed</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Project Move Out - Days to OTM</fullName>
+        <actions>
+            <name>Project_Move_Out_Days_to_OTM</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Project__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Move Out</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Rental_Status__c</field>
+            <operation>equals</operation>
+            <value>Waiting to Close,Lease Closed</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Project Move Out Foundation Issue</fullName>
+        <actions>
+            <name>Project_Move_Out_Foundation_Issues</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Project__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Move Out</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Project_Status__c</field>
+            <operation>equals</operation>
+            <value>Foundation Issues</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Project OKC New Vacancy Alert</fullName>
+        <actions>
+            <name>Project_OKC_New_Vacancy_Alert</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Project__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Move Out</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Market__c</field>
+            <operation>equals</operation>
+            <value>OKC</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Project_Status__c</field>
+            <operation>equals</operation>
+            <value>Waiting Owner Approval</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Project REI Owned New Vacancy Alert</fullName>
+        <actions>
+            <name>Project_REI_Owned_New_Vacancy_Alert_MEM</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Project__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Move Out</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Project_Status__c</field>
+            <operation>equals</operation>
+            <value>Need List</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Owner_Account_Name__c</field>
+            <operation>equals</operation>
+            <value>REI Nation</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Project Renovation Finished ALL Markets</fullName>
+        <actions>
+            <name>Project_Renovation_Finished_Alert</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Project_Change_Renovation_Complete_Email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Project__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Renovation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Project_Status__c</field>
+            <operation>equals</operation>
+            <value>Vacant But Completed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Renovation_Complete_Email_Sent__c</field>
+            <operation>notEqual</operation>
+            <value>Yes</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Project Rent Reduction</fullName>
+        <actions>
+            <name>Project_Rent_Reduction</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <formula>PRIORVALUE( Target_Rent__c ) &gt; ( Target_Rent__c )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Project SAN New Vacancy Alert</fullName>
+        <actions>
+            <name>Project_SAN_New_Vacancy_Alert</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Project__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Move Out</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Market__c</field>
+            <operation>equals</operation>
+            <value>SAN</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Project_Status__c</field>
+            <operation>equals</operation>
+            <value>Waiting Owner Approval</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Project STL Move House to Rental Sheet</fullName>
+        <actions>
+            <name>Project_New_Available_Rental_STL</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Project_Ren_MO_Move_Up_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Project_Ren_MO_Ready_to_Show</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Project__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Move Out,Renovation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Project_Status__c</field>
+            <operation>equals</operation>
+            <value>Ready to Show</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Market__c</field>
+            <operation>equals</operation>
+            <value>STL,HSV,BHM,TUS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Application_Status__c</field>
+            <operation>notEqual</operation>
+            <value>Approved With Deposit/Waiting To Close,Lease Closed</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Project STL New Vacancy Alert</fullName>
+        <actions>
+            <name>Project_STL_New_Vacancy_Alert</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Project__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Move Out</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Market__c</field>
+            <operation>equals</operation>
+            <value>STL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Project_Status__c</field>
+            <operation>equals</operation>
+            <value>Waiting Owner Approval</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Project Scope Completed Update</fullName>
+        <actions>
+            <name>Project_Scope_Completed_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Project__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Move Out,Renovation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Scope_Status__c</field>
+            <operation>equals</operation>
+            <value>Completed</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Sold Owner Occ - DFW %2F HOU %2F LIT %2F OKC %2F TUL</fullName>
+        <actions>
+            <name>Sold_Owner_Occ_DFW_HOU_LIT_OKC_TUL</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Project__c.Market__c</field>
+            <operation>equals</operation>
+            <value>DFW,HOU,LIT,OKC,TUL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Sales_Status__c</field>
+            <operation>equals</operation>
+            <value>Owner Occ</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Sold Owner Occ - MEM %2F STL</fullName>
+        <actions>
+            <name>Sold_Owner_Occ_MEM_STL</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Project__c.Market__c</field>
+            <operation>equals</operation>
+            <value>MEM,STL,WME,JKT</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Project__c.Sales_Status__c</field>
+            <operation>equals</operation>
+            <value>Owner Occ</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>UpdateProjectManager</fullName>
+        <actions>
+            <name>UtilProjectPMReceive</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Project__c.Project_Manager__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Notify Project Manager when Need List is selected</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>
