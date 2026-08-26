@@ -1,0 +1,5 @@
+Offer Sheet submitted, please review.
+
+Opportunity Name:  {!Opportunity.Name}
+Opportunity Owner: {!Opportunity.OwnerFullName}
+Opportunity Link:     {!Opportunity.Link}

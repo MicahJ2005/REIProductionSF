@@ -1,0 +1,9 @@
+Good morning,
+
+Please start on these refinances. Let me know if you need anything additional
+
+Property: {!Assessment__c.Name}
+City: {!Assessment__c.City__c}
+Zip:  {!Assessment__c.Zip__c}
+Purchase Price: {!Assessment__c.Purchase_Price__c}
+Est Loan: {!Assessment__c.Loan_Amounts__c}

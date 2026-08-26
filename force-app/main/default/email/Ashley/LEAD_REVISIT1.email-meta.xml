@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MemphisInvest</letterhead>
+    <name>LEAD REVISIT</name>
+    <style>freeForm</style>
+    <subject>MEMPHIS INVEST- Schedule an Appointment</subject>
+    <textOnly>Hey {!Lead.FirstName},
+
+I hope you are having a good week so far!
+
+I wanted to reach out because I noticed you&apos;ve recently visited our site again.
+
+If you would like to set up a call to ask some questions and discuss investment strategies, I would be happy to help!
+
+You can click right here to set up a call with me.
+
+Thank you,
+
+Ashley
+
+-----
+
+Ashley Tinker
+Portfolio Advisor
+Tel: 901.505.0724
+Fax: 901.751.7187
+www.MemphisInvest.com
+ashley.tinker@memphisinvest.com
+
+
+
+Click Here to schedule a 15-minute Phone Call</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,16 @@
+APPLICANT(S) NAME:
+
+{!Application__c.Applicant_1__c}
+{!Application__c.Applicant_2__c}
+{!Application__c.Applicant_3__c}
+{!Application__c.Applicant_4__c}
+
+Information Needed: {!Application__c.Notes__c}
+
+We have received an application for the prospect listed above. For us to screen this application we must receive the documents listed above within 48 hours. Please send the needed documents to your agent so we can make a decision on your application. 
+
+Please do not send any documents to this email. This is an automatic response. Please do not reply to this email. 
+
+Keep in mind: Your application will not be processed until ALL required documents have been received by this office.
+
+Thank you

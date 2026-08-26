@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Lender 2 Intro Sample</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MemphisInvest</letterhead>
+    <name>Lender 2 Intro Email2</name>
+    <style>freeForm</style>
+    <subject>REI Nation Lender Introduction/Title Verification</subject>
+    <textOnly>Hello {!Opportunity.Account},
+
+
+Thank you for your time over our last phone call.  As we discussed,  the next step toward evaluating and purchasing properties from REI Nation is to be financially qualified by a Lender.  In addition, we need to verify how you have instructed us to Title your property.  Your title choice may require further documentation, so please see the instruction below regarding title verification documents that we will need to receive prior to a sales contract being created and transmitted to you when the time comes.
+
+
+I have copied one of our preferred Lender contacts  in this email as a way of introduction, so please meet {!Opportunity.Intro_Lender_2__c} with {!Opportunity.Intro_Lender_2_Account__c}. I look forward to connecting with you as soon as {!Opportunity.Intro_Lender_2__c} has completed your pre-approval.
+
+
+Our records indicate that you have elected to Title this purchase in a {!Opportunity.Title_Name_Type__c} with a purchase method of {!Opportunity.Purchase_Method__c}. If this information is not correct please reply to this email with the Title entity type you have chosen.  Keep in mind that your choices are Personal Name, LLC/Business Name or Trust.
+
+
+Title Verification Documents should be emailed to me as an attachment as soon as possible and the requirements are as follows:
+
+Personal Name requires: Legal Name accompanied by valid DL or Passport; SSN
+
+LLC Business Name requires: Operating Agreement/Articles of Organization/EIN Letter
+
+Trust requires: Trust Abstract - Identifying the Trustees of the Trust
+
+
+
+Sincerely,
+
+{!User.FirstName}
+
+
+REF: {!Opportunity.Id}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

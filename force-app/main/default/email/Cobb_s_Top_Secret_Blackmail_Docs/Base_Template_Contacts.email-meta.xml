@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MemphisInvest</letterhead>
+    <name>Base Template (Contacts)</name>
+    <style>freeForm</style>
+    <subject>Empty template with email signature (Contacts)</subject>
+    <textOnly>{!Lead.FirstName}
+
+
+
+Sincerely,
+
+Marq
+
+
+
+——————————————————————————
+
+https://my-schedule.timetrade.com/app/td-1259187/workflows/rzlm2/schedule/availability?wfsid=16a5bde1-baba97f6-16a5bdb5-baba97f6-00000005-1s19g530acl5j8g9e2faj934keo7bi8u&amp;view=full&amp;fs=1</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

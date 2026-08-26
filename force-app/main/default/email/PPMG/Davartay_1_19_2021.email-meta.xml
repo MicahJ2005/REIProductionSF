@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Davartay-1.19.2021</name>
+    <style>none</style>
+    <subject>$100 Property Management Incentive</subject>
+    <textOnly>Experience Matters It&apos;s All About The Experience We&apos;ve Got Big News! Property Management Exclusive Offer
+
+
+
+
+PREMIER PROPERTY MANAGEMENT
+
+REMINDER: We have opened the doors of Premier Property Management to manage properties not purchased through REI Nation. So many of you have sent friends and family our way, and your recommendation is the highest compliment. We’d like to thank you for it! Recommend a friend, who already owns a property, and we’ll give them $100 towards their transfer – if they choose us to manage their property. We’ll also reward you with a $100 credit towards any of your current property address/es under management. Just have your friend mention to our host (DaVartay Miller - davartay@reination.com) that you referred them, and you’ll both be set. While we can’t go back in time for past referrals, this is effective as of today’s date.
+
+If you refer someone in any of our 11 cities, you are eligible to earn a referral fee.
+
+
+Memphis, TN
+St. Louis, MO
+Birmingham, AL
+Huntsville, AL
+Tuscaloosa, AL
+Dallas, TX
+Houston, TX
+San Antonio, TX
+Oklahoma City, OK
+Tulsa, OK
+Little Rock, AR
+
+
+REFERRALS HOW IT WORKS
+
+
+DISCLAIMER: THIS REFERRAL DISCOUNT ONLY APPLIES TO PROPERTIES THAT ARE NOT BOUGHT WITH REI NATION.
+
+Have Questions?
+
+Davartay Miller
+
+
+P: (901)505-0931
+E: davartay@reination.com
+S: Schedule a Call</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

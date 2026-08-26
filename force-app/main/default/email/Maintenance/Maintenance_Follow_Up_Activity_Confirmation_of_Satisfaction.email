@@ -1,0 +1,24 @@
+You recently submitted a request for {!Project_Item__c.MaintenanceCategoryGlobal__c} Maintenance and our vendor has notified us that the work is now complete. Please confirm the repair status below.
+<br/><br/>
+<table width="40%" border="0">
+<tr>
+<td align="center">Repaired</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td align="center">Not Repaired</td>
+</tr>
+<tr>
+<td align="center">
+<a style="color: green; font-weight:bold;" id="link1" href="{!$Label.Email_Response_Site}?id={!Project_Item__c.Id}&selectedOpt=Satisfied"><img src="https://na45.salesforce.com/servlet/servlet.ImageServer?id=0153A000004abRg&oid=00D30000000pfXlEAI" width="150" height="137"/></a>
+</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td align="center">
+<a  style="color: orange; font-weight:bold;" iid="link2" href="{!$Label.Email_Response_Site}?id={!Project_Item__c.Id}&selectedOpt=Unsatisfied - Not Finished"><img src="https://na45.salesforce.com/servlet/servlet.ImageServer?id=0153A000004abRb&oid=00D30000000pfXlEAI" width="145" height="149"/></a>	
+</td>
+
+</tr>
+</table>
+
+<br/><br/><br/>
+Thank you,
+<br/><br/>
+Premier Property Management Group

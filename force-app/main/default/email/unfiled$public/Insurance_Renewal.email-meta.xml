@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>REI_Nation</letterhead>
+    <name>Insurance Renewal</name>
+    <style>formalLetter</style>
+    <subject>IMPORTANT: {!Insurance__c.Opportunity__c} Homeowner’s Insurance Renewal</subject>
+    <textOnly>Dear Valued Investor,
+
+
+It is time for your annual property and liability insurance policy through Valentine Insurance Services to be renewed.
+
+
+This renewal email was updated recently, so please be sure to read it in its entirety.  As always, thank you for your time and attention to this important information.
+
+
+
+Overview of Important Details:
+
+
+*Your new policy will provide Replacement Cost Coverage up to the Reported (Insured) Value on your Evidence of Insurance (EOI) plus 25%, if applicable.  The EOI uploaded in your owner’s portal includes a Reported (Insured) Value consistent with a minimum of $110 per square foot.
+
+
+
+If your evidence of insurance shows the premium is escrowed from a lender, we will invoice the lender and await their payment. Please verify that your lender’s name and loan # are correct on your Evidence of Insurance. If either the lender or loan number have changed, please let us know promptly.
+
+
+If your evidence of insurance shows the premium is non-escrowed or it has no mortgage company listed, we will be deducting the premium from your rental account at Premier Property Management mid-month of the month following your renewal date.
+
+If management of the property ends for any reason, the insurance policy will terminate effective the same date that management is terminated.
+
+
+
+Have you recently put a property into an LLC or Trust? If so, have you notified our insurance department so that your coverage details can be updated? If not, please email insurance@reination.com and let us know so we can have your insurance documents updated.
+
+
+
+*If you would like to discuss the Reported (Insured) Value of your property further, have Valentine Insurance run a replacement cost estimate for you, or discuss other options, please reach out to our dedicated Valentine team at 1-800-772-0535 or email at investorinsurance@valentine.insure.*
+
+
+
+Property Under Renewal:
+
+{!Insurance__c.Opportunity__c}
+
+How To Access Your Evidence of Insurance (EOI) &amp; Your 2026 Valentine Homeowner&apos;s Insurance FAQ/Coverage Summary:
+
+
+• Go to your owner&apos;s portal for the property in question.
+
+
+• From your dashboard, click &quot;Documents&quot; on the left side menu. (&quot;Statements&quot; will appear at the top.)
+
+
+• Scroll down to the &quot;Other Documents&quot; section. At the bottom of this section, choose &quot;Show 100 entries&quot; from the dropdown menu.
+
+
+• Scroll back up to the heading &quot;Other Documents.&quot; On the right-hand side please click the &quot;uploaded&quot; word twice so the most recent dates appear near the top of the list.
+
+
+• Search list for house number (example &quot;399 Savage Lane EOI xx/xx/2026&quot;) to access your EOI.
+
+
+• Click the name of the file and it will download to a pdf.
+
+
+• Also click the FAQ/Coverage Summary Sheet to download it.
+
+
+• Open the pdfs and review all pages.
+
+
+
+
+Thank you for your attention to these matters.  It is greatly appreciated.
+
+- Jill Griffith</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

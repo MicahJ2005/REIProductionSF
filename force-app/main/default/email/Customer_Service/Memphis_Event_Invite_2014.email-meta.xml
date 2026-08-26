@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Memphis Event Invite 2014</name>
+    <style>none</style>
+    <subject>Hurry! Seats Are Filling Up FAST</subject>
+    <textOnly>YOU don’t want to MISS this ONE!!
+
+April 25 &amp; 26th is our BIG 10 year Anniversary Event!
+
+Come spend the weekend with
+
+Memphis Invest
+
+In our hometown, Memphis Tennessee!
+
+We would love it if you would join us Friday night, April 25th, for our
+
+Welcome Reception at the host hotel DoubleTree Hilton located in beautiful downtown Memphis.
+
+Meet the Memphis Invest team for the first time or shake hands with us again!
+
+
+Then on Saturday the 26th at 9am....
+
+Learn about everything new we have planned for your financial future!
+
+We will be announcing some brand new programs for all of our current and future clients!
+
+Including:
+
+- updated data and figures on Memphis
+- updated data and figures on Dallas
+- introduction to our newest market Houston
+- brand new financing options including large scale financing from B2R
+
+PLUS we are building brand new homes for our investors to add to their portfolios!
+
+Saturday night dinner will be held inside the
+
+China Exhibit at The World Famous Memphis Zoo
+
+We are going to be thanking some of our longest and most loyal clients, celebrating all of our client&apos;s success.
+
+We are so grateful for the opportunity to work with all of our investors who rely on us from so far away to protect their real estate investment.
+
+HURRY! TIME IS RUNNING OUT!
+
+RESERVE YOUR SEAT TODAY! Seats are Limited!
+
+Please feel free to bring a spouse, friend or relative!
+
+Please call me directly at 901-312-1790 or respond to this email if you have further questions! You can also click this link to sign up online
+
+http://info.memphisinvest.com/celebration-2014</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

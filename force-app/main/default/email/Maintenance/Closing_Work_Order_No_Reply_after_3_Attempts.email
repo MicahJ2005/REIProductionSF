@@ -1,0 +1,9 @@
+You recently submitted a request for {!Project_Item__c.MaintenanceCategoryGlobal__c} Maintenance and our vendor notified us that the work was completed.  We have attempted to confirm your satisfaction of the work completed to no avail.  Therefore, we are closing the Work Order.
+<br/><br/>
+Please contact us if you need anything else. 
+<br/><br/>
+Thank you,
+<br/><br/>
+Premier Property Management Group
+<br/>
+<p style="color:white"> [ref: {!Project_Item__c.Id}] [userRef: {!$User.Id}]</p>

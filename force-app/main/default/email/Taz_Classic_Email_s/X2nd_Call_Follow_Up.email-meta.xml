@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Blank_Letterhead</letterhead>
+    <name>2nd Call Follow Up</name>
+    <style>freeForm</style>
+    <subject>Memphis Invest- Turnkey Real Estate</subject>
+    <textOnly>{!Contact.FirstName},
+
+Hope all is well and your week is off to a great start!  I wanted to follow up on your turnkey real estate investing interests to see if you had any questions for me or the Memphis Invest Portfolio Advisor team.  Would love to schedule a call at your convenience to answer any questions you may have!
+
+Thanks and look forward to hearing from you soon!
+
+John Goode
+Portfolio Advisor
+Memphis Invest
+Phone: n901-751-7187
+Fax:901-751-7187</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

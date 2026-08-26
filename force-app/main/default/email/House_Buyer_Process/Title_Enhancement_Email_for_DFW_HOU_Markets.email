@@ -1,0 +1,45 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span lang="EN-US">Hello&nbsp;</span><font face="arial" style="font-size: 12pt; background-color: rgb(255, 255, 255);">{!Opportunity.Title_Company_Attorney__c}</font><span style="font-size: 12pt; font-family: Arial, sans-serif; background-color: rgb(255, 255, 255);">,</span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span lang="EN-US" style="font-size: 12pt; font-family: Arial, sans-serif;">We look forward to working with you on this transaction! We will be
+touching base within&nbsp;{!Opportunity.Title_Company_Days_Allotted__c}&nbsp;business
+days to confirm title work has been received. Once title work is received
+please email a copy of the commitment to </span><span lang="EN-US" style="font-size:11.0pt;mso-bidi-font-size:12.0pt;font-family:&quot;Calibri&quot;,sans-serif;
+mso-ascii-theme-font:minor-latin;mso-fareast-font-family:Calibri;mso-fareast-theme-font:
+minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-bidi-theme-font:minor-bidi;mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA"><a href="mailto:closings@reination.com"><span style="font-size:12.0pt;mso-bidi-font-size:13.5pt;font-family:&quot;Arial&quot;,sans-serif">closings@reination.com</span></a></span><span lang="EN-US" style="font-size: 12pt; font-family: Arial, sans-serif;">. Let us know if anything
+additional is needed at this time, contact information and contract details
+provided below.</span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal" style=""><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Opportunity Owner: {!Opportunity.OwnerId}</span><br><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Total Purchase Cost: ${!Opportunity.Total_Purchase_Cost__c}</span><br><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Assignment Fee: ${!Opportunity.Additional_Purchase_Costs__c}</span><br><font face="arial" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Contract Closing Date:&nbsp;</font><font face="arial">{!Opportunity.Contract_Closing_Date__c}</font></p><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Earnest Money: ${!Opportunity.Earnest_Money__c}</span><br><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Earnest Money Held At: {!Opportunity.Earnest_Money_Held_At__c}</span><br><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Title Company Attorney:&nbsp;</span><font face="arial">{!Opportunity.Title_Company_Attorney__c}</font><br><font face="arial" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Closing Concessions:&nbsp;</font><font face="arial" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">{!Opportunity.Closing_Concessions_Information__c}</font><br><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="arial">Occupancy At Closing: {!Opportunity.Occupancy_At_Closing__c}</font></p></div>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span lang="EN-US" style="mso-bidi-font-size:13.5pt;
+font-family:&quot;Arial&quot;,sans-serif">Thank you! <o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span lang="EN-US" style="mso-bidi-font-size:13.5pt;
+font-family:&quot;Arial&quot;,sans-serif">&nbsp;</span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span lang="EN-US" style="mso-bidi-font-size:13.5pt;
+font-family:&quot;Arial&quot;,sans-serif">REI Nation<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span lang="EN-US" style="mso-bidi-font-size:13.5pt;
+font-family:&quot;Arial&quot;,sans-serif">Deidre Sandifer<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span lang="EN-US" style="font-size:11.0pt;mso-bidi-font-size:
+12.0pt"><a href="mailto:closings@reination.com"><span style="font-size:12.0pt;
+mso-bidi-font-size:13.5pt;font-family:&quot;Arial&quot;,sans-serif">closings@reination.com</span></a></span><span lang="EN-US" style="mso-bidi-font-size:13.5pt;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">
+
+
+
+
+
+
+
+
+
+<span lang="EN-US" style="font-size:12.0pt;mso-bidi-font-size:13.5pt;font-family:
+&quot;Arial&quot;,sans-serif;mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;
+mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA">(901) 505-0825</span></p>]]></td>
+</tr>
+</table>

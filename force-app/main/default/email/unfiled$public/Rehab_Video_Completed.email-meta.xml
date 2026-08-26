@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email alert letting the marketing team know that rehab has filmed a video of a house</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Rehab Video Completed</name>
+    <style>none</style>
+    <subject>Rehab Video - {!Project__c.Market__c} - {!Project__c.Name}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

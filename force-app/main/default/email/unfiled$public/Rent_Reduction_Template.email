@@ -1,0 +1,11 @@
+Target rent has been dropped at {!Opportunity.Name}
+
+New Target Rent:{!Opportunity.Target_Rent__c}
+
+Rent Range: {!Opportunity.Rent_Range__c}
+
+Account: {!Opportunity.Account}
+
+Contract Stage: {!Opportunity.StageName}
+
+Sales Rep: {!Opportunity.Sales_Assignment__c}

@@ -1,0 +1,5 @@
+The buyback of {!Opportunity.Opportunity_Complete_Address__c} has closed.<br>
+<br>
+REI Nation has completed the purchase of this property.<br>
+<br>
+-{!User.FirstName} {!User.LastName}

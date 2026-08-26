@@ -1,0 +1,18 @@
+Carol, Ryan and Marq,
+
+The sale of this house just blew up: {!Opportunity.Name}, to {!Opportunity.Account}.
+
+This was assigned to {!Opportunity.OwnerFullName} 
+
+Address: {!Opportunity.Name}
+Zip: {!Opportunity.Property_Zip_Code__c}
+Amount: {!Opportunity.Amount}
+Purchase Method: {!Opportunity.Purchase_Method__c}
+Lender: {!Opportunity.Lender__c}
+Earnest Money: {!Opportunity.Earnest_Money__c}
+Closing Date: {!Opportunity.Closing_Date__c}
+
+Link to this Opportunity: 
+https://na1.salesforce.com/{!Opportunity.Id}
+
+If you have any questions regarding this contract please talk to {!Opportunity.OwnerFullName}.

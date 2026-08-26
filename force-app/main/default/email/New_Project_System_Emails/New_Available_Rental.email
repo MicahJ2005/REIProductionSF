@@ -1,0 +1,12 @@
+The project is complete and this property is Available Now for leasing. 
+
+Type: {!Project__c.RecordType}
+City: {!Project__c.City__c}
+State: {!Project__c.State__c}
+Zip: {!Project__c.Zip_Code__c}
+Target Rent: {!Project__c.Target_Rent__c}
+Rent Range: {!Project__c.Rent_Range__c}
+Year Built: {!Project__c.Year_Built__c}
+Square Footage: {!Project__c.Sq_Feet__c}
+Link:  {!Project__c.Link}
+Customer Service Assignment: {!Project__c.Customer_Service__c}

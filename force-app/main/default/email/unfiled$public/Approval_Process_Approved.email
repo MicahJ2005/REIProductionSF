@@ -1,0 +1,6 @@
+<messaging:emailTemplate subject="Profile Update Approved" recipientType="User" relatedToType="Account">
+<messaging:htmlEmailBody >
+The changes you have requested to your vendor account profile have been approved. <br/><br/>
+<c:ApprovalRequestComments relatedToId="{!relatedTo.id}"/>
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

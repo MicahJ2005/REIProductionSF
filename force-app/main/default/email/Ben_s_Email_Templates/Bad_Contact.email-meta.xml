@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Blank_Letterhead</letterhead>
+    <name>Bad Contact</name>
+    <style>freeForm</style>
+    <subject>Bad Contact</subject>
+    <textOnly>Hi {!Lead.FirstName}
+
+I have been reaching out to you to see If you are in the position to purchase turn key investment properties for passive income or would like to learn more about the opportunity, please reach back out! We can schedule you a call with one of our portfolio advisors to discuss our team &amp; process to see if were a good fit for you.
+
+
+Looking forward to hearing back.
+
+
+Thanks,
+
+Ben</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

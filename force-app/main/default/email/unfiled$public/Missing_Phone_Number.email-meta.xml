@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MemphisInvest</letterhead>
+    <name>Missing Phone Number</name>
+    <style>freeForm</style>
+    <subject>Touching base...</subject>
+    <textOnly>Hi {!Lead.OwnerFirstName},
+We appreciate you registering for our website at memphisinvest.com,
+ and we would love to speak with you by phone to introduce ourselves and
+ answer all of your questions about investing with us here in Memphis. 
+
+We have tried to reach you by phone, but for one reason or another we were unable to reach 
+you so we wanted to at least send you an email. 
+
+If you would like to speak with one of our portfolio advisors, please call us at one of my numbers listed below, or reply to this email with a day
+and time convenient for you and the best number to reach you. 
+
+There&apos;s a reason that in 2011 we will help investors from all over 
+the country purchase over 300 turn-key investment properties in Memphis.
+To find out why so many people put their trust in us, get in touch with
+us as soon as possible. 
+
+Sincerely, 
+
+
+The MemphisInvest.com Team
+ 901-751-7191
+1.877.773.9998</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

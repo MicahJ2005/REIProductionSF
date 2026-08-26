@@ -1,0 +1,8 @@
+A Rently box has been placed at the property by the project manager.  Please update the marketing on the Rently website.
+
+Box Number: {!Project__c.Rently_Asset__c}
+Address: {!Project__c.Name}
+Project Manager: {!Project__c.Project_Manager__c}
+Project Status: {!Project__c.Project_Status__c}
+Application Status: {!Project__c.Application_Status__c}
+Days Vacant: {!Project__c.Days_Vacant1__c}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>For requesting 10 minutes with a new lead.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Lead Introduction</name>
+    <style>none</style>
+    <subject>Hi {!Lead.FirstName} ... 10 minutes free this week?</subject>
+    <textOnly>Thanks for visiting our website www.memphisinvest.com.  We are a true turnkey real estate investment company that assists investors who are looking to invest passively in real estate. From complete renovations to superior property management we are there every step of the way. We currently manage over 1800 properties for more than 800 clients and would love the opportunity to help you build or diversify your real estate portfolio.  
+
+I would love to schedule some time to talk with you about your interest in passive income. I specialize in helping clients build cash flow portfolios and I can do that for you as well.  I am happy to schedule some time to learn about you and your financial goals.  I have a very busy schedule this week and I can only make time for calls on Tuesday and Wednesday this week.  
+
+Let me know what works best for you.  
+
+To your wealth, 
+{!User.FirstName}  
+
+{!User.FirstName} {!User.LastName} 
+{!User.CompanyName} 
+{!User.Email} 
+{!User.Phone}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

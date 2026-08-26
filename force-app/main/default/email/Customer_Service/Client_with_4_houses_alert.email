@@ -1,0 +1,5 @@
+Cyndy,
+The Account for {!Account.Name} just updated to show they have 4 properties.  You should review their Account because it might be time to move them over to you.
+
+Click the link to review their Account Record.  
+https://na1.salesforce.com/{!Account.Id}

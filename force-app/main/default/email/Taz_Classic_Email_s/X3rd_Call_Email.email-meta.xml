@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Blank_Letterhead</letterhead>
+    <name>3rd Call Email</name>
+    <style>freeForm</style>
+    <subject>Memphis Invest- Turnkey Real Estate</subject>
+    <textOnly>More powerful than any words I could ever put into writing, I wanted to share these videos with you- some recorded by our owners talking about our company&apos;s culture and investment philosophies, and also some from our clients, talking about their experience working with us.
+
+First, start right here and hear the Memphis Invest story told by the Clothier family, owners of Memphis Invest.
+
+These next few videos answer some of our most frequently asked questions overall:
+
+How do I get started?
+Why do I need to build a portfolio vs. just buying 1 property?
+Why did you choose Memphis, Dallas, Houston, Little Rock, and Oklahoma City as your markets?
+What should I be looking for when selecting the right turnkey partner?
+
+Ok, so you&apos;ve heard from the owners, but you also REALLY need to hear it from investors that have been with us for several years.
+
+So start right here and then keep going right here, and if you still need convincing that we are the best in our industry, go ahead and watch this one and that one.
+
+This next link is the most important of all. This one puts you on the path. If you feel fairly certain that we are the right fit for you as a company and that you would be a great client for us, click right here to schedule a call with me and let&apos;s get this thing going!
+
+Looking forward to talking with you soon.
+
+Sincerely,
+
+John Goode
+Portfolio Advisor
+Memphis Invest
+Phone: 901-505-0730
+Fax: 901-751-7187</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Waiting to Release Requirements</name>
+    <style>none</style>
+    <subject>Carpet Dispatched - {!01I30000002Pa22.Name} - Need Documents to Release</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

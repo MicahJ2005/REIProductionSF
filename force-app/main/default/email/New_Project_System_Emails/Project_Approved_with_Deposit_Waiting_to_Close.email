@@ -1,0 +1,22 @@
+Approved with Deposit / Waiting to Close - {!Project__c.Street_Address__c}, {!Project__c.City__c}, {!Project__c.State__c} {!Project__c.Zip_Code__c}
+
+CSR:  {!Project__c.Customer_Service__c}
+Owner:  {!Project__c.Account__c}
+Investor Type:  {!Project__c.Investor__c}
+
+Security Deposit: {!Project__c.Security_Deposit__c}
+Deposit in House:  {!Project__c.Deposit_In_House__c}
+Rent Year 1:  {!Project__c.Rent_Year_1__c}
+Rent Year 2:  {!Project__c.Rent_Year_2__c}
+Lease Length:  {!Project__c.Lease_Length__c}
+Expected Lease Closing Date:  {!Project__c.Lease_Closing__c}
+Due at Closing:  {!Project__c.Due_at_Closing__c}
+Leasing Agent: {!Project__c.Leasing_Agent_new__c}
+Pet Fee:  {!Project__c.Pet_Fee__c}
+Special:  {!Project__c.Specials__c}
+Section 8: {!Project__c.Section_8__c}
+
+Rent Range:  {!Project__c.Rent_Range__c}
+Type:  {!Project__c.RecordType}
+Previous Rent:  {!Project__c.Previous_Rent__c}
+Project:  {!Project__c.Link}

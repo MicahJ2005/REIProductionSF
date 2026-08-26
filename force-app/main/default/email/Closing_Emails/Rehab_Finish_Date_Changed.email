@@ -1,0 +1,4 @@
+For the house at: {!01I30000002Pa22.Name}
+New Rehab Est Finish Date is: {!01I30000002Pa22.00N3000000ALZZa}
+Current Oppt Closing Date is: {!Opportunity.Closing_Date__c}
+Rehab Manager: {!01I30000002Pa22.00N3000000ALZYw}

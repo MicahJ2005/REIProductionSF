@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MI_White</letterhead>
+    <name>MI Closing Survey</name>
+    <style>formalLetter</style>
+    <subject>Tell us about your experience!</subject>
+    <textOnly>Your Feedback Matters!
+Dear {!Contact.Name},
+
+
+On behalf of the Clothier family and team, we want to thank you for choosing REI Nation. We hope that we were able to deliver on our service promise to create the best experience for you!
+We would love to hear your feedback on how your experience went. This survey should only take 2-4 minutes to complete. To participate in this survey, simply click the link below to begin. Thank you for your participation.
+
+
+Click Here to Take the Survey!
+
+Congratulations again, it was a pleasure working with you!
+
+{!User.Name}
+{!User.Title}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

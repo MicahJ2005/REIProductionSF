@@ -1,0 +1,15 @@
+You have submitted a work order in regard to some ELECTRICAL issues. We are dispatching a vendor to the property to assess and fix any problem. 
+<br/><br/>
+Please be sure that you have: 
+<br/>
+<ul>
+<li>Checked the breakers to ensure they haven't tripped into the OFF position;</li>
+<li>Checked for lightbulbs that need to be changed; and</li>
+<li>Checked that outlets are not overloaded.</li>
+</ul>
+<br/>
+If the vendor comes and the problem is related to any of the listed items, a service charge will be applied to your account .
+<br/><br/>
+Please be expecting a call from the vendor. You likely will not recognize their phone number, so make sure you answer any unknown calls please.
+<br/>
+<p style="color:white"> [ref: {!Project_Item__c.Id}] [userRef: {!$User.Id}]</p>

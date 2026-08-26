@@ -1,0 +1,5 @@
+<messaging:emailTemplate subject="Vendor Profile Update Approval Request - {!relatedTo.Name}" recipientType="User" relatedToType="Account">
+<messaging:htmlEmailBody >
+    <c:VendorProfileApproverComp accRecId="{!relatedTo.Id}" isPrimaryAcc="false" />   
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

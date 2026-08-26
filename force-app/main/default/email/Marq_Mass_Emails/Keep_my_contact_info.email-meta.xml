@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Dead lead but keep my contact info for the future</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MemphisInvest</letterhead>
+    <name>Keep my contact info</name>
+    <style>freeForm</style>
+    <subject>Memphis Invest: Keep my contact info for down the road</subject>
+    <textOnly>Hi {!Lead.FirstName},
+
+Even though we were not the right fight for you as an investment company at the present time, I want to make sure that you have all of my contact info for future use.
+
+Recently, I helped a new client acquire his first investment property after first meeting him over 10 years ago at one of the first events Memphis Invest ever hosted for real estate investors.
+
+So whether it&apos;s 5 days or 5 years before you are ready to reach out to me again, I will be ready to help you build a portfolio as soon as you are ready.
+
+Take care, and I look forward to hearing from you down the road.
+
+Marq
+
+
+--
+
+Marq Cobb
+Memphis Invest, GP
+
+
+
+CLICK HERE TO SCHEDULE A 15 MINUTE CALL WITH ME
+THIS WEEK!
+T: +901.481.6842
+F: +901.201.5803
+E: cobb@memphisinvest.com
+http://www.MemphisInvest.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

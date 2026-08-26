@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>IT - Case Closed</name>
+    <style>none</style>
+    <subject>Case #{!Case.CaseNumber} Has Been Resolved</subject>
+    <textOnly>The following Case has been resolved:
+
+Case #:{!Case.CaseNumber}
+Case Subject: {!Case.Subject}
+Case Details: {!Case.Description}
+
+{!Case.OwnerFullName} Has completed the above. If you have any questions or concerns, please reach out to the IT Team and we will address them.
+
+-IT Support Team</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

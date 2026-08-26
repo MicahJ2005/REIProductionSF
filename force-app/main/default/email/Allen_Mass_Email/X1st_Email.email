@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+	<title>HTML Editor - Full Version</title>
+</head>
+<body>
+<div>Hi&nbsp;{!Contact.FirstName},</div>
+
+<div>&nbsp;</div>
+
+<div>Thank you for&nbsp;inquiring about our online book, &quot;How to Purchase Out-of-Area&nbsp;Real Estate Investments.&quot; I hope you will continue to visit our website.&nbsp;
+<p>If you are in the position to purchase investment properties for passive income or would like to learn more about the opportunity, please reach back out! We can schedule you a call with one of our portfolio advisors to discuss our team &amp; process to see if were a good fit for you.&nbsp;</p>
+
+<p>Looking forward to hearing back.</p>
+
+<p>Thanks,</p>
+
+<p>Allen</p>
+
+<p>--&nbsp;</p>
+
+<div>
+<div dir="ltr">
+<div dir="ltr">
+<div dir="ltr">
+<table border="0" dir="ltr">
+	<tbody>
+		<tr>
+			<td><strong>Allen Nason</strong><br />
+			<em>Portfolio Advisor&nbsp;</em>
+
+			<div><strong>Tel:&nbsp;<a value="+19017517191">901.505.0733</a>&nbsp;<br />
+			Fax:&nbsp;<a value="+19017517187">901.751.7187</a></strong></div>
+			<strong><a href="http://www.memphisinvest.com/" target="_blank">www.MemphisInvest.com</a></strong><br />
+			<strong><a href="mailto:allennason@memphisinvest.com" target="_blank">allennason@memphisinvest.com</a></strong>
+
+			<div dir="ltr">&nbsp;</div>
+
+			<div><strong><a href="https://www.timetrade.com/book/N2BRQ" target="_blank">Click Here</a>&nbsp;</strong><strong>to schedule a 15 minute phone call</strong></div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div style="clear:both;">&nbsp;</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

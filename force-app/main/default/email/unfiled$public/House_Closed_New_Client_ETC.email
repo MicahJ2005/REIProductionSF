@@ -1,0 +1,10 @@
+Kelsey,
+A new client (account: {!Opportunity.Account}) just closed on {!Opportunity.Name} and the IRA custodian is {!Opportunity.Custodian__c}.  
+
+The sales rep is {!Opportunity.OwnerFullName}.  Closing Date {!Opportunity.Closing_Date__c}.
+
+The property is in {!Opportunity.Property_State_Oppt__c}.
+
+Contact Deidre at ext 794 if you have questions.  
+
+Drew

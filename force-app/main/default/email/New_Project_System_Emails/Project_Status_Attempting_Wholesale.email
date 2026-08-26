@@ -1,0 +1,9 @@
+Please rekey, trashout and turn on all utilities at property. Let us know once post trashout pics are uploaded.
+
+Attempting Wholesale
+Market: {!Project__c.Market__c}
+{!Project__c.Name}
+{!Project__c.City__c}
+{!Project__c.Zip_Code__c}
+{!Project__c.Project_Code__c}
+Roof Budget: {!Assessment__c.Roof__c}

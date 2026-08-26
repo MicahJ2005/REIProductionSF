@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Marketplace HOT House Is Sold Alert</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Blank_Letterhead</letterhead>
+    <name>Marketplace HOT House Is Sold Template</name>
+    <style>freeForm</style>
+    <subject>Marketplace House Sold Alert - {!Marketplace__c.Name} - {!Marketplace__c.Market__c}</subject>
+    <textOnly>{!Marketplace__c.OwnerFullName} just sold the house at {!Marketplace__c.Name}.  Please remove this house from your list of available houses.
+
+House: {!Marketplace__c.House__c}
+Market: {!Marketplace__c.Market__c}
+Year Built: {!Marketplace__c.Year_Built__c}
+
+Seller Account: {!Marketplace__c.Seller_Account__c}
+Buyer Account: {!Marketplace__c.Buyer_Account__c}
+Sale Date: {!Marketplace__c.Closing_Date__c}
+Contract Price: {!Marketplace__c.Contract_Price__c}
+Purchase Method: {!Marketplace__c.Purchase_Method__c}
+Lender: {!Marketplace__c.Lender_Name__c}
+Marketplace Link: {!Marketplace__c.Link}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

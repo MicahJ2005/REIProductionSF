@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MemphisInvest</letterhead>
+    <name>Missed Appt: Timetrade reschedule link</name>
+    <style>freeForm</style>
+    <subject>Memphis Invest Missed Appointment/Link to Reschedule</subject>
+    <textOnly>{!Contact.FirstName},
+
+Since we were not able to connect at our scheduled time today, please use this link to reschedule at a time that works well for you.
+
+If you free up and are able to call me within 10 minutes or so of our scheduled time, please use my direct line at 901-505-0723. Otherwise I will be on to my next appointment and I will ask you to reschedule for another day.
+
+Thanks,
+
+Marq
+
+--
+
+Marq Cobb
+Memphis Invest, GP
+
+
+
+CLICK HERE TO SCHEDULE A 15 MINUTE CALL WITH ME
+THIS WEEK!
+T: +901.481.6842
+F: +901.201.5803
+E: cobb@memphisinvest.com
+http://www.MemphisInvest.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

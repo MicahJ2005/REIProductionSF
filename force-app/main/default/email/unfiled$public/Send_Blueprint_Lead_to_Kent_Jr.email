@@ -1,0 +1,12 @@
+Coaching Candidate Lead from the Memphis Invest funnel:
+{!Lead.FirstName} {!Lead.LastName}
+{!Lead.Email}
+{!Lead.Phone}
+
+Investing Experience: {!Lead.00N3000000C0rls}
+Actively Investing Today: {!Lead.00N3000000B5bGF}
+Primary Motivation: {!Lead.00N3000000C0rm7}
+Interested in SDIRA: {!Lead.BP_5_Interested_in_SD_IRA__c {!Lead.BP_6_If_Interested_in_SD_IRA_explain__c}
+Current Available Resources: {!Lead.00N3000000C0rmg}
+Next Logical Steps: {!Lead.00N3000000C0rmv}
+How can we help: {!Lead.00N3000000C0rn0}

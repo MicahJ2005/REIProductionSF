@@ -1,0 +1,34 @@
+Bridge Capital
+Pipeline or Permanent Loan request form
+
+Filled out by:  Deidre Stubblefield
+Date Turned in:  {!Today} 
+Wealth Advisor:  {!Opportunity.OwnerFullName}
+
+Buyer: {!Opportunity.Contact__c}
+Phone:  {!Opportunity.Contact_Phone__c}
+Email:  {!Opportunity.Contact_Email__c}
+
+Property Address: {!Opportunity.Name}
+Zip:  {!Opportunity.Property_Zip__c}
+
+Description:  
+Bedrooms:  {!Opportunity.Bedrooms_Old__c}
+Baths:  {!Opportunity.Bathrooms_old__c}
+Sq. Ft.:  {!Opportunity.Sq_Ft__c}
+Garage: {!Opportunity.Parking__c},  
+
+Vacant or Rented: {!Opportunity.Rental_Status__c}
+Renovation Dollar Amount:  {!Opportunity.Rehab_Budget__c}
+Wholesaler Purch Price:  {!Opportunity.Purchase_Price__c}
+Monthly Rent Amount:  {!Opportunity.Rent_Range__c}
+MI Purchase Date:  {!Opportunity.MI_Purchase_Date__c} 
+
+Investor Sale Price:  {!Opportunity.Amount}
+Loan Request Amount:  {!Opportunity.Loan_Request_Amount__c}
+Term Request in Years: {!Opportunity.Loan_Term_Years__c}
+IRA Loan (Yes or No):  {!Opportunity.Purchase_Method__c}
+
+For questions about this form please contact Katie Grashot at katie@memphisinvest.com.
+
+End of Form

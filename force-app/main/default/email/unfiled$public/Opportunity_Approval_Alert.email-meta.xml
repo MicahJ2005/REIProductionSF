@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to Brett and Marq and Chris to get Opportunity Approval</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Opportunity Approval Alert</name>
+    <style>none</style>
+    <subject>Opportunity Approval Request - {!Opportunity.Name}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

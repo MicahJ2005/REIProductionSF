@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MemphisInvest</letterhead>
+    <name>Cross Collateralization blast to clients who have 1 house IRA Cashj</name>
+    <style>freeForm</style>
+    <subject>A new, easy way to add a property to your MI portfolio with little to no $ out of pocket.</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+I hope you are doing well and you had a great weekend.
+
+If you want to add a property to your Memphis Invest portfolio but do not have the funds
+necessary to fund your next deal, this email is meant specifically for you.
+
+I wanted to let you know that there is a possibility for you to add at least 1 property to
+your portfolio with Memphis Invest with little or no money out of pocket using your self-directed IRA
+or your solo-401k.
+
+Since you previously purchased at least one property through Memphis Invest using your IRA/solo-k outright
+without financing, I want to show you how you can borrow against the equity in the property you already own
+to purchase a 2nd property with very little (or possibly, nothing) out of pocket.
+
+Bridge Capital is now offering non-recourse financing on 20 year, fixed rate at 8.4% with 50% down terms, which are far and
+away the best non-recourse terms we have ever been able to obtain through our financing partners.
+
+Many of you receiving this email will immediately see how favorable those terms really are, as you might have loans
+outstanding between 10-12% through our past non-recourse financing options.
+
+Please take a look at the attachment to this email. I&apos;ve put together a very simple powerpoint that explains the process
+of cross collateralization and I provided a real example of how I just finished helping one of my clients acquire their 2nd
+property with almost nothing out of pocket.
+
+If this is something that you are interested in talking about, please schedule a call with me this week and we can discuss
+your options.
+
+Please let me know how I can help you build your portfolio!
+
+Sincerely,
+
+Marq
+
+
+
+--
+
+Marq Cobb
+Memphis Invest, GP
+
+
+
+CLICK HERE TO SCHEDULE A 15 MINUTE CALL WITH ME
+THIS WEEK!
+T: +901.481.6842
+F: +901.201.5803
+E: cobb@memphisinvest.com
+http://www.MemphisInvest.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

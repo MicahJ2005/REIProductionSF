@@ -1,0 +1,21 @@
+Brett,
+
+I would like to sell {!Opportunity.Name}, {!Opportunity.Property_State_Oppt__c} to {!Opportunity.Account}.
+
+Referral Fee: {!Opportunity.Referral_Fee__c}
+
+Adviser:  {!Opportunity.OwnerFullName}
+New or Existing: {!Opportunity.Type}
+Purchase Method: {!Opportunity.Purchase_Method__c}
+Prequal With: {!Opportunity.PreQual_With__c}
+Prequal Status:  {!Opportunity.PreQual_Status__c}
+Lender: {!Opportunity.Lender__c}
+Lender Actions Completed:  {!Opportunity.Lender_Actions_Completed__c}
+Custodian:  {!Opportunity.Custodian__c}
+
+IRA Account Titling:  {!Opportunity.IRA_Account_Titling__c}
+Contract Titling: {!Opportunity.Contract_Titling__c}
+
+Referred By: {!Opportunity.Referred_by_Affiliate__c}
+
+End Message

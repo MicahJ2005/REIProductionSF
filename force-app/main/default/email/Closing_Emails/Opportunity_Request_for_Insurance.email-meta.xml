@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>For sending an insurance request</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Opportunity Request for Insurance</name>
+    <style>none</style>
+    <subject>Insurance Request for {!Opportunity.Name}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

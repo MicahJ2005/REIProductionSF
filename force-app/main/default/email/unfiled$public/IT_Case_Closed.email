@@ -1,0 +1,9 @@
+The following Case has been resolved:<br>
+<br>
+Case #:{!Case.CaseNumber}<br>
+Case Subject: {!Case.Subject}<br>
+Case Details: {!Case.Description}<br>
+<br>
+{!Case.OwnerFullName} Has completed the above. If you have any questions or concerns, please reach out to the IT Team and we will address them.<br>
+<br>
+-IT Support Team

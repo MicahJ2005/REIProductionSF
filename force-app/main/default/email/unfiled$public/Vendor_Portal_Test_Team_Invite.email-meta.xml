@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Vendor Portal Test Team Invite</name>
+    <style>none</style>
+    <subject>Vendor Portal Invitation: REI Nation &amp; Premier Property Management</subject>
+    <textOnly>{!Receiving_User.Name}
+
+Welcome to the Vendor Portal for REI Nation and Premier Property Management.  Setting up your Vendor Profile should take less than 15 minutes and once you are approved, we can begin working together.
+
+Portal Benefits
+
+Conveniently set up your account profile.
+Portal is available 24 hours a day, 7 days a week.
+All your important documents stored in one place.
+Easily update your information whenever there is a change.
+Access to our Vendor Training Resources.
+Home Depot Rapid Pass discount program.
+
+Get Started Here
+
+Click Here to get started.
+Username: {!Receiving_User.Username}
+Save the Portal website to your bookmarks or favorites:
+{!$Label.VendorCommunityURL}
+
+
+Detailed Instructions to Set Up Your Vendor Profile
+
+Complete the following 3 steps:
+
+Set up your Vendor Portal access with a password.
+Go to the Account Profile tab and fill in the required information.
+
+If you want us to report income to the IRS under your Social Security number, use the name on your Social Security card for your Legal Business Name.  Use this same name on Line 1 of the W9 form. Use your Social Security number for your Tax ID.
+If you want us to report income to the IRS under a Business Tax ID, use the name and Tax ID number on your IRS Notice of Assignment form.  Use the same name and Tax ID number on Line 1 of the W9.
+Epayment/Banking Information is required because all invoices are paid by Direct Deposit.
+
+Upload all your documents to the Vendor Portal.
+
+Social Security Card or IRS Notice of Assignment of TIN, EIN, or ITIN
+W-9
+Driver’s License/Photo ID
+Direct Deposit Agreement
+Voided Check (note: counter checks will not be accepted)
+Hold Harmless Agreement
+Other documents that may be required based on your Trade/Category, include:
+
+Certificate of Insurance - General Liability
+Insurance Agreement
+License/Trade License
+Permits One Pager
+
+
+
+
+Tips for Completing Your Vendor Portal Profile
+
+To spend the least amount of time completing your Profile, we suggest completing all the required documents and saving them to your computer as a pdf, jpeg or png file.
+If you are not able to complete everything at one time, you may ‘Save’ your progress and come back to finish at a later time.
+When uploading documents, remember to enter the expiration date when required.
+Submit your Vendor Profile for approval when you have completed everything.
+You will receive an email once you are approved.
+Please try to keep all onboarding communication with us in the Portal utilizing the Vendor Support Message Center on the Home tab.
+If the initial link is not working, please email Michelle Carmichael for help: mcarmichael@reination.com
+
+
+
+
+Jessica Stooksbury, Chief Financial Officer
+
+www.reination.com
+www.premierpropertymemphis.com
+www.ppmgtexas.com</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

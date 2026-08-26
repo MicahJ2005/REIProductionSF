@@ -1,0 +1,16 @@
+Hello {!Assessment__c.Assessment_Requested_By__c},
+
+A change has been recorded in the Assessment for
+{!Assessment__c.Assessment_Complete_Address__c}. Please review the following field changes:
+
+New Value:
+
+Year Built: {!Assessment__c.Year_Built__c}
+
+Previous Value:
+
+Year Built: {!Assessment__c.Old_Year_Built_Value__c}
+
+Thanks,
+
+{!Assessment__c.LastModifiedBy}

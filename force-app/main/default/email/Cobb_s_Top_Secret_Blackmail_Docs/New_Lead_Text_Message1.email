@@ -1,0 +1,4 @@
+NL: {!Lead.FirstName} {!Lead.LastName}
+{!Lead.City}, {!Lead.State}
+{!Lead.Phone}
+https://na1.salesforce.com/{!Lead.Id}

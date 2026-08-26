@@ -1,0 +1,15 @@
+Please List {!Project__c.Transaction_Type__c}
+
+List Price: {!Project__c.Listing_Price__c}
+HOA: {!Project__c.Estimated_Annual_HOA_Dues__c}
+HOA Subdivision: {!Project__c.HOA_Subdivision_Name__c}
+Market: {!Project__c.Market__c}
+Listing Owner: {!Project__c.Listing_Owner__c}
+Utilities Status: {!Project__c.Utilities_Status__c}
+Utility Svc Requested: {!Project__c.00N3A00000Cg7GY}
+Utility Turn-On: {!Project__c.Utility_Turn_On__c}
+Utility Turn-Off: {!Project__c.00N3A00000Cg7GZ}
+Electric: {!Project__c.Electric__c}
+Water: {!Project__c.Water__c}
+Utility Gas: {!Project__c.Utility_Gas__c}
+Utility Notes: {!Project__c.Utility_Notes__c}

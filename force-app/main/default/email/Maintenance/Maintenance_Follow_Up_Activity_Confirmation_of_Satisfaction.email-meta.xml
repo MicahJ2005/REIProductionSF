@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Maintenance Follow Up Activity - Confirmation of Satisfaction</name>
+    <style>none</style>
+    <subject>Maintenance Follow Up</subject>
+    <textOnly>You recently submitted a request for {!Project_Item__c.MaintenanceCategoryGlobal__c} Maintenance and our vendor has notified us that the work is now complete. Please confirm the repair status below.
+
+Repaired     Not Repaired
+
+
+
+
+Thank you,
+
+Premier Property Management Group</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

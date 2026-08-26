@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Blank_Letterhead</letterhead>
+    <name>ehind w/ Open leads</name>
+    <style>freeForm</style>
+    <subject>Memphis.Dallas.Houston Invest- Let&apos;s Connect</subject>
+    <textOnly>Hello,
+
+Thanks for downloading our ebook on purchasing out-of-area real estate investments. I&apos;d love to answer any questions you have about the ebook and passive income real estate investing. CLICK HERE to view my calendar and schedule a 15 minute call for whichever time works best for you.
+
+I&apos;ll be following up soon in case you didn&apos;t receive this email!
+
+Best Regards,
+
+Allen Nason
+Portfolio Advisor
+allennason@memphisinvest.com
+901-505-0733</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

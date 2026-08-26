@@ -1,0 +1,3 @@
+We completed the Buy Back of the house at {!Assessment__c.Name}.
+
+The buy back was completed on {!Assessment__c.MI_Purch_Date__c} (we closed on the house on that date).

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email automation to send out after the first PMA opportunity is closed</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Blank_Letterhead</letterhead>
+    <name>New Outside Property Assigned</name>
+    <style>freeForm</style>
+    <subject>New Outside Property - {!Opportunity.Account}</subject>
+    <textOnly>The following has been brought on an Outside Property:
+
+Owner : {!Opportunity.Account}
+
+Property : {!Opportunity.Name}
+
+Please visit the link below and confirm if you are the customer service representative assigned:
+
+https://ppmg.lightning.force.com/{!Opportunity.AccountId}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

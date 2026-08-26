@@ -1,0 +1,5 @@
+A Budget Review is now needed for the following Project:
+
+Project Name:  {!Project__c.Name}
+Project Manager:  {!Project__c.Project_Manager__c}
+Project Link:  {!Project__c.Link}

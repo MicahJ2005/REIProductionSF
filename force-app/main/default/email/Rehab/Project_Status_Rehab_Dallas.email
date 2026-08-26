@@ -1,0 +1,11 @@
+Go on Rehab:
+Market: {!Project__c.Market__c}
+{!Project__c.Name}
+{!Project__c.City__c}
+{!Project__c.Zip_Code__c}
+{!Project__c.Rehab_Budget_Final_Budget__c}
+{!Project__c.Project_Code__c}
+Owner Occ: {!Project__c.00N3A00000Cg7FR}
+Wholetail: {!Project__c.00N3A00000CgBQS}
+Roof Budget: {!Assessment__c.Roof__c}
+Please Rehab and Rent like normal

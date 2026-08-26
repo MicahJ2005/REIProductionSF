@@ -1,0 +1,93 @@
+<html>
+     <body>
+           <p style="margin-bottom:0px;">The Vendor has made changes to the profile that need your approval.</p>
+           <p style="margin-bottom: 5px;">The following changes have been requested:</p>
+            <table style="width:60%; border: 1px solid black; margin-left:30px;">
+                  <tr>
+                       <th style="border: 1px solid black;  border-collapse: collapse; width:20%; text-align:center; font-weight:bold;"> Change Request For </th>
+                        <th style="border: 1px solid black;  border-collapse: collapse; width:40%; text-align:center; font-weight:bold;"> New Value </th>
+                       <th style="border: 1px solid black;  border-collapse: collapse; width:40%; text-align:center; font-weight:bold;"> Old Value </th>
+                   </tr>
+
+                    <tr>
+                       <td style="border: 1px solid black;  border-collapse: collapse;  text-align:center; font-weight:bold;"> Billing Email </td>
+                       <td style="border: 1px solid black;  border-collapse: collapse;  text-align:center; ">{!Account.Billing_Email__c} </td>
+                       <td style="border: 1px solid black;  border-collapse: collapse;  text-align:center; "> {!Account.Old_Billing_Email__c}</td>
+                   </tr>
+                   
+                    <tr>
+                       <td style="border: 1px solid black;  border-collapse: collapse;  text-align:center; font-weight:bold;"> Billing State </td>
+                       <td style="border: 1px solid black;  border-collapse: collapse;  text-align:center; ">{!Account.BillingState} </td>
+                       <td style="border: 1px solid black;  border-collapse: collapse;  text-align:center; "> {!Account.Old_Billing_State__c}</td>
+                   </tr>
+
+                   <tr>
+                       <td style="border: 1px solid black;  border-collapse: collapse; text-align:center; font-weight:bold;">Billing Street</td>
+                       <td style="border: 1px solid black;  border-collapse: collapse; text-align:center;"> {!Account.BillingStreet} </td>
+                       <td style="border: 1px solid black;  border-collapse: collapse; text-align:center; ">{!Account.Old_Billing_Street__c} </td>
+                   </tr>
+
+                    <tr>
+                       <td style="border: 1px solid black;  border-collapse: collapse;  text-align:center; font-weight:bold;"> Billing Postal Code </td>
+                       <td style="border: 1px solid black;  border-collapse: collapse;  text-align:center;"> {!Account.BillingPostalCode} </td>
+                       <td style="border: 1px solid black;  border-collapse: collapse;  text-align:center;"> {!Account.Old_Billing_PostalCode__c} </td>
+                   </tr>
+                   
+                   <tr>
+                       <td style="border: 1px solid black;  border-collapse: collapse;  text-align:center; font-weight:bold;"> Billing City </td>
+                       <td style="border: 1px solid black;  border-collapse: collapse;  text-align:center;"> {!Account.BillingCity} </td>
+                       <td style="border: 1px solid black;  border-collapse: collapse;  text-align:center;"> {!Account.Old_Billing_City__c} </td>
+                   </tr>
+
+                   <tr>
+                       <td style="border: 1px solid black;  border-collapse: collapse; text-align:center; font-weight:bold;">Maintenance Categories</td>
+                       <td style="border: 1px solid black;  border-collapse: collapse; text-align:center;"> {!Account.Maint_Category_1__c} </td>
+                       <td style="border: 1px solid black;  border-collapse: collapse; text-align:center;">{!Account.Old_Maint_Category_1__c}</td>
+                   </tr>
+
+                   <tr>
+                       <td style="border: 1px solid black;  border-collapse: collapse; text-align:center; font-weight:bold;">Rehab Categories</td>
+                       <td style="border: 1px solid black;  border-collapse: collapse; text-align:center;">{!Account.Category_1__c}</td>
+                       <td style="border: 1px solid black;  border-collapse: collapse; text-align:center;">{!Account.Old_Category_1__c}</td>
+                   </tr>
+
+                   <tr>
+                       <td style="border: 1px solid black;  border-collapse: collapse; text-align:center; font-weight:bold;">Market </td>
+                       <td style="border: 1px solid black;  border-collapse: collapse; text-align:center;">{!Account.Market__c}</td>
+                       <td style="border: 1px solid black;  border-collapse: collapse; text-align:center;">{!Account.Old_Market__c}</td>
+                   </tr>
+
+                   <tr>
+                       <td style="border: 1px solid black;  border-collapse: collapse; text-align:center; font-weight:bold;">Bank Name</td>
+                       <td style="border: 1px solid black;  border-collapse: collapse; text-align:center;">{!Account.Bank_Name__c}</td>
+                       <td style="border: 1px solid black;  border-collapse: collapse; text-align:center;">{!Account.Old_Bank_Name__c}</td>
+                   </tr>
+
+                   <tr>
+                       <td style="border: 1px solid black;  border-collapse: collapse; text-align:center; font-weight:bold;">Routing Number</td>
+                       <td style="border: 1px solid black;  border-collapse: collapse; text-align:center;">{!Account.Routing_Number__c}</td>
+                       <td style="border: 1px solid black;  border-collapse: collapse; text-align:center;">{!Account.Old_Routing_Number__c}</td>
+                   </tr>
+
+                   <tr>
+                       <td style="border: 1px solid black;  border-collapse: collapse; text-align:center; font-weight:bold;">Account Number</td>
+                       <td style="border: 1px solid black;  border-collapse: collapse; text-align:center;">{!Account.Account_Number__c}</td>
+                       <td style="border: 1px solid black;  border-collapse: collapse; text-align:center;">{!Account.Old_AccountNumber__c}</td>
+                   </tr>
+
+                   <tr>
+                       <td style="border: 1px solid black;  border-collapse: collapse; text-align:center; font-weight:bold;">Account Type</td>
+                       <td style="border: 1px solid black;  border-collapse: collapse; text-align:center;">{!Account.Account_Type__c}</td>
+                       <td style="border: 1px solid black;  border-collapse: collapse; text-align:center;">{!Account.Old_Account_Type__c}</td>
+                   </tr>
+
+                    <tr>
+                       <td style="border: 1px solid black;  border-collapse: collapse; text-align:center; font-weight:bold;">License</td>
+                       <td style="border: 1px solid black;  border-collapse: collapse; text-align:center;">{!Account.License__c}</td>
+                       <td style="border: 1px solid black;  border-collapse: collapse; text-align:center;">{!Account.Old_License__c}</td>
+                   </tr>
+            </table>
+             <p style="margin-bottom: 5px;">The following Vendor Account requires approval:</p>
+             <a href="https://ppmg.my.salesforce.com/{!Account.Id}">{!Account.Name}</a>
+     </body>
+</html>

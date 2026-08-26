@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>New CJ Vacancy Email Alert Template</name>
+    <style>none</style>
+    <subject>New CJ Vacancy Alert - {!Project__c.Name} - {!Project__c.Market__c} - {!Project__c.Zip_Code__c}</subject>
+    <textOnly>{!Project__c.Name}
+has now gone vacant. Customer service please notify the owner. The rehab department will be sending a move out list to the owner promptly.
+
+
+Owner: {!Project__c.View_Account_Name__c}
+
+Move Out Manager - {!Project__c.Project_Manager__c}
+
+{!Project__c.Link}
+
+Thank you,
+Renovation Department</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

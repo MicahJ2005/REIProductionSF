@@ -1,0 +1,13 @@
+Address: {!Application__c.Address__c}
+Application Status: {!Application__c.Status__c}
+
+Notes: {!Application__c.Notes__c}
+
+Agent: {!Application__c.Agent__c}
+Other Agent Name:  {!Application__c.Other_Agent_Name__c}
+Applicant 1: {!Application__c.Applicant_1__c}
+Applicant 2: {!Application__c.Applicant_2__c}
+Applicant 3: {!Application__c.Applicant_3__c}
+Applicant 4: {!Application__c.Applicant_4__c}
+Phone Number: {!Application__c.Phone_Number__c}
+Application Fee Paid: {!Application__c.Application_Fee__c}

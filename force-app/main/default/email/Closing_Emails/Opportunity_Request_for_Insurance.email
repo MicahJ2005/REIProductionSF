@@ -1,0 +1,23 @@
+Request for Property Insurance from:
+Ins Carrier: {!Opportunity.Insurance_Carrier__c}
+
+1.  Property Street Address:  {!Opportunity.Name}
+2.  Property City:  {!Opportunity.Property_City__c}
+3.  Property State:  {!Opportunity.Prop_State__c}
+4.  Property Zip:  {!Opportunity.Property_Zip__c}
+5.  Estimated Closing Date: {!Opportunity.Closing_Date__c}
+6.  Property Sale Amount: {!Opportunity.Amount} 
+
+4.  Purchase Method: {!Opportunity.Purchase_Method__c} 
+5.  Lender (if any) : {!Opportunity.Lender__c} 
+6.  Title Company: {!Opportunity.Title_Company__c} 
+
+7.  Contact Name: Katie Fields 
+8.  Contact Email: katie@memphisinvest.com
+9.  Contact Phone: 901.312.1794
+10. Buyer Address: {!Account.BillingAddress}
+11. Year Built: {!Opportunity.Year_Built_Old__c}
+12. Square Feet:  {!Opportunity.Sq_Ft__c}
+13. Pool: No
+14: Estimated Monthly Rent: {!Opportunity.Rent_Range__c} 
+15. Roof: {!Project__r.Remaining_Years_on_Roof__c}

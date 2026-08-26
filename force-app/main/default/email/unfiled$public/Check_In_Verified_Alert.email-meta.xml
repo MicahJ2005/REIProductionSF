@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Alert for bag pick up at check in</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Check In Verified Alert</name>
+    <style>none</style>
+    <subject>Arrival: {!Lead.LastName}, {!Lead.FirstName} AND {!Lead.00N3000000Brg3G}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

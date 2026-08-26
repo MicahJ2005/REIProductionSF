@@ -1,0 +1,15 @@
+You have submitted a work order in regard to the HVAC system not functioning properly. We are dispatching a vendor to the property to assess and fix any problem. 
+<br/><br/>
+Please be sure that you have:
+<br/>
+<ul>
+<li>Changed the filter within the last 30 days;</li>
+<li>Checked the breakers to ensure they haven't tripped into the OFF position;</li>
+<li>Checked the thermostat batteries; and</li>
+<li>Verified that the pilot light is lit and that the furnace/air handler is plugged in.</li>
+</ul>
+If the vendor comes and the problem is related to any of the listed items, a service charge will be applied to your account. 
+ <br/><br/>
+Please be expecting a call from the vendor. You likely will not recognize their phone number, so make sure you answer any unknown calls please.
+<br/>
+<p style="color:white"> [ref: {!Project_Item__c.Id}] [userRef: {!$User.Id}]</p>

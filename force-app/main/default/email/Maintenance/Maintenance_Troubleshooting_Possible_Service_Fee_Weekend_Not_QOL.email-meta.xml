@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Maintenance Troubleshooting / Possible Service Fee Weekend Not QOL</name>
+    <style>none</style>
+    <subject>Maintenance Troubleshooting / Possible Service Fee</subject>
+    <textOnly>You have contacted our office after hours in regard to a Maintenance Request. Your message is very important to us. While every attempt will be made to resolve your issue, please be sure to also contact the office Monday morning so that we can assess the situation at hand and provide the best care and solution for the problem you are currently facing. After hours and weekend requests are prioritized according to quality of life. Thank you for your patience and understanding, Premier Maintenance.
+
+[ref: {!Project_Item__c.Id}] [userRef: {!$User.Id}]</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

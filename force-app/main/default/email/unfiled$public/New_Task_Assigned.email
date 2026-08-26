@@ -1,0 +1,6 @@
+A new task has been assigned to you.
+
+Task Link: {!Task.Link}
+Subject: {!Task.Subject}
+Due Date: {!Task.ActivityDate}
+Comments: {!Task.Description}

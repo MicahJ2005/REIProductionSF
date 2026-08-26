@@ -1,0 +1,14 @@
+<br/><br/>
+ATTENTION REQUIRED – EXPIRED DOCUMENTS
+<br/><br/>
+{!Account.Name},
+<br/><br/>
+ATTENTION – VENDOR ACCOUNT NEEDS UPDATING SEE BELOW
+<br/><br/>
+{!Account.Attachment_Type__c}  :   {!Account.Expiration_Date__c}
+<br/><br/>
+If any of your Required Documents reach a status of expired, we will not be able to utilize your services until you can provide current documents.<br/><br/>
+ 
+Click here <a href="{!$Label.VendorCommunityURL + '/VendorPortalAccountProfile'}">VendorPortalAccountProfile</a> to access your Vendor Profile and submit your updated documents for review and approval.
+
+Regards,

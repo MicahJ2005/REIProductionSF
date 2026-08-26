@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MemphisInvest</letterhead>
+    <name>FB Cash/NRC $100k Reconnect</name>
+    <style>freeForm</style>
+    <subject>Touching Base: I&apos;ve got some great properties to share with you</subject>
+    <textOnly>{!Contact.HomePhone},
+
+It&apos;s been a little while since we last spoke, so I wanted to reach out to you to see if you are ready to expand upon your current portfolio.
+
+Our acquisitions team has knocked it out of the park the last 90 days or so, so I&apos;ve gotten some really nice new properties this week. I will attach a few to this email for you to take a look.
+
+If you haven&apos;t already taken a look at our 2 newest markets, Oklahoma City and Little Rock, then you are missing the boat! These two markets are currently kicking out some of our best properties.
+
+**Prices are slowly going up in all five markets, as are interest rates, so your buying power is stronger today than it likely will be 6-12 months from now, so if you are ready to rock and roll and want to expand your portfolio, please use the link below to schedule a call with me asap.
+
+**Also, non-recourse rates are down to 8.4% through Bridge Capital and they will do 20-year loans now, which is a fantastic improvement for our clients compared to years past.
+
+You can also text me at 901-481-6842 if you are interested in jumping on one of the properties attached to this email.
+
+Thanks,
+
+Marq</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

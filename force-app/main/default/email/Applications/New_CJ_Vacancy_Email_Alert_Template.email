@@ -1,0 +1,12 @@
+{!Project__c.Name}<br>
+has now gone vacant. Customer service please notify the owner. The rehab department will be sending a move out list to the owner promptly.<br>
+<br>
+<br>
+Owner: {!Project__c.View_Account_Name__c}<br>
+<br>
+Move Out Manager - {!Project__c.Project_Manager__c}<br>
+<br>
+{!Project__c.Link}<br>
+<br>
+Thank you,<br>
+Renovation Department

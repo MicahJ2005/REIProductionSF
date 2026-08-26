@@ -1,0 +1,9 @@
+House: {!House__c.Name}
+One of these values was recently changed.  Please check your rental marketing to be sure the information is correct.  
+
+Beds:  {!House__c.00N3A00000Cg79S}
+Baths:  {!House__c.00N3A00000Cg79R}
+Sq Feet:  {!House__c.Sq_Feet__c}
+
+Change made by: {!House__c.LastModifiedBy}
+Chande made on:  {!House__c.LastModifiedDate}

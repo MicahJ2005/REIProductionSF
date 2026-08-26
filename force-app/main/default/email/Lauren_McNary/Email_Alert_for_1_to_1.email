@@ -1,0 +1,10 @@
+Please look at this lead. They requested a 1 to 1 strategy call with an Adviser.  Please follow up with them to schedule a call.
+https://na45.salesforce.com/{!Lead.Id}
+
+Advisor:  {!Lead.OwnerFullName}
+{!Lead.FirstName} {!Lead.LastName}
+Best Day: {!Lead.Best_Day__c} 
+Best Time: {!Lead.Best_Time__c}
+
+Thanks,
+Drew

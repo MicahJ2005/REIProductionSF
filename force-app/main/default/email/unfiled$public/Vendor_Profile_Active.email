@@ -1,0 +1,5 @@
+{!Account.Name},
+<br/><br/>
+This is to inform you that your Vendor Profile has been set to "Active". For further details, please view your profile.
+<br/><br/>
+<a href="{!$Label.VendorCommunityURL & 'VendorPortalAccountProfile'}">VendorPortalAccountProfile</a>

@@ -1,0 +1,17 @@
+Hello {!Assessment__c.Assessment_Requested_By__c},
+
+A change has been recorded in the Assessment for
+{!Assessment__c.Assessment_Complete_Address__c}. Please review the following field changes:
+
+New Value:
+
+Car Storage/Parking: {!Assessment__c.Car_Storage_Parking__c}
+
+Previous Value:
+
+Car Storage/Parking: 
+{!Assessment__c.Old_Car_Storage_Parking_Value__c}
+
+Thanks,
+
+{!Assessment__c.LastModifiedBy}

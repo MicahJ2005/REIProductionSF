@@ -1,0 +1,6 @@
+Offer Sheet approved, please proceed.
+
+Opportunity Name:  {!Opportunity.Name}
+Opportunity Owner: {!Opportunity.OwnerFullName}
+Opportunity Link:     {!Opportunity.Link}
+Current Offer:          {!Opportunity.Current_Offer__c}

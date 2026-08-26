@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Blank_Letterhead</letterhead>
+    <name>Amanda Lead 2</name>
+    <style>freeForm</style>
+    <subject>Your Scheduled Appointment - Reply to Confirm</subject>
+    <textOnly>Hi {!Lead.FirstName}:
+
+A quick thank you for your interest in our team. The next step after you&apos;ve had a chance to review our site is to scheduling a one:one conversation. In order to align our busy schedules efficiently CLICK HERE to set a time.
+
+We have a more personable approach than most so it&apos;s only fair to set proper expectations prior to our call. During our conversation, we are going to explore:
+- What your objectives are,
+- Your resources, your plan, &amp;
+- How we may or may not fit in &quot;your unique blueprint.&quot;
+
+After, we will decide our next action steps with an accountable deadline to get the results you are looking for. Fair enough?
+
+Looking forward to our conversation {!Lead.FirstName}!
+
+Respectfully,
+
+Amanda Holbrook &amp; Eric Anthos
+
+Amanda Holbrook
+Senior Portfolio Advisor
+Amanda@MemphisInvest.Com
+CLICK HERE to schedule a 15 minute phone call with me
+Office: 901-505-0731 Cell: 440-341-3685 Fax: 901-201-5803
+
+Eric Anthos
+Portfolio Relations Manager
+Eric@memphisinvest.com
+
+Office:901-505-0734 Cell: 440-822-4758
+
+PS: Once you have the opportunity to get to know us on a personal level you&apos;ll see how our team is dedicated to the supreme service level of our 1100+ investors that currently hold 3000+ properties across our 3 markets.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

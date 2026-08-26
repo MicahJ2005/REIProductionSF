@@ -1,0 +1,16 @@
+Thanks for requesting a 1-to-1 call with our team. Your experience as an investor is very important to the Clothier family. These 1 to 1 calls are designed to be informative and to help you get the answers you need.<br><br>
+
+Please {!User.Time_Trade_Link__c} for a day/time that works well for you.<br><br>
+
+Before our call, we would love for you to review our <a href="https://www.reination.com/company/about-us"> company history page</a>. With 2 decades of experience and over 7,600 properties managed for our clients, there is excellent information to help you prepare for our call.<br><br>
+
+In addition, many of our Investors are active on our private Facebook group.  The group is a closed group with no solicitations, but regular posts with videos about our Property Management performance level, advice from the owners on timely real estate topics and interviews with our investors on their customer journey and experience.  We would love for you to join us - - - You are personally invited to the <a href="https://www.facebook.com/groups/reinationgroup?utm_source=WiseStamp&amp%3Butm_medium=email&amp%3Butm_term=&amp%3Butm_content=&amp%3Butm_campaign=signature">REI Nation - Profiting from Passive Real Estate Group</a>.<br><br>
+
+Looking forward to speaking with you soon.<br><br>
+
+Sincerely,<br><br>
+<p style="color:white;"> REF: {!Lead.Id} </p>
+
+{!User.FirstName} {!User.LastName}
+Email: {!User.Email}
+Phone: {!User.Phone}

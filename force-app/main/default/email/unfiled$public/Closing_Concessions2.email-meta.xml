@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Blank_Letterhead</letterhead>
+    <name>Closing Concessions2</name>
+    <style>freeForm</style>
+    <subject>Closing Concessions - {!Opportunity.Name} - {!Opportunity.Market__c}</subject>
+    <textOnly>Opportunity: {!Opportunity.Name} - {!Opportunity.Market__c}
+
+Investor: {!Opportunity.Account}
+
+Waive Placement Fee: {!If(Opportunity.Waive_Placement_Fee__c,&quot;Yes&quot;,&quot;&quot;)}
+{!If(Opportunity.Waive_Placement_Fee_Post_Appraisal__c,&quot;Yes&quot;,&quot;&quot;)}
+
+WOW Status: {!Opportunity.WOW_Status__c}
+
+PM Fee REDUCTION %: {!Opportunity.Property_Management_Reduction__c}{!Opportunity.Property_Management_Reduction_P_A__c}
+Number of Months: {!Opportunity.For_x_Months__c}{!Opportunity.For_x_Months_Post_Appraisal__c}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

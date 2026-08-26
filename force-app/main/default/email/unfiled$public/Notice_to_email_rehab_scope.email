@@ -1,0 +1,7 @@
+For the house at:  
+{!Opportunity.00N3000000AfTf0}
+{!Opportunity.Property_City__c}, {!Opportunity.Prop_State__c}, {!Opportunity.Property_Zip__c}
+
+The Scope for this house should now be ready in Sharefile.  Please email the scope to the buyer who has this property under contract.  
+
+https://na1.salesforce.com/{!Opportunity.Id}

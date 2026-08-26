@@ -1,0 +1,7 @@
+The buyback of {!Opportunity.Opportunity_Complete_Address__c} has begun.<br>
+<br>
+Owner Name: {!Opportunity.Account}<br>
+CS Rep: {!Opportunity.Customer_Service__c}<br>
+Closing Date: {!Opportunity.Contract_Closing_Date__c}<br>
+<br>
+-{!User.FirstName} {!User.LastName}

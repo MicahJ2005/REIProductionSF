@@ -1,0 +1,5 @@
+You have a new Lead. 
+{!Lead.FirstName} {!Lead.LastName}
+
+Finished the 7 Day Marketing Funnel.  
+/{!Lead.Id}

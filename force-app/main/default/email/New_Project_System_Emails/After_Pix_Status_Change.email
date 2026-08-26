@@ -1,0 +1,4 @@
+After Pics Status: {!Project__c.After_Pix__c}
+Pic Notes: {!Project__c.Picture_Notes__c}
+
+Some/all after pics have been uploaded to Google Drive. Please update all rental marketing with the new pictures.

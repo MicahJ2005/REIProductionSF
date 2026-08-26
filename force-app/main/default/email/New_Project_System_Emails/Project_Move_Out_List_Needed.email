@@ -1,0 +1,5 @@
+A new move out has been created in Salesforce and the status is "Need List". The address is 
+{!Project__c.Name}
+{!Project__c.Market__c}
+{!Project__c.City__c}
+{!Project__c.Zip_Code__c}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MemphisInvest</letterhead>
+    <name>Why 40% of our clients live in California</name>
+    <style>freeForm</style>
+    <subject>Case Study: Why 40% of Memphis Invest Clients Live in California and invest with us!</subject>
+    <textOnly>{!Lead.FirstName},
+
+You probably did not know this, but almost 40% of our clients live in California while investing with our team in our 5 investment markets- Memphis, Dallas-Ft. Worth, Houston, Oklahoma City, and Little Rock.
+
+Why do so many people from the Golden State choose Memphis Invest?  You already know the answer, but have you ever seen the math that makes it such an easy decision to invest outside your home area?
+
+Your money just goes a lot farther with us, plain and simple. You wouldn&apos;t want to buy a $100-200k property in most parts of California even IF you could find one. One client said to me years ago, &quot;For $150k I couldn&apos;t buy a dog house in a war zone in California.&quot;
+
+Let&apos;s do a simple side by side comparison. This link shows you a typical 3/2 outside Los Angeles price right at $600,000, in a pretty nice area as far as I can tell. Using Rentometer, the average expected rent for this property would be $2,567/month
+
+This link takes you to a property that a Memphis Invest client recently acquired at the $150k price point in our Dallas market. This property will rent for $1395/month.
+
+What seems like the best investment decision to you- acquire the 1 California property for $600k, put all your eggs in that 1 basket, collect $2567/month and then pay state income taxes on it, OR...
+
+With that same $600k you have sitting on go, you can acquire 4 properties just like this Dallas property and collect a total of $5180/month, while also diversifying your risk across 4 properties rather than one.
+
+And oh yeah, Texas extremely landlord friendly laws and no state income tax.
+
+Please use this link to schedule a call with me if you are ready to talk about taking the next steps and start building your portfolio with us.
+
+Take care.
+
+Marq
+
+
+
+--
+
+
+Get to Know Marq Cobb
+
+Marq Cobb
+
+Sr. Portfolio Advisor
+
+Cell: 901.481.6842
+
+Office Direct: 901.505.0723
+
+
+www.MemphisInvest.com
+
+cobb@memphisinvest.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

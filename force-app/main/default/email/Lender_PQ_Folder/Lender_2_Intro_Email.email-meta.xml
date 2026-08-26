@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Lender 2 Intro Email</name>
+    <style>none</style>
+    <subject>REI Nation Lender Introduction/Title Verification for {!Opportunity.Account}</subject>
+    <textOnly>Hello {!Opportunity.Account},
+
+Thank you for your time over our last phone call and congratulations on moving forward. The next step toward purchasing properties from REI Nation is to verify how you would like to Title your property. Your title choice may require further documentation, so please see the details below regarding title types and title verification requirements.  We will need to receive this information prior to a sales contract being created and transmitted to you when the time comes.
+
+I have copied one of our preferred Lender contacts  in this email as a way of introduction, so please meet {!Opportunity.Intro_Lender_2__c} with {!Opportunity.Intro_Lender_2_Account__c}. I look forward to connecting with you as soon as {!Opportunity.Intro_Lender_2__c} has completed your pre-approval.
+
+Currently, our records indicate that you have elected to Title this purchase in a {!Opportunity.Title_Name_Type__c} with a purchase method of {!Opportunity.Purchase_Method__c}. If this information is not correct, please reply to this email with the Title Type you have chosen. Keep in mind that your choices are as follows:
+
+Title Type Purchase Methods
+Personal Name(s)  Cash, Conventional, SD-IRA Non-Recourse, SD-IRA Cash, Non-Recourse, or Non-Conventional
+LLC  Cash, SD-IRA Non-Recourse, SD-IRA Cash, or Non-Recourse
+Trust  Cash, Conventional, SD-IRA Non-Recourse, SD-IRA Cash, Non-Recourse, or Non-Conventional
+
+
+
+Title Verification is dependent on the Title Type and should be emailed to me as soon as possible.  Title Verification requirements are as follows:
+
+Title Type Verification Requirement
+Personal Name(s)  Full Legal Name(s)
+LLC   Operating Agreement, Articles of Organization, and IRS Notice of Assignment of EIN
+Trust  Trust Abstract, Identifying the Trustee(s) of the Trust
+
+
+
+Sincerely,
+
+{!User.FirstName}
+
+{!User.Sig2__c}
+
+REF: {!Opportunity.Id}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

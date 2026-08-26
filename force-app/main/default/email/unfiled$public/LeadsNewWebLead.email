@@ -1,0 +1,17 @@
+*** NEW LEAD RECEIVED***
+
+This is a new Lead in SalesForce.  
+Lead Name:  {!Lead.Name}  
+
+Activity: {!Lead.hubspot__Recent_Conversion_Event__c}
+
+Referral Info:  {!Lead.Affiliate_or_Referral_Info__c}
+Lead Source: {!Lead.LeadSource}
+
+Address:  {!Lead.Address}
+City:           {!Lead.City}
+State:        {!Lead.State}
+Phone:     {!Lead.Phone}
+Email:      {!Lead.Email}
+
+Click on the link to access the lead directly:  {!Lead.Link}

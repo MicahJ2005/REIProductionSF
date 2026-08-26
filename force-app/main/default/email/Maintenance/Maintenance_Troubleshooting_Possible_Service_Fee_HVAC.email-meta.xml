@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Maintenance Troubleshooting / Possible Service Fee HVAC</name>
+    <style>none</style>
+    <subject>Maintenance Troubleshooting / Possible Service Fee</subject>
+    <textOnly>You have submitted a work order in regard to the HVAC system not functioning properly. We are dispatching a vendor to the property to assess and fix any problem.
+
+Please be sure that you have:
+
+Changed the filter within the last 30 days;
+Checked the breakers to ensure they haven&apos;t tripped into the OFF position;
+Checked the thermostat batteries; and
+Verified that the pilot light is lit and that the furnace/air handler is plugged in.
+
+If the vendor comes and the problem is related to any of the listed items, a service charge will be applied to your account.
+
+Please be expecting a call from the vendor. You likely will not recognize their phone number, so make sure you answer any unknown calls please.
+
+[ref: {!Project_Item__c.Id}] [userRef: {!$User.Id}]</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

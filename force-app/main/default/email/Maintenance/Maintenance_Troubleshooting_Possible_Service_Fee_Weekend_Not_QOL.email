@@ -1,0 +1,3 @@
+You have contacted our office after hours in regard to a Maintenance Request. Your message is very important to us. While every attempt will be made to resolve your issue, please be sure to also contact the office Monday morning so that we can assess the situation at hand and provide the best care and solution for the problem you are currently facing. After hours and weekend requests are prioritized according to quality of life. Thank you for your patience and understanding, Premier Maintenance.
+<br/>
+<p style="color:white"> [ref: {!Project_Item__c.Id}] [userRef: {!$User.Id}]</p>

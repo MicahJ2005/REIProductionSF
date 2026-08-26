@@ -1,0 +1,6 @@
+<messaging:emailTemplate subject="Approval Rejected" recipientType="User" relatedToType="Account">
+<messaging:htmlEmailBody >
+Your request has been rejected.  <br/><br/>
+<c:ApprovalRequestComments relatedToId="{!relatedTo.id}"/>
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

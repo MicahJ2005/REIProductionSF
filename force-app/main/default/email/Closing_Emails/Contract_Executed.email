@@ -1,0 +1,7 @@
+{!Opportunity.Name}
+{!Opportunity.Contract_Executed__c}
+{!Opportunity.Account}   
+
+A Contract Executed date has been entered into the Opportunity. 
+
+Please proceed.

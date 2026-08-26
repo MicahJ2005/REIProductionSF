@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MemphisInvest</letterhead>
+    <name>5 FAQ</name>
+    <style>freeForm</style>
+    <subject>5 Things You Need to Know About Memphis Invest</subject>
+    <textOnly>1. Memphis Invest offers fully turnkey properties in Memphis, Dallas, Houston, Oklahoma City, and Little Rock. We purchase distressed properties, rehab them way beyond your typical rental property, and then we offer them to our clients for purchase. We also do all of our own property management, so as soon as the property is finished with rehab our rental team begins showing the property to prospective residents.
+
+
+2. We manage 4500+ single family (exclusively- we do not do MF) properties, and we do not manage outside properties that were not purchased from us. We want to devote our management resources towards taking care of the clients who invested with us. Our average resident occupies the property for 4.5 – 5 years on average. Our average vancancy per property is less than 4% per year, and our average annual maintenance is less than 5% of gross rents.
+
+
+3. Our prices vary from 100-200k per property, and we work with investors who have the financial means and the desire to build a true portfolio of 3+ properties over time. This means that you will be looking to commit $100k+ to acquiring your first 3 properties
+
+with us over the next 12-36 months depending on your investment timeline.
+
+
+4. The typical cash on cash return on our properties net of insurance, taxes, and property mgmt fees is 6.5-7.5%, and the average leveraged net return is between 10-15% depending on the property and the financing structure taken on by the client.
+
+
+5.. We have everything an out of state investor could ever need to build their portfolio with us, including financing partners (both 20% down conventional lenders and non-recourse lenders for those looking to leverage a self-directed IRA or solo 401k). If you have a pre-existing relationship with a lender who has already closed an out-of-state investment property purchase for you, then that might be an option for you to use as well.
+
+
+If this sounds like what you are looking for as an investor, then your next step is to CLICK RIGHT HERE AND SCHEDULE OUR FIRST CALL.
+
+
+Looking forward to speaking with you soon.
+
+--
+
+Marq Cobb
+Memphis Invest, GP
+
+
+
+CLICK HERE TO SCHEDULE A 15 MINUTE CALL WITH ME
+THIS WEEK!
+T: +901.481.6842
+F: +901.201.5803
+E: cobb@memphisinvest.com
+http://www.MemphisInvest.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

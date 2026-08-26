@@ -1,0 +1,11 @@
+This Assessment has just been completed:
+
+{!Assessment__c.Name}, {!Assessment__c.Zip__c}
+Beds {!Assessment__c.Bedrooms_Old__c}, Baths {!Assessment__c.Bathrooms_Old__c}, Car Storage {!Assessment__c.Car_Storage__c}, 
+Rent Range {!Assessment__c.00N30000009VvAc}
+Code {!Assessment__c.Code__c}
+
+Rehab Budget (manually entered): {!Assessment__c.Rehab_Budget__c}
+
+Click Here to access the full record for this assessment:
+https://na1.salesforce.com/{!Assessment__c.Id}

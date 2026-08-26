@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Vendor Profile Update Approval Request</name>
+    <style>none</style>
+    <subject>Vendor Profile Update Approval Request</subject>
+    <textOnly>The Vendor has made changes to the profile that need your approval.
+
+The following changes have been requested:
+
+Change Request For   New Value   Old Value
+Billing Email   {!Account.Billing_Email__c}    {!Account.Old_Billing_Email__c}
+Billing State   {!Account.BillingState}    {!Account.Old_Billing_State__c}
+Billing Street   {!Account.BillingStreet}   {!Account.Old_Billing_Street__c}
+Billing Postal Code    {!Account.BillingPostalCode}    {!Account.Old_Billing_PostalCode__c}
+Billing City    {!Account.BillingCity}    {!Account.Old_Billing_City__c}
+Maintenance Categories   {!Account.Maint_Category_1__c}   {!Account.Old_Maint_Category_1__c}
+Rehab Categories  {!Account.Category_1__c}  {!Account.Old_Category_1__c}
+Market   {!Account.Market__c}  {!Account.Old_Market__c}
+Bank Name  {!Account.Bank_Name__c}  {!Account.Old_Bank_Name__c}
+Routing Number  {!Account.Routing_Number__c}  {!Account.Old_Routing_Number__c}
+Account Number  {!Account.Account_Number__c}  {!Account.Old_AccountNumber__c}
+Account Type  {!Account.Account_Type__c}  {!Account.Old_Account_Type__c}
+License  {!Account.License__c}  {!Account.Old_License__c}
+
+The following Vendor Account requires approval:
+
+{!Account.Name}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Blank_Letterhead</letterhead>
+    <name>Clients not s/w- Next purchase update</name>
+    <style>freeForm</style>
+    <subject>Quick Call With Your Portfolio Advisor</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+
+
+The first quarter of 2017 is drawing to a close and we haven&apos;t connected yet to discuss your investment goals for the fiscal year. My focus is specifically supporting our existing clients to continue their portfolio development. Due to having a limited 700 properties this year for our 1,400+ clients, it very important that we set a game plan for your next acquisition. If we include new investors that are looking to start building their portfolios, the scarcity of opportunities becomes even thinner.
+
+
+
+We want to emphasize that supporting our existing clients to build their portfolios is what is most important to us. We want to ensure we are able to provide the opportunities you need for portfolio growth. Please let me know when is a good time for us to jump on a quick call to discuss your next acquisition whether it be next month or next year.
+
+
+
+Best regards,
+
+
+Ashley Tinker
+
+Portfolio Advisor
+
+Tel: 901.505.0724
+
+Fax: 901.751.7187
+
+www.MemphisInvest.com
+
+ashley.tinker@memphisinvest.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

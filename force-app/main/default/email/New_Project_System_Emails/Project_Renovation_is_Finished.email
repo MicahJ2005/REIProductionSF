@@ -1,0 +1,5 @@
+Just an alert that:  {!Project__c.Name} 
+is now a finished renovation. You may proceed with the Closing. 
+
+Click for the Project record 
+{!Project__c.Link}

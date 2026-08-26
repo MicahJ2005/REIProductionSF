@@ -1,0 +1,29 @@
+Hello {!Contact.Name}, <br/><br/>
+
+Your property at {!Project_Item__c.House_Address__c} recently required 'Quality of Life' maintenance which had to be immediately addressed.  The cost to remedy the problem exceeded the $400 maintenance spending limit that is set forth in the Property Management Agreement.  We wanted to reach out and let you know, so there are no surprises on your upcoming statement.
+<br/><br/>
+{!Project_Item__c.Over_400_Description__c}
+<br/><br/>
+{!Project_Item__c.Name}
+<br/><br/>
+<b>
+<i>
+Note: All prices displayed above will include the maintenance fee unless otherwise noted. Bid fees may not be calculated in the prices above if multiple bids have been provided. We strive to avoid bid fees where possible and will only pass along the fees that are incurred.
+</i>
+</b>
+<br/><br/>
+Do not hesitate to contact your Customer Service Representative with any questions or concerns you may have.  
+<br/><br/>
+Please "REPLY TO ALL" when responding to this message.
+<br/><br/><br/>
+Your options for payment are as follows:
+<br/><br/>
+1. Mail a check to Premier Property Management Group LLC, PO Box 381887, Germantown, TN 38183
+<br/><br/>
+2. Log onto your owner portal in Propertyware where you can submit a payment via your bank account. Log on by clicking here:
+<br/>
+<a href="https://app.propertyware.com/pw/portals/ppmg/owner.action" target="_blank">https://app.propertyware.com/pw/portals/ppmg/owner.action</a>
+<br/><br/>
+To make a payment online: Log in, click Dashboard, then click "New Contribution" and follow the steps accordingly. In the comments section please notate the property address and a brief description of what your payment is for. You can also select which payment account you want this payment to come from (checking, savings, credit card, etc). If you are not set up to receive owner draws via ACH/Direct Deposit, you must first set up a new bank account by following the steps below. <br><br>
+You may now have multiple payment accounts associated with your portfolio (checking, savings, credit card). To set up multiple payment accounts, click on the arrow in the top right corner of the Dashboard, then click View Payment Information. Click New Account and fill in the required information, then click Save. 
+<p style="color:white"> [ref: {!Project_Item__c.Id}] [userRef: {!$User.Id}]</p>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MemphisInvest</letterhead>
+    <name>PQ: Supreme Lending (Anthony DiToma)</name>
+    <style>freeForm</style>
+    <subject>Memphis Invest Lender Pre-Qual Information</subject>
+    <textOnly>{!Lead.FirstName},
+
+As promised, here is the contact information for the lender so that you can get approved for the financing before we select your first property.
+
+Please use the link included in Graham&apos;s info to complete your financing application online, and please also email me to confirm that you have completed your application so that I can help you follow up for a quick approval.
+
+Thanks,
+
+Marq
+
+
+Anthony DiToma
+
+Loan Officer – NMLS #13002
+
+972-447-5694 – Direct
+
+903-421-1264 – Cell
+
+469-461-1356 – Fax
+
+14841 N. Dallas Pkwy - Suite 250 Dallas, TX 75254
+
+anthony.ditoma@supremelending.com
+
+http://anthonyditoma.supremelending.com
+
+
+
+
+
+--
+
+
+Click Here to schedule a 15-minute Phone Call
+
+Marq Cobb
+
+Sr. Portfolio Advisor
+
+Cell: 901.481.6842
+
+Office Direct: 901.505.0723
+
+
+www.MemphisInvest.com
+
+ashley.tinker@memphisinvest.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

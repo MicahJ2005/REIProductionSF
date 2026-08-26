@@ -1,0 +1,7 @@
+The move out repairs have started. Please add the property as Coming Soon on all marketing. 
+
+{!Project__c.Street_Address__c}
+{!Project__c.Street_Address_Line_2__c}
+ {!Project__c.City__c}
+{!Project__c.State__c}
+{!Project__c.Zip_Code__c}

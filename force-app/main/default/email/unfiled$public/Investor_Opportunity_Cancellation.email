@@ -1,0 +1,8 @@
+Sale of the house at {!Opportunity.Name} in {!Opportunity.Market__c}
+has been cancelled.  
+
+Cancellation Reason:  {!Opportunity.Cancellation_Reason__c}
+Cancellation Comments:  {!Opportunity.Cancellation_Comment__c}
+Investor:  {!Opportunity.Account}
+Opportunity Owner:  {!Opportunity.OwnerFullName}
+Opportunity Link:  {!Opportunity.Link}

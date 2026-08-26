@@ -1,0 +1,1 @@
+{!Assessment__c.Assessment_Full_Address__c} is currently in the process of being bought back from the investor {!NullValue(Contact.FirstName, "NO DATA")} . The current status is {!Assessment__c.Purchase_Status__c}

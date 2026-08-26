@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>New Building with Default House Alert</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MemphisInvest</letterhead>
+    <name>New Building with Default House Alert</name>
+    <style>freeForm</style>
+    <subject>New Building with Default House</subject>
+    <textOnly>Building {!PW_Building__c.Name} has been assigned a Default House and needs alignment.
+
+Please Review Here: https://ppmg--partial.sandbox.lightning.force.com/{!PW_Building__c.House__c}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

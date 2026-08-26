@@ -1,0 +1,30 @@
+APPLICANT(S) NAME:
+{!Application__c.Applicant_1__c}
+{!Application__c.Applicant_2__c}
+{!Application__c.Applicant_3__c}
+{!Application__c.Applicant_4__c}
+
+AGENT NAME: {!Application__c.Agent__c}
+
+DATE OF APPROVAL: {!Application__c.Decision_Made__c}
+
+ADDRESS APPLYING FOR: {!Application__c.Address__c}
+
+APPROVAL AMOUNT: {!Application__c.Rent_Amount__c}
+
+DEPOSIT AMOUNT: {!Application__c.Deposit_Required__c}
+
+REASON FOR HIGHER DEPOSIT: Reason_for_Higher_Deposit__c
+
+
+Thank you for applying! 
+We are pleased to inform you that your application has been approved!
+
+You are approved for our standard lease terms, which is a 2 year lease. Please be aware that the rent does increase by $25/$50 on year 2 of all of our standard leases. The increase amount is based on the rent amount of the home you choose.
+
+NEXT STEP: If you have not already chosen a property, please contact your agent as soon as possible to schedule an appointment to view homes in the price range for which you have been approved. 
+You will need to have deposit money available to secure the home for you. Our houses do rent quickly so it would be in your best interest to have more than 1 property in mind when you choosing a home.
+
+If you have already chosen a property our leasing department will be giving you a call within the next 24 hours.
+
+This is an automatic response. Please do not reply to this email.

@@ -1,0 +1,24 @@
+Can we add these properties to the MI Renovation Policy? 
+10,000 Deductible Basic Form with Liability no Loss of Rents
+To be paid at with credit card
+See attachment for details
+Please note mortgage holder of Southwest 
+Please use address below for clause.
+ 
+Southwest Bank – PO BOX 962020 – Fort Worth ,TX 76162
+
+Renovations
+  Property Street Address:  {!Assessment__c.Name}
+ Property City:  {!Assessment__c.City__c}
+ Property State: {!Assessment__c.State__c}
+ Property Zip:{!Assessment__c.Zip__c}
+ Loan Request 
+
+ Lender (if any) :
+
+ Year Built: {!Assessment__c.Year_Built_Old__c}. 
+Square Feet:  {!Assessment__c.Square_Ft__c}
+
+
+
+Please contact Deidre Sandifer at 901-312-1794 with questions regarding the setup for this insurance

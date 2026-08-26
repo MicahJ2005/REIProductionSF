@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Blank_Letterhead</letterhead>
+    <name>REI Nation : Schedule your 1-to-1 call here!</name>
+    <style>freeForm</style>
+    <subject>REI Nation: Schedule your 1-to-1 call here!</subject>
+    <textOnly>Thanks for requesting a 1-to-1 call with our team.
+
+Please use this link to book us a call for a day/time that works well for you.
+
+To make our first call as productive as possible, please take some time to review our company information that will cover many of your most basic questions about our company prior to our call.
+
+Looking forward to speaking with you soon.
+
+Sincerely,
+
+Ben
+
+Ben Riley
+Portfolio Advisor
+REI Nation
+215 360 9303
+benriley@reination.com
+www.reination.com
+1900 Exeter Rd, Suite 210, Germantown, TN 38138</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

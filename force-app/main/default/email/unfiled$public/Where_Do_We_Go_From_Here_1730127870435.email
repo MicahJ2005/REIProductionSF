@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" style="overflow-y: hidden;">
+<head><meta><meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Email Template</title>
+	<style type="text/css">body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      color: #333333;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 5px;
+    }
+    .header {
+      text-align: center;
+      padding: 20px 0;
+    }
+    .header img {
+      max-width: 150px;
+      height: auto;
+    }
+    .main-content h1 {
+      background-color: #134058;
+      color: #ffffff;
+      padding: 15px;
+      text-align: center;
+      margin: 0 0 20px;
+      border-radius: 5px;
+    }
+    .section {
+      padding: 20px;
+      line-height: 1.6;
+    }
+    .cta-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #134058;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      margin-top: 10px;
+      text-align: center;
+    }
+    .two-column {
+      display: flex;
+      gap: 15px;
+      padding: 20px 0;
+    }
+    .two-column img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+    .two-column-content {
+      flex: 1;
+      padding: 10px;
+    }
+    .two-column-image-container {
+      flex: 1;
+      max-width: 120px;
+    }
+    .trusted-lender-section {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 0;
+      align-items: center;
+      gap: 15px;
+    }
+    .trusted-lender-section img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #666666;
+      padding: 20px 0;
+    }
+	</style>
+</head>
+<body style="height: auto; min-height: auto;">
+<div class="container">
+<div class="header"><img alt="Company Logo" src="https://ppmg.my.salesforce.com/servlet/servlet.ImageServer?id=015PZ000002yf8o&oid=00D30000000pfXl&lastMod=1730128474000" /></div>
+
+<div class="main-content">
+<h1>Where Do We Go From Here?</h1>
+
+<div class="section">
+<p>Hello,</p>
+
+<p>I hope this email finds you well. My team has tried to contact you several times in recent months but hasn&rsquo;t been able to get in touch. I wanted to connect with you from our last conversation and get a better game plan together for your portfolio moving forward. If now isn&rsquo;t the right time, when should we revisit?</p>
+
+<p>An update from our end: we have made forward commitments with a few lenders to offer 5.38% interest rates at no cost to you. If one did want to buy the rate down further, you could get as low as 4.75% with 3 points. This rate could help position your investments to take advantage of growth to come.</p>
+
+<p>I understand now isn&#39;t the right time for everyone, and that&#39;s ok. If it&#39;s not, when should we revisit? If it is, what does your availability look like this week to schedule a call? If you don&#39;t want me to contact you, just say so, that&#39;s ok as well.</p>
+
+<p>Thanks, and I look forward to better serving you.</p>
+
+<p>Best,</p>
+
+<p>Taz</p>
+</div>
+
+<div class="section two-column">
+<div class="two-column-content">
+<h3><img alt="Investor Resources" src="https://ppmg.my.salesforce.com/servlet/servlet.ImageServer?id=015PZ000002yfaD&oid=00D30000000pfXl&lastMod=1730128610000" style="width: 339px; height: 241.531px;" /><br />
+Company Overview and Market Details</h3>
+
+<p>Click the link below to see our current stats and learn about what markets we are currently offering investment opportunities in.</p>
+<a class="cta-button" href="#">Download Investor Resource</a></div>
+</div>
+
+<div class="section">
+<h2>Your Next Step</h2>
+
+<p>Take a look at our trusted lenders:</p>
+
+<div class="trusted-lender-section">
+<div><img alt="Michael Kohrs" src="https://ppmg.my.salesforce.com/servlet/servlet.ImageServer?id=015PZ000002ycHP&oid=00D30000000pfXl&lastMod=1730128537000" /></div>
+
+<div><img alt="Boston Taylor" src="https://ppmg.my.salesforce.com/servlet/servlet.ImageServer?id=015PZ000002yd0Y&oid=00D30000000pfXl&lastMod=1730128587000" /></div>
+</div>
+</div>
+
+<div class="section two-column">
+<div class="two-column-content">
+<h3><img alt="Private Facebook Group" src="https://ppmg.my.salesforce.com/servlet/servlet.ImageServer?id=015PZ000002yfdR&oid=00D30000000pfXl&lastMod=1730128650000" style="width: 261px; height: 184px;" /><br />
+Private Facebook Group For Investors</h3>
+
+<p>This is a great group for connecting and sharing with like-minded investors. Enjoy live videos, articles, and conversations with over 6,000 members.</p>
+<a class="cta-button" href="https://www.facebook.com/groups/reinationgroup">Join Group</a></div>
+</div>
+</div>
+
+<div class="footer">
+<p>REI Nation<br />
+Suite 201<br />
+1900 Exeter Rd<br />
+Germantown TN 38138</p>
+</div>
+</div>
+</body>
+</html>

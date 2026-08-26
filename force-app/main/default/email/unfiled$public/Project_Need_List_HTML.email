@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<font face="arial">The Project for {!Project__c.Name} Needs a List</font><div><br></div><div>Click here to open the Project in Salesforce {!Project__c.Link}<br><div><br></div><div><span class="feedText" id="ext-gen33" style="position: relative; color: rgb(22, 50, 92); font-family: sf-font-regular, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 13.008px; background-color: rgb(255, 255, 255);"><div class="feedcommenttext" id="ext-gen35" style="overflow: hidden; margin-top: 5px; line-height: 20px; padding-top: 8px;"><br></div></span></div><div><div><font face="arial"><br></font></div><div><font face="arial"><br></font></div></div></div>]]></td>
+</tr>
+</table>

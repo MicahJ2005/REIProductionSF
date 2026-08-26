@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>And email alert for the Resident Final Account Statement Team - STL/MEM</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MI_White</letterhead>
+    <name>STL/MEM - Resident Final Account Statement Notification</name>
+    <style>freeForm</style>
+    <subject>Resident Final Account Statement Notification - {!Project__c.House__c}</subject>
+    <textOnly>Attention :
+
+{!Project__c.House__c} now has a Move Out List that has a status of &quot;{!Project__c.Scope_Status__c}&quot;. Please proceed with the creation of the Resident Final Account Statement (FAS) as soon as possible.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

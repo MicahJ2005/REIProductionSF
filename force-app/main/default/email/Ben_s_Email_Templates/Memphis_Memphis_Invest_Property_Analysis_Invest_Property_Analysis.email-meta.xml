@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Blank_Letterhead</letterhead>
+    <name>Memphis Invest- Property Analysis</name>
+    <style>freeForm</style>
+    <subject>Memphis Invest- Property Analysis</subject>
+    <textOnly>Hi {!Lead.FirstName},
+
+
+Now that you have determined that we are the right investment company to help you achieve your real estate goals, and we have determined that you are the right fit for us as a new client, it is time to take the next steps to put you into the position to make your first property selection with us.
+
+We have already discussed the average price points and ROI for our typical properties, so now it is time to review a few specific properties that we have completed recently that were acquired by other clients. The purpose is to help you familiarize yourself with our properties and the way that we will show you new properties that will be available for you to add to your own portfolio.
+
+First, you will find example scopes of works for several properties, which will enable you to get a feel for what your property will look like before and after the rehab is completed. Remember, when we show you a new property, it is still under rehab so we will not usually have the after pictures available to show you, so it is very important that you have an idea as to what the finished product will look like.
+
+Next, I have attached a sample property evaluation, which will show you how we calculate our return numbers. When a property becomes available that matches the investment criteria we have developed for you, I will send over the property in this exact format.
+
+Lastly, I am attaching lender contact information for you as we discussed. Before one of our Senior Portfolio Advisers can show you any specific available properties, we must have the financing lined up. As soon as the lender gives you approval, please let me know.
+
+Thanks,
+
+Ben</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MemphisInvest</letterhead>
+    <name>RICK NOT S/W EMAIL</name>
+    <style>freeForm</style>
+    <subject>Quick Call With Your Portfolio Advisor</subject>
+    <textOnly>Hello {!Contact.FirstName},
+
+
+The first quarter of 2017 is drawing to a close and we haven&apos;t connected yet to discuss your investment goals for the fiscal year. My focus is specifically supporting our existing clients to continue their portfolio development. Due to having a limited 700 properties this year for our 1,400+ clients, it very important that we set a game plan for your next acquisition. If we include new investors that are looking to start building their portfolios, the scarcity of opportunities gets even thinner.
+
+
+
+We want to emphasize that supporting our existing clients to build their portfolios is what is most important to us. We want to ensure we are able to provide the opportunities you need for portfolio growth. Please let me know when is a good time for us to jump on a quick call to discuss your next acquisition whether it be next month or next year.
+
+
+
+Best regards,
+
+
+
+
+Rick Luebbert
+
+Portfolio Advisor
+
+Memphis Invest, GP
+
+
+
+CLICK HERE to schedule a 15 minute phone call with me!
+
+
+
+130 Timber Creek Drive
+
+Cordova, Tennessee 38018
+
+Office: 901.751.7191
+
+Fax: 901.201.5803
+
+Mobile: 901.628.5959
+
+rick@memphisinvest.com
+
+www.memphisinvest.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

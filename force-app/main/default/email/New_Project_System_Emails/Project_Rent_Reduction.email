@@ -1,0 +1,5 @@
+Target rent has been dropped at {!Project__c.Name}
+
+New Target Rent: {!Project__c.Target_Rent__c}
+
+Rent Range: {!Project__c.Rent_Range__c}

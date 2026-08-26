@@ -1,0 +1,8 @@
+New Est. Finish Date is {!Project__c.Est_Finish__c}
+
+Old Est. Finish Date was {!Project__c.00N3A00000Cg7EV}
+
+{!Opportunity.Purchase_Method__c}
+{!Opportunity.Closing_Date__c}
+
+{!Project__c.00N3A00000Cg7EU}

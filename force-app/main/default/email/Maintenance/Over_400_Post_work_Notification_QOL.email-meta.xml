@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Over $400 Post-work Notification (QOL)</name>
+    <style>none</style>
+    <subject>Over $400 Post-work Notification (QOL) - {!Project_Item__c.House_Street_Address1__c}</subject>
+    <textOnly>Hello {!Contact.Name},
+
+Your property at {!Project_Item__c.House_Address__c} recently required &apos;Quality of Life&apos; maintenance which had to be immediately addressed.  The cost to remedy the problem exceeded the $400 maintenance spending limit that is set forth in the Property Management Agreement.  We wanted to reach out and let you know, so there are no surprises on your upcoming statement.
+
+{!Project_Item__c.Over_400_Description__c}
+
+Note: All prices displayed above will include the maintenance fee unless otherwise noted. Bid fees may not be calculated in the prices above if multiple bids have been provided. We strive to avoid bid fees where possible and will only pass along the fees that are incurred.
+
+Do not hesitate to contact your Customer Service Representative with any questions or concerns you may have.
+
+Please &quot;REPLY TO ALL&quot; when responding to this message.
+
+
+Your options for payment are as follows:
+
+1. Mail a check to Premier Property Management Group LLC, PO Box 381887, Germantown, TN 38183
+
+2. Log onto your owner portal in Propertyware where you can submit a payment via your bank account. Log on by clicking here:
+https://app.propertyware.com/pw/portals/ppmg/owner.action
+
+To make a payment online: Log in, click Dashboard, then click &quot;New Contribution&quot; and follow the steps accordingly. In the comments section please notate the property address and a brief description of what your payment is for. You can also select which payment account you want this payment to come from (checking, savings, credit card, etc). If you are not set up to receive owner draws via ACH/Direct Deposit, you must first set up a new bank account by following the steps below.
+
+You may now have multiple payment accounts associated with your portfolio (checking, savings, credit card). To set up multiple payment accounts, click on the arrow in the top right corner of the Dashboard, then click View Payment Information. Click New Account and fill in the required information, then click Save.
+
+[ref: {!Project_Item__c.Id}] [userRef: {!$User.Id}]</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,5 @@
+<messaging:emailTemplate subject="Notification of Account Change Request" recipientType="User" relatedToType="Account">
+<messaging:htmlEmailBody >
+    <c:VendorProfileApproverComp accRecId="{!relatedTo.Id}" isPrimaryAcc="true" />   
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

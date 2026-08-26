@@ -1,0 +1,7 @@
+DO NOT PUBLISH TO WEBSITE
+
+Go on Rehab:
+{!Assessment__c.Name}
+{!Assessment__c.City__c}
+{!Assessment__c.Zip__c}
+{!Assessment__c.Rehab_Budget__c}

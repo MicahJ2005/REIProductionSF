@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Blank_Letterhead</letterhead>
+    <name>Outside Property Management Acquisition</name>
+    <style>freeForm</style>
+    <subject>Outside Property Management Acquisitions</subject>
+    <textOnly>&lt;a href=&quot;https://ppmg.propertywaresites.com/wp-content/uploads/sites/220/2016/01/Premier-Property-Management-Group.png&quot;&gt;&lt;/a&gt;
+
+
+
+REI Nation Investors
+
+Outside Property Management Acquisitions
+
+
+
+For years, you have asked us for our assistance in managing properties not purchased from REI Nation. We are pleased to now extend this offer to you as a current client.  If you have properties in any of the 8 cities we are currently operating in, Premier Property Management/ PPMG of Texas is ready to help! The properties can be vacant or occupied. We are currently in the following 8 markets, and ready to serve you:
+
+
+Memphis, TN - St Louis, MO - Dallas, TX -  Houston, TX - San Antonio, TX -  Oklahoma City, OK - Tulsa, OK -  Little Rock, AR
+
+
+If you are interested or know anyone who may need our assistance, please reach out to us and let us know how we can help. For inquiries, please contact:
+
+
+Davartay Miller
+
+Email: Davartay@reination.com
+
+Office: 901-505-0931</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

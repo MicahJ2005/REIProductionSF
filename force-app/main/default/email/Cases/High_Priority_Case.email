@@ -1,0 +1,9 @@
+Please be advised that the following Case has been set to High Priority:
+
+Case Number:  {!Case.CaseNumber}
+Account Name: {!Case.Account}
+Description: {!Case.Description}
+
+View the case with the following link:
+
+https://ppmg.lightning.force.com/lightning/r/Case/{!Case.Id}/view

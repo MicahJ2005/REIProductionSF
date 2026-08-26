@@ -1,0 +1,32 @@
+House Sold, Contract Needed
+
+{!Opportunity.OwnerFullName} just sold the house at 
+{!Opportunity.Name}, to {!Opportunity.Account}. 
+
+Contact:  {!Opportunity.Contact__c}
+Email:  {!Opportunity.Contact_Email__c}
+Phone: {!Opportunity.Contact_Phone__c}
+Mobile: {!Opportunity.Mobile_Phone__c}
+Account Billing Address: {!Opportunity.Acct_Address__c}
+Contact Address: {!Opportunity.Contact_Home_Address__c}
+
+Opportunity: {!Opportunity.Name}
+Property Address: {!Opportunity.Assessment_Full_Address__c}
+Year Built:  {!Opportunity.Year_Built_Old__c}
+
+Amount: {!Opportunity.Amount}
+Contract Titling (if different from Account Name): {!Opportunity.Contract_Titling__c}
+Purchase Method: {!Opportunity.Purchase_Method__c}
+Lender: {!Opportunity.Lender__c}
+Other Lender Information: {!Opportunity.Other_Lender__c}
+Closing Concessions: {!Opportunity.Closing_Concessions__c}
+
+Memphis Invest Purchase Date: {!Opportunity.MI_Purchase_Date__c}
+Entity:  {!Opportunity.Assessment_Entity__c}
+
+Current Portfolio: {!Opportunity.Current_Houses_Closed__c}
+Referred By:  {!Opportunity.Referred_by_Affiliate__c}
+
+Link to this Opportunity: https://na1.salesforce.com/{!Opportunity.Id}
+
+If you have any questions regarding this contract please talk to {!Opportunity.OwnerFullName}.

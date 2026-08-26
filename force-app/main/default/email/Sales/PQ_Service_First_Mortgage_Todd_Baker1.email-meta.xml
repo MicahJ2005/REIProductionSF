@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MemphisInvest</letterhead>
+    <name>PQ: Service First Mortgage (Todd Baker)</name>
+    <style>freeForm</style>
+    <subject>Memphis Invest: Todd Baker Financing Introduction and Online Application</subject>
+    <textOnly>{!Lead.FirstName},
+
+As promised, here is the contact information for the lender so that you can get approved for the financing before we select your first property.
+
+Please use the link included in Nina&apos;s info below to complete your financing application online, and then you can use the link below which takes you to my call calendar in my email signature to schedule our next call.
+
+Thanks!
+
+
+
+
+John F. Brawner
+
+AREA MANAGER
+
+
+NMLS# 218829
+
+
+O: 901-630-4675 C: 901-832-5519 F: 901-630-4682
+
+
+jbrawner@castlecookemortgage.com
+
+
+Website: jbrawner.castlecookemortgage.com
+
+
+46 Timber Creek Drive, Suites 100 &amp; 200 | Cordova, TN 38018
+
+
+
+
+--
+
+Marq Cobb
+Memphis Invest, GP
+
+
+
+CLICK HERE TO SCHEDULE A 15 MINUTE CALL WITH ME
+THIS WEEK!
+T: +901.481.6842
+F: +901.201.5803
+E: cobb@memphisinvest.com
+http://www.MemphisInvest.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

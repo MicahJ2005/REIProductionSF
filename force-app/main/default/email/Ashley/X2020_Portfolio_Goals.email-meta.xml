@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Blank_Letterhead</letterhead>
+    <name>2020 Portfolio Goals</name>
+    <style>freeForm</style>
+    <subject>2020 Portfolio Goals</subject>
+    <textOnly>Happy New Year!! I hope you&apos;ve had a wonderful holiday season and that you are excited to kick off 2020!
+
+I want to invite you to schedule a quick call with me over the next several weeks to catch up. I would also like to make sure we are on the same page as far as your investment plans go, both in the short term and overall for 2020. I would love to discuss the new markets that we have added over the past year and discuss expanding your portfolio.
+
+You can use the link below to line up a time on my calendar. Looking forward to catching up with you soon!
+
+Click Here to schedule a 15-minute Phone Call
+
+All the best,
+
+Ashley
+
+--
+
+Ashley Tinker
+Portfolio Advisor
+REI Nation
+901-505-0724
+ashley.tinker@reination.com
+www.reination.com
+1900 Exeter Rd. Suite 210 Germantown, TN 38138</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,7 @@
+Please make a Rehab List for:
+{!Assessment__c.Name}
+{!Assessment__c.City__c}
+{!Assessment__c.Zip__c}
+Code: {!Assessment__c.Code__c}
+Rehab Budget: {!Assessment__c.Rehab_Budget__c}
+MI Purchase Date: {!Assessment__c.MI_Purch_Date__c}

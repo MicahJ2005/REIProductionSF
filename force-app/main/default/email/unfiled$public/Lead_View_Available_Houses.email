@@ -1,0 +1,7 @@
+We received a conversion on View Available Houses:
+
+SalesForce Link: {!HubSpot_Inc__HubSpot_Activity__c.Link}
+
+{!HubSpot_Inc__HubSpot_Activity__c.HubSpot_Inc__Activity_Date__c}
+
+{!HubSpot_Inc__HubSpot_Activity__c.HubSpot_Inc__Body__c}

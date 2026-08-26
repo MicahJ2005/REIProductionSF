@@ -1,0 +1,19 @@
+RENTAL CANCELLED - 	{!Project__c.Name}  {!Project__c.City__c}  {!Project__c.State__c}  {!Project__c.Zip_Code__c}
+
+CSR:  {!Project__c.CSR_picklist__c}
+
+{!Project__c.Application_Status__c}
+
+Account: {!Project__c.Account__c}
+
+{!Project__c.Security_Deposit__c}  Security Deposit ($XXX in house) 
+{!Project__c.Rent_Year_1__c}  Rent Year 1 
+{!Project__c.Rent_Year_2__c}  Rent Year 2 
+{!Project__c.Lease_Length__c}  Lease Length 
+Expected Lease Closing Date: {!Project__c.Lease_Closing__c}
+($XXX due at closing) 
+Closing Time:  
+Agent: {!Project__c.Leasing_Agent__c}
+
+Rent Range: {!Project__c.Rent_Range__c}
+Previous Rent: {!Project__c.Previous_Rent__c}

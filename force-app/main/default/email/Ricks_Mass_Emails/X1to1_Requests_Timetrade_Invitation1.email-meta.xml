@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Invitation to use my timetrade to schedule a call with me</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MemphisInvest</letterhead>
+    <name>1to1 Requests: Timetrade Invitation</name>
+    <style>freeForm</style>
+    <subject>Memphis Invest: Let&apos;s Schedule our 1 to 1 call</subject>
+    <textOnly>{!Lead.FirstName},
+
+Thanks for requesting the 1 to 1 call with someone from our team to talk more about investing in passive income properties with us.
+
+We are a portfolio company, so if you are truly looking to build a strong portfolio of at 3 properties in the next 12-24 months, then we may just be the right company for you.
+
+Also, you will need to have available assets of no less than $50-100k to acquire those first 2-3 properties, along with a 680+ credit score.
+
+So if you are looking to build a portfolio, and you have funds available to invest, then the next step is scheduling our call using the link below at a time that is convenient for you.
+
+PLEASE USE THIS LINK TO SCHEDULE OUR CALL.
+
+Also, I&apos;m attaching some useful info for you to review about our company and the markets in which we invest to this email for you to look over prior to our call.
+
+Thanks,
+
+--
+
+Marq Cobb
+Memphis Invest, GP
+
+
+
+CLICK HERE TO SCHEDULE A 15 MINUTE CALL WITH ME
+THIS WEEK!
+T: +901.481.6842
+F: +901.201.5803
+E: cobb@memphisinvest.com
+http://www.MemphisInvest.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

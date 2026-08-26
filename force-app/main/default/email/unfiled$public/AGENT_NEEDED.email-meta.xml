@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Investors 50/50 Listings Program. Opportunity is created and agent needed email goes out to Ryan, Drew, Deidre to assign an agent.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>AGENT NEEDED</name>
+    <style>none</style>
+    <subject>{!Opportunity.Opportunity_Complete_Address__c} - {!Opportunity.Account} - AGENT NEEDED</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

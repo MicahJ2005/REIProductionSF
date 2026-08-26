@@ -1,0 +1,2 @@
+Please get the bags for {!Lead.LastName}, {!Lead.FirstName} AND {!Lead.00N3000000Brg3G}.  Check In at {!Lead.00N3000000BrrCR}
+{!Lead.Affiliate_or_Referral_Info__c}

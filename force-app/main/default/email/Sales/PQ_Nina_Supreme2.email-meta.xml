@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MemphisInvest</letterhead>
+    <name>PQ: Nina (Supreme)</name>
+    <style>freeForm</style>
+    <subject>Memphis Invest: Getting pre-qualified for financing</subject>
+    <textOnly>{!Lead.FirstName},
+
+As promised, here is the contact information for the lender so that you can get approved for the financing before we select your first property.
+
+Please use the link included in Nina&apos;s info below to complete your financing application online, and then you can use the link below which takes you to my call calendar in my email signature to schedule our next call.
+
+Thanks!
+
+
+
+
+Nina Harrison
+Loan Officer, NMLS #155636
+Direct: 901.443.4602 Cell: 901.461.7207
+eFax: 901.410.1298
+Nina.Harrison@SupremeLending.com
+www.MortgageLoansbyNina.com
+985 Cordova Station, Suite 101
+Cordova, TN 38018
+
+
+
+
+
+
+
+--
+
+
+Click Here to schedule a 15-minute Phone Call
+
+Marq Cobb
+
+Sr. Portfolio Advisor
+
+Cell: 901.481.6842
+
+Office Direct: 901.505.0723
+
+
+www.MemphisInvest.com
+
+ashley.tinker@memphisinvest.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MemphisInvest</letterhead>
+    <name>Lead - First VM</name>
+    <style>freeForm</style>
+    <subject>{!Lead.FirstName}, Thank You, for Downloading Our Content!</subject>
+    <textOnly>{!Lead.FirstName},
+
+Thank you, for recently downloading or finding us from the following:
+
+Downloading one of our e-books from Bigger Pockets
+Google search
+Heard about us from a friend or colleague 
+
+No matter how you heard about Memphis Invest, we are glad you found us!
+
+Now, I don&apos;t want to take up too much of your time but, I wanted to quickly introduce myself and our company. 
+                                                       
+My name is Joshua Jackson and I am a portfolio advisor at Memphis Invest.
+
+Our company, Memphis Invest, is the largest and most importantly, respected turnkey real estate investment company in the country. We have pioneered the passive real estate investment market by helping over 1600 (and counting) investors achieve long-term wealth. 
+ 
+Currently, Memphis Invest has renovated and rented over 4500+ single-family properties in 5 of the best-performing markets in the country. 
+ 
+Now, we don&apos;t claim to be perfect by any means, but we have learned a thing or two since we started a little over 14 years ago. 
+ 
+You can learn more about our story here.
+
+I would highly recommend that you visit our website to learn a little more about us and the impact we have made with investors all over the country. 
+
+After you have visited the website, I would love to schedule an introduction call to discuss building your passive real estate portfolio. 
+
+To do this, simply click here, to schedule a one on one call with me. 
+
+I look forward to talking with you soon!
+
+Take care,
+
+Joshua</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

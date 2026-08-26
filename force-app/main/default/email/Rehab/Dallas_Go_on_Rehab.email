@@ -1,0 +1,9 @@
+Go on Rehab:
+Market: {!Assessment__c.Market__c}
+{!Assessment__c.Name}
+{!Assessment__c.City__c}
+{!Assessment__c.Zip__c}
+{!Assessment__c.Rehab_Budget__c}
+Code: {!Assessment__c.Code__c}
+Owner Occ: {!Assessment__c.Owner_Occ__c}
+Wholetail: {!Assessment__c.Wholetail__c}

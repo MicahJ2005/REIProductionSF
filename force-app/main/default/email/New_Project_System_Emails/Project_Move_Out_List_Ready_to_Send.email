@@ -1,0 +1,12 @@
+{!Project__c.Name}
+is now past the engineer and hydrostatic process. The move out list is ready to send to the owner. Please call them and let them know it is forthcoming. 
+
+Customer Service Rep: {!Project__c.Customer_Service__c}
+
+Market: {!Project__c.Market__c}
+
+Owner: 
+
+Move Out Manager -  {!Project__c.Project_Manager__c}
+
+{!Project__c.Link}

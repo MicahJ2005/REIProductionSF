@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MemphisInvest</letterhead>
+    <name>Prior to our Call 1 Conversation</name>
+    <style>freeForm</style>
+    <subject>Memphis Invest: A Few Basics to Cover Before Our First Call</subject>
+    <textOnly>{!Lead.FirstName},
+
+Thanks so much for scheduling our call coming up in the next few days. I&apos;m really excited to meet you and tell you more about our company and who we are as real estate investors.
+
+Prior to our call, I thought it would be productive to cover a few of the basics, so that we can spend our time talking in more depth and determine if we would be a good fit for you as a company, and if you would be a good fit for us as a client.
+
+1. Memphis Invest offers fully turnkey properties in Memphis, Dallas, Houston, Oklahoma City, and Little Rock. We purchase distressed properties, rehab them way beyond your typical rental property, and then we offer them to our clients for purchase. We also do all of our own property management, so as soon as the property is finished with rehab our rental team begins showing the property to prospective residents.
+
+2. We manage 4500+ single family (exclusively- we do not do MF) properties, and we do not manage outside properties that were not purchased from us. We want to devote our management resources towards taking care of the clients who invested with us.
+
+3. The most common reasons that I hear as to what was the difference when a current client decided that we were the right fit for them and they wanted to invest with us is that we have the best reputation and the most experience in the industry. In an industry where most other companies are less than 5 years old, being around almost 15 years now makes us the &quot;grey hairs&quot; in the room, and that&apos;s a great thing. We&apos;ve been through multiple economic cycles and we know exactly what we are doing.
+
+4. The second most common reason why clients choose us is that we make it so simple for them to build a passive income portfolio across 5 different markets, all with streamlined communication through one point of contact (us!). Whether you own 5 properties in 1 of our markets, or 1 property in each of our 5 markets, you can almost never tell the difference because of how seamless make the investment experience.
+
+5. Our price points are almost exclusively between $100-200k. Memphis, Little Rock, and Oklahoma City are typically $100-150k, and Dallas and Houston are typically $150-200k.
+
+5. The typical cash on cash return on our properties net of insurance, taxes, and property mgmt fees is 6.5-7.5%, and the average leveraged net return is between 10-15% depending on the property and the financing structure taken on by the client.
+
+6. Our property management company is most likely the best in the entire United States. Our average resident stays 4.5-5 years after intially signing a two year lease. Almost 90% of our residents extend their lease at least one time beyond the first two years.
+
+7. Our average vacancy rate is around 3%, and our average maintenance per property is around 4% of gross rents. The industry average is close to twice as high.
+
+8. We have everything an out of state investor could ever need to build their portfolio with us, including financing partners (both 20% down conventional lenders and non-recourse lenders for those looking to leverage a self-directed IRA or solo 401k). If you have a pre-existing relationship with a lender who has already closed an out-of-state investment property purchase for you, then that might be an option for you to use as well.
+
+We also have a group rate insurance policy on behalf of our almost 2000 clients which will typically save you between 10-20% compared to large companies like State Farm, etc.
+
+We also have a network of title companies, closing attorneys, 1031 exchange custodians, and we can even point you in the right direction if you need to roll over funds from your current retirement accounts into a self-directed IRA so that you can invest in real estate.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

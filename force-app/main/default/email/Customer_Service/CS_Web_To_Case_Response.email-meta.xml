@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>For sending to clients who submit a case on the website</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Blank_Letterhead</letterhead>
+    <name>CS Web To Case Response</name>
+    <style>freeForm</style>
+    <subject>Thank You For Submitting A Case to Memphis Invest</subject>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

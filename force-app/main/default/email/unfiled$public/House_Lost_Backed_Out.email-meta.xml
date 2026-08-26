@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Alert that a sale blew up</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>House Lost - Backed Out</name>
+    <style>none</style>
+    <subject>House Sale LOST - {!Opportunity.Name}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

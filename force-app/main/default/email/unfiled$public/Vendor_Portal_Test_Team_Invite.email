@@ -1,0 +1,78 @@
+<Font face="calibri">
+<b>{!Receiving_User.Name}</b>
+</br>
+<p>
+Welcome to the Vendor Portal for REI Nation and Premier Property Management.  Setting up your Vendor Profile should take less than 15 minutes and once you are approved, we can begin working together. 
+</p>
+<p>
+<b>Portal Benefits</b>
+<br>
+<ul>
+<li>Conveniently set up your account profile.</li>
+<li>Portal is available 24 hours a day, 7 days a week.</li>
+<li>All your important documents stored in one place.</li>
+<li>Easily update your information whenever there is a change.</li>
+<li>Access to our Vendor Training Resources.</li>
+<li>Home Depot Rapid Pass discount program.</li>
+</ul>
+<b>Get Started Here</b>
+<br>
+<ul>
+<li>Click <a href="{!Community_Url}">Here</a> to get started.</li>
+<li>Username: <b>{!Receiving_User.Username}</b></li>
+<li>Save the Portal website to your bookmarks or favorites: <br/><b>{!$Label.VendorCommunityURL}</b></li>
+</ul>
+</p>
+<p>
+<b>Detailed Instructions to Set Up Your Vendor Profile</b>
+<br><br>
+Complete the following 3 steps:
+<ol>
+<li>Set up your Vendor Portal access with a password.</li>
+<li>Go to the Account Profile tab and fill in the required information.</li>
+<ol type='a'>
+<li>If you want us to report income to the IRS under your Social Security number, use the name on your Social Security card for your Legal Business Name.  Use this same name on Line 1 of the W9 form. Use your Social Security number for your Tax ID.</li>
+<li>If you want us to report income to the IRS under a Business Tax ID, use the name and Tax ID number on your IRS Notice of Assignment form.  Use the same name and Tax ID number on Line 1 of the W9.</li>
+<li>Epayment/Banking Information is required because all invoices are paid by Direct Deposit.</li>
+</ol>
+<li>Upload all your documents to the Vendor Portal.</li>
+<ol type='a'>
+<li>Social Security Card or IRS Notice of Assignment of TIN, EIN, or ITIN</li>
+<li>W-9</li>
+<li>Driver’s License/Photo ID</li>
+<li>Direct Deposit Agreement</li>
+<li>Voided Check (note: counter checks will not be accepted)</li>
+<li>Hold Harmless Agreement</li>
+<li>Other documents that may be required based on your Trade/Category, include:</li>
+<ol type = 'i'>
+<li>Certificate of Insurance - General Liability</li>
+<li>Insurance Agreement</li>
+<li>License/Trade License</li>
+<li>Permits One Pager</li>
+</ol>
+</ol>
+</ol>
+</p>
+<p>
+<b>Tips for Completing Your Vendor Portal Profile</b> 
+<br>
+<ul>
+<li>To spend the least amount of time completing your Profile, we suggest completing all the required documents and saving them to your computer as a pdf, jpeg or png file.  </li>
+<li>If you are not able to complete everything at one time, you may ‘Save’ your progress and come back to finish at a later time.</li>
+<li>When uploading documents, remember to enter the expiration date when required.</li>
+<li>Submit your Vendor Profile for approval when you have completed everything. </li>
+<li>You will receive an email once you are approved.</li>
+<li>Please try to keep all onboarding communication with us in the Portal utilizing the Vendor Support Message Center on the Home tab. </li>
+<li>If the initial link is not working, please email Michelle Carmichael for help: <a href="mailto:mcarmichael@reination.com">mcarmichael@reination.com</a></li>
+</ul>
+</p>
+<br><br>
+Jessica Stooksbury, Chief Financial Officer
+<br/>
+<br/>
+<a href="https://www.reination.com">www.reination.com</a>
+<br/>
+<a href="https://www.premierpropertymemphis.com">www.premierpropertymemphis.com</a>
+<br/>
+<a href="https://www.ppmgtexas.com">www.ppmgtexas.com</a>
+</font>

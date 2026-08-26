@@ -1,0 +1,10 @@
+Hello,
+
+The following Project has requested a Draw Check Redistribution:
+
+Name: {!Project__c.Name}
+Request DC Redistribution: {!Project__c.Request_DC_Redistribution__c}
+
+Link: https://ppmg.lightning.force.com/{!Project__c.Id}
+
+- IT Department

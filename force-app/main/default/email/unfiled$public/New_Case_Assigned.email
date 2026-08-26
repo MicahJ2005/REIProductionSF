@@ -1,0 +1,8 @@
+The following Case has been added to the IT Case Queue:<br/><br/>
+
+Case Subject: {!Case.Subject}<br/>
+Case Description:<br/>
+{!Case.Description}<br/>
+Submitted by: {!Case.CreatedBy}<br/><br/>
+
+Link: https://ppmg.lightning.force.com/{!Case.Id}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Notice of Required Document Expired</name>
+    <style>none</style>
+    <subject>ATTENTION REQUIRED – EXPIRED DOCUMENTS</subject>
+    <textOnly>ATTENTION – VENDOR ACCOUNT NEEDS UPDATING SEE BELOW
+
+{!Account.Name},
+
+If any of your Required Documents reach a status of expired, we will not be able to utilize your services until you can provide current documents.
+
+Our records indicate that the following required document has now expired:
+
+{!Account.Attachment_Type__c}  :   {!Account.Expiration_Date__c}
+
+Click here https://ppmg.my.site.com/VendorPortal/VendorPortalAccountProfile to access your Vendor Profile and submit your updated documents for review and approval.
+
+Regards,
+
+REI Nation
+Premier Property Management</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MemphisInvest</letterhead>
+    <name>PQ: Teresa Waters (Versolis Lending Group)</name>
+    <style>freeForm</style>
+    <subject>Memphis Invest: Online Application for Financing</subject>
+    <textOnly>{!Lead.FirstName},
+
+As promised, here is the contact information for the lender so that you can get approved for the financing before we select your first property.
+
+Please use the link included in Charlie&apos;s info to complete your financing application online, and please also email me to confirm that you have completed your application so that I can help you follow up for a quick approval.
+
+Thanks,
+
+Marq
+
+
+
+
+
+Marsha Gandy
+
+VP of Mortgage Lending
+
+marsha.gandy@rate.com
+
+www.rate.com/MarshaGandy
+
+O: 561.226.4209 - C: 561.271.1591 - F:561.431.7825
+
+621 NW 53rd St Suite 410, Boca Raton, FL 33487
+NMLS ID: 60024
+
+
+
+
+Loan Options - Mobile App - Facebook - Twitter - LinkedIn - Gateless
+
+
+| © Guaranteed Rate 2017 | 3940 N. Ravenswood Ave., Chicago, IL. 60613
+
+NMLS ID 2611 / NMLS Consumer Access / Licensing Information
+
+Please Note: We care about your security and privacy. Please don&apos;t include identifying information like account numbers, birth dates and social security numbers in emails to us. Call us instead for secure email options or send the information by fax or regular US mail.
+
+CONFIDENTIALITY AND SECURITY NOTICE The contents of this message and any attachments may be privileged, confidential and proprietary and also may be covered by the Electronic Communications Privacy Act. If you are not an intended recipient, please inform the sender of the transmission error and delete this message immediately without reading, disseminating, distributing or copying the contents. Guaranteed Rate makes no assurances that this e-mail and any attachments are free of viruses and other harmful code.
+
+State License Numbers: AR - 100616, FL - LO2605 - MLD1102, NC - I-135241 - L-109803, OK - MLO15101, PA - 28195 - 20371, TN - 43005 - 109179, TX – 60024
+
+Meet My Service Team
+
+Rebecca Raulin - Elite Mortgage Consultant - (561) 226-4222 - Rebecca.Raulin@rate.com
+
+Kalinda Dolman – Associate VP – (561)226-4214 Kalinda.Dolman@rate.com
+
+Jenn Wunstel - Sales Assistant - (561) 226-4225 - jenn.wunstel@rate.com
+
+Patricia Mandara - Loan Coordinator - 561-226-4235 - patricia.mandara@rate.com
+
+
+
+
+
+--
+
+
+Get to Know Marq Cobb
+
+Marq Cobb
+
+Sr. Portfolio Advisor
+
+Cell: 901.481.6842
+
+Office Direct: 901.505.0723
+
+
+www.MemphisInvest.com
+
+cobb@memphisinvest.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

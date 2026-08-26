@@ -1,0 +1,6 @@
+New lead in the blueprint funnel:
+Assigned to: {!Lead.OwnerFullName}
+
+{!Lead.FirstName} {!Lead.LastName}
+{!Lead.Email}
+{!Lead.Phone}

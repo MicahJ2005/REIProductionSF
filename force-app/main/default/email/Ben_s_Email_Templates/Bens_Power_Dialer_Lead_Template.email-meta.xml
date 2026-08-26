@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Blank_Letterhead</letterhead>
+    <name>Bens Lead Power Dialer Template</name>
+    <style>freeForm</style>
+    <subject>Memphis Invest Follow Up</subject>
+    <textOnly>Hi {!Lead.Name},
+
+
+It has been a few weeks since we last spoke but I hope all is well. You were interested in working with us and I wanted to reach out to see if you are still actively looking for a turnkey provider.
+
+I wanted to let you know that there are some exciting new trends we are seeing in our industry and to tell you why now might be the perfect time to start your portfolio with Memphis Invest.
+
+#1. Favorable interest rate environment continues on, likely into year 2020.
+
+While rates did climb as high as 6% less than 90 days ago, the winds have changed directions and rates are back down to an average of 5.00% on conventional 20-25% down mortgages.
+
+
+#2. Small change to our internal rehab process have resulted in properties that will typically be rented when you close.
+
+Until recently, my team received new property spreadsheets to begin to show clients when the rehab was 80-90% complete (or said another way: 1-2 weeks  the rental agents begin showings). Now, each property is COMPLETELY finished with rehab before the rehab team releases the property to me to show clients, and more often than not a new property that comes to me in my inbox is ALREADY LEASED!!!
+
+Obviously that is huge from a comfort standpoint.. not having to worry about making your first mortgage payment or two without having rental income coming in, but the impact runs deeper than that even. If we are able to rent the properties early enough in the process, then it is likely that you as the client ultimately will avoid paying the 1st month&apos;s placement fee that Premier charges.
+
+#3. Non-recourse rates are down to 7.75% and you can secure those rates on a 20 year loan. This equals more cashflow than ever on a non-recourse loan.
+
+
+Remember the days of 12% rates on 10-12 year terms?? If you have been working hard to pay down your existing non-recourse loans on properties you own with us and you are interested in learning how to use the equity you have now in order to acquire more properties, schedule a call for us and I&apos;ll be happy to walk you through it.
+
+If you&apos;d like to discuss please do not hesitate to reach out or book time with me HERE . I hope to hear from you soon.
+
+Ben</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

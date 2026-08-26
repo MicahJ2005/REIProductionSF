@@ -1,0 +1,33 @@
+<p>Bridge Capital<br />
+Pipeline or Permanent Loan request form<br />
+<br />
+Buyer:&nbsp;<br />
+Titling: {{{Opportunity.Contract_Titling__c}}}<br />
+Phone: {{{Opportunity.Contact_Phone__c}}}<br />
+Email:&nbsp;{{{Opportunity.Contact_Email__c}}}<br />
+<br />
+Property Address:{{{Opportunity.Assessment_Full_Address__c}}}<br />
+<br />
+<br />
+Description:&nbsp;<br />
+Beds: {{{Opportunity.Bedrooms__c}}}<br />
+Baths:{{{Opportunity.Bathrooms__c}}}<br />
+Sqft:&nbsp;{{{Opportunity.Sq_Ft__c}}}<br />
+Parking:&nbsp;{{{Opportunity.Parking__c}}}<br />
+<br />
+Vacant or Rented:{{{Opportunity.Application_Status__c}}}<br />
+Rehab Amount:&nbsp;{{{Opportunity.Rehab_Budget__c}}}<br />
+Rent Range:&nbsp;{{{Opportunity.Rent_Range__c}}}<br />
+Rent Year 1:{{{Opportunity.Rent_Year_1__c}}}<br />
+<br />
+MI Purchase price:{{{Opportunity.Purchase_Price__c}}}<br />
+MI Purch Date:&nbsp;{{{Opportunity.MI_Purchase_Date__c}}}<br />
+Investor Sales Price:&nbsp;{{{Opportunity.Amount}}}<br />
+Loan Amount:&nbsp;{{{Opportunity.Down_payment_for_investor__c}}}<br />
+<br />
+Closing Attorney:{{{Opportunity.Title_Company__c}}}<br />
+Closing Date:&nbsp;{{{Opportunity.Closing_Date__c}}}<br />
+<br />
+For questions about this form please contact Rachel Gordon at rachelgordon@memphisinvest.com&nbsp;<br />
+<br />
+End of Form</p>

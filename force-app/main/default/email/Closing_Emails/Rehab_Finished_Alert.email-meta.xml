@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email update when a house is marked as appraisal ready</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Rehab Finished Alert</name>
+    <style>none</style>
+    <subject>{!01I30000002Pa22.Name} Rehab is Finished</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

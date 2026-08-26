@@ -1,0 +1,20 @@
+APPLICANT NAME: {!Application__c.Applicant_1__c}
+                                 {!Application__c.Applicant_2__c}
+                                 {!Application__c.Applicant_3__c}
+                                 {!Application__c.Applicant_4__c}
+
+ADDRESS APPLIED FOR: {!Application__c.Address__c}
+
+AGENT NAME: {!Application__c.Agent__c}
+
+STATUS: DENIED
+
+Reason Denied: {!Application__c.TD_Reason__c}
+
+Thank you for applying for a Premier Property Management property. 
+
+If you have placed a holding deposit with Premier for the purpose of securing a property, you may retrieve it from our office at your earliest convenience. 
+
+PLEASE NOTE: Monies will not be released to any person who is not named on the application and picture id must be presented at the time of pick up. APPLICATION FEES ARE NON REFUNDABLE.
+
+This is an automatic response. Please do not reply to this email.

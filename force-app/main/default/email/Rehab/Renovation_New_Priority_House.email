@@ -1,0 +1,12 @@
+Please reply to this email with the expected appraisal ready date for this house. 
+
+{!Opportunity.Name}, {!Opportunity.Property_State_Oppt__c}
+Date Sold: {!Opportunity.CloseDate}
+Purchase Method:  {!Opportunity.Purchase_Method__c}
+Lender:  {!Opportunity.Lender__c}
+Renovation Manager: {!Opportunity.00N3000000C096Y}
+Start: {!Opportunity.Rehab_Start__c}
+Status: {!Opportunity.Rehab_Status__c}
+
+Thanks,
+Mark

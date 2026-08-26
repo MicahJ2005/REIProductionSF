@@ -1,0 +1,33 @@
+Bridge Capital 
+Pipeline or Permanent Loan request form 
+
+Filled out by: Deidre Stubblefield 
+Date Turned in: {!Today} 
+
+Recourse signatory: Brett Clothier
+Company Signatory: Brett Clothier
+
+Title: {!Assessment__c.Entity__c}
+
+Property Address: {!Assessment__c.Name}
+Zip: {!Assessment__c.Zip__c}
+
+Description: 
+Bedrooms: {!Assessment__c.Bedrooms_Old__c}
+Baths: {!Assessment__c.Bathrooms_Old__c}
+Sq. Ft.: {!Assessment__c.Square_Ft__c}
+Garage: {!Assessment__c.Car_Storage__c}
+
+Vacant or Rented: 
+Renovation Dollar Amount: {!Assessment__c.Rehab_Budget__c}
+Wholesaler Purch Price: {!Assessment__c.Purchase_Price__c}
+Monthly Rent Amount: {!Assessment__c.Rent_High__c}
+MI Purchase Date: {!Assessment__c.MI_Purch_Date__c}
+Asking Price: {!Assessment__c.Asking_Price__c}
+HOA: {!Assessment__c.HOA__c}
+Loan Request Amount: 
+
+Property Management Contact: PPMG of Texas
+Phone: 817.328.6125
+
+Title Company: Lawyers Title - Kim Mills

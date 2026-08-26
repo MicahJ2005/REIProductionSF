@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MemphisInvest</letterhead>
+    <name>PQ: Ridge Lending (Caeli Ridge)</name>
+    <style>freeForm</style>
+    <subject>Memphis Invest Pre-Qual Lender Info</subject>
+    <textOnly>{!Lead.FirstName},
+
+As promised, here is the contact information for the lender so that you can get approved for the financing before we select your first property.
+
+Please use the link included in Charlie&apos;s info to complete your financing application online, and please also email me to confirm that you have completed your application so that I can help you follow up for a quick approval.
+
+Thanks,
+
+Marq
+
+CHARLIE HILLEMANN | Executive Vice President
+
+12655 Olive Boulevard, Suite 250  |  Creve Coeur, MO 63141
+
+(314) 317-6970 | (866) 634-9290 fax  | NMLS #438481
+
+chillemann@stifelbank.com
+
+Click here to apply for a mortgage with charlie
+
+
+
+
+
+
+
+
+
+
+--
+
+Marq Cobb
+Memphis Invest, GP
+
+
+
+CLICK HERE TO SCHEDULE A 15 MINUTE CALL WITH ME
+THIS WEEK!
+T: +901.481.6842
+F: +901.201.5803
+E: cobb@memphisinvest.com
+http://www.MemphisInvest.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

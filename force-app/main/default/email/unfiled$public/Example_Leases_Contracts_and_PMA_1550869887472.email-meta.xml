@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Example Leases, Contracts, and PMA</name>
+    <relatedEntityType>Lead</relatedEntityType>
+    <style>none</style>
+    <subject>Contact Info for Jimmy Luke, CPA and mega-successful real estate investor</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

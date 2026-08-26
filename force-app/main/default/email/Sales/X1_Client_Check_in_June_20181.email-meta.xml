@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MemphisInvest</letterhead>
+    <name>*1 Client Check in June 2018</name>
+    <style>freeForm</style>
+    <subject>Here is the link to schedule our call..</subject>
+    <textOnly>Hi, hope you are doing well.
+
+As promised on the voicemail I left for you today, here is the link you can use to schedule a call with me on a good day/time for you.
+
+As interest rates are likely going up again this summer, I would encourage you to schedule a call soon if you have plans to add to your passive income portfolio this year.
+
+If you are interested in adding to your portfolio right now, please reply to this email and let me know (including your criteria if you already know what you want) in addition to scheduling a call.
+
+Perhaps you want to talk about the state of the current markets in which we operate, or maybe you did not even know that in addition to Memphis, Dallas-Ft.Worth, and Houston, that we also are fully up and running in Little Rock and Oklahoma City as well.
+
+Looking forward to connecting with you.
+
+Marq Cobb
+
+CLICK HERE TO SCHEDULE A 15 MINUTE CALL WITH ME
+THIS WEEK!
+
+Cell: +901.481.6842
+Direct: +901.201.5803
+E: cobb@memphisinvest.com
+http://www.MemphisInvest.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

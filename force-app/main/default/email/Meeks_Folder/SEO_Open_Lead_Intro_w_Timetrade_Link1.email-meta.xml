@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MemphisInvest</letterhead>
+    <name>SEO Open Lead Intro w/ Timetrade Link</name>
+    <style>freeForm</style>
+    <subject>Memphis Invest: How to Set Up Your First Call with Us</subject>
+    <textOnly>{!Lead.FirstName},
+
+Since you found our company, most likely checked out our site, and reached out to us, my question to you is this?:
+
+Are you just looking for education, or are you serious about building a passive income portfolio?
+
+Aside from publishing free content for newbie investors from time to time, our company, Memphis Invest, is the largest and (few would argue) the most respected turnkey company in the country. You can see 16 short videos right here where our owners discuss their investment strategies and how we assist investors to achieve long term wealth.
+
+Offering rehabbed and rented single family properties in 5 of the best markets in the U.S. for buy and hold investors, we currently manage 4300+ properties for 1500 investors from all over the world.
+
+We offer cash flowing properties between $100-200k in Memphis, Dallas, Houston, with our first properties in Little Rock and Oklahoma City already acquired and going through the rehab process.
+
+We operate in these specific markets because of the affordable price point for available inventory, the high rent-to-price ratio of these markets, and because these states all have very friendly landlord laws.
+
+If you are serious about beginning to build your real estate portfolio, your next step is to click right here to schedule a call with me. I&apos;ll be happy to help you figure out if we are a good fit for you as a company, and if you are a good fit for us as a client.
+
+Take care.
+
+Marq
+
+--
+
+Marq Cobb
+Memphis Invest, GP
+
+
+
+CLICK HERE TO SCHEDULE A 15 MINUTE CALL WITH ME
+THIS WEEK!
+T: +901.481.6842
+F: +901.201.5803
+E: cobb@memphisinvest.com
+http://www.MemphisInvest.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

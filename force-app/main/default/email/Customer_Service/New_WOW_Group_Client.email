@@ -1,0 +1,11 @@
+Hello {!Account.Customer_Service_Assignment__c},
+
+Please check this to confirm, but it appears that {!Account.Name} just closed on a 5th house and is now in the WOW Group.  
+Sales rep is {!Account.OwnerFullName}.
+
+Link to Account record.
+https://na1.salesforce.com/{!Account.Id}
+
+Please double check and let me know if there is a problem.
+
+IT Team

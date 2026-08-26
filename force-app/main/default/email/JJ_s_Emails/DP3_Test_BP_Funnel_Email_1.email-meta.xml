@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>HTML no letterhead</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Test BP Funnel Email - #1</name>
+    <style>none</style>
+    <subject>Thank You For Downloading - How To Buy Investment Properties In Another State!</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

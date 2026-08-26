@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Go on Rehab email for Regal Ventures purchases</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Regal Ventures Go on Rehab</name>
+    <style>none</style>
+    <subject>Go on Rehab - {!Assessment__c.Zip__c}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

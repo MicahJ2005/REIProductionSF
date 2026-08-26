@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email automation to send out after an owner occ opportunity is closed</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Blank_Letterhead</letterhead>
+    <name>Closed Owner Occ</name>
+    <style>freeForm</style>
+    <subject>CLOSED - {!Opportunity.Name} - ( {!Opportunity.Market__c} ) - OWNER OCC</subject>
+    <textOnly>Contract Price : {!Opportunity.Final_Contract_Price__c}
+
+Purchase Method : {!Opportunity.Purchase_Method__c}
+
+Titling : {!Opportunity.Contract_Titling__c}
+
+Titling &amp; Banking Notes: {!Opportunity.Titling_Banking_Notes__c}
+
+Closing Costs/Credits: {Closing_Costs_Credits__c}
+
+Link to Project: https://ppmg.lightning.force.com/{!Opportunity.ProjectId__c}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

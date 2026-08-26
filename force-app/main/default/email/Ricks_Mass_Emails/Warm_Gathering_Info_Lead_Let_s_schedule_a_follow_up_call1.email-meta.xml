@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MemphisInvest</letterhead>
+    <name>Warm/Gathering Info Lead: Let&apos;s schedule a follow up call</name>
+    <style>freeForm</style>
+    <subject>Let&apos;s Schedule Our Next Call - Rick Luebbert of Memphis Invest</subject>
+    <textOnly>{!Contact.FirstName},
+
+Hope all is well. I wanted to shoot you a quick email to see if we can schedule our next call to keep the ball moving down the field towards building your portfolio.
+
+Please use this link and it will take you straight to my calendar and show you my available time slots over the next few days. Choose a good day/time for you and book a call so we can keep the conversation moving forward.
+
+Looking forward to it.
+
+Marq
+
+
+--
+
+Marq Cobb
+Memphis Invest, GP
+
+
+
+CLICK HERE TO SCHEDULE A 15 MINUTE CALL WITH ME
+THIS WEEK!
+T: +901.481.6842
+F: +901.201.5803
+E: cobb@memphisinvest.com
+http://www.MemphisInvest.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

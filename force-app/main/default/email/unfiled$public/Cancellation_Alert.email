@@ -1,0 +1,9 @@
+Sale of the house at {!Opportunity.Name}
+has been cancelled.  
+
+Reason:  {!Opportunity.Oppt_Lost_Reason__c}
+Buyer:  {!Opportunity.Account}
+Sales Rep: {!Opportunity.OwnerFullName}
+Cancel Date:  {!Opportunity.00N3000000C0mwq}
+
+https://na1.salesforce.com/{!Opportunity.Id}

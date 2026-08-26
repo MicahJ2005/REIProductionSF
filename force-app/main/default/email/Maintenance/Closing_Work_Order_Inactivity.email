@@ -1,0 +1,10 @@
+You recently submitted a request for {!Project_Item__c.MaintenanceCategoryGlobal__c} Maintenance.  We dispatched our vendor to contact you and schedule a time to assess and resolve the problem; however, all attempts to reach you have been unsuccessful.  Unfortunately, we have no other option but to close the Work Order at this time. 
+<br/><br/>
+If this issue persists, please contact us to submit a new maintenance request and provide an active phone number and email address.
+<br/><br/><br/>
+
+Thank you,
+<br/><br/>
+Premier Property Management Group
+<br/>
+<p style="color:white"> [ref: {!Project_Item__c.Id}] [userRef: {!$User.Id}]</p>

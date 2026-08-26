@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email alert letting the marketing team know a Rently box has been placed and to update the marketing.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Rently Boxed Placed</name>
+    <style>none</style>
+    <subject>Rently Box Placed - {!Project__c.Market__c} - {!Project__c.Name}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

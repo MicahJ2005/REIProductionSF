@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Blank_Letterhead</letterhead>
+    <name>TAX EMAIL</name>
+    <style>freeForm</style>
+    <subject>HELPFUL Information on YOUR taxes for Tennessee, Mississippi and Texas properties!</subject>
+    <textOnly>Hello!
+
+We are hoping this will help answer your questions regarding paying property taxes.
+
+PLEASE REMEMBER!  YOU are responsible for paying ALL taxes!
+
+Unless:
+• You already have them escrowed/impounded out of your mortgage payments
+• If you have a self directed IRA.  Then you will need to notify that company to direct payment from that account.
+
+If you closed on a property this year, you may have been credited for taxes from the time you did not own this property. Please check your HUD statements under the heading &apos;Adjustments for Items Unpaid by Seller&apos;.  These still need to be paid.
+
+IMPORTANT NOTES!
+1-Both TN and TX only update their systems once and MAYBE twice a year.  So even if the property is under the previous owners name, you are still responsible for the taxes.  CHECK YOUR HUD! They eventually do get transferred to the new owner name at some point during this year.
+
+2-Not all recourse lenders offer escrow of tax payments. Please check with your lender to make sure your taxes and insurance (if applicable) are being paid.
+
+Tennessee:
+First tax due is:
+
+CITY of MEMPHIS
+Tax bills are ISSUED around the 3rd week in June!  If you own property in the city of Memphis then here is where you look up and pay your CITY taxes.  They are DUE before August 30th.  On OR after the 31st, they are considered LATE.
+
+For online payments go to this site and select the address option, enter in the address and then you can pay this bill.  If you pay by credit card, they will charge you a hefty fee! You can opt to pay by E-check which is a flat fee.  Or you can still pay by check and send it via mail.
+
+https://epayments.memphistn.gov/property/
+
+(**Not all properties in Memphis are located in City limits.  Search a property and it does not show up, then it is NOT located in the city limits.
+
+
+Second tax due is:
+
+SHELBY COUNTY – MEMPHIS
+September you will receive a tax bill for Shelby County.  These taxes are due in October but not considered late until the last day in February of the following year.  Below is the online link for information or online payments.
+
+http://www.shelbycountytrustee.com
+
+OTHER taxes for TENNESSEE--  IF APPLICABLE!
+
+City of Bartlett Taxes- ONLY if your property is located in Bartlett (Zip Codes 38134, 38135 &amp; 38133).
+Tax bills are mailed to homeowners prior to December 1, and are payable through February 28. Taxes become delinquent March 1.  Below is the online link you to pay for further information or online payments.
+
+https://cityofbartlett.munisselfservice.com/citizens/RealEstate/Default.aspx?mode=new
+
+City of Germantown Tennessee- Only if you property is located in Germantown.  (Zip codes are38138 and 38139)
+
+Tax statements are sent out each November.  Taxes are due and payable on the first day of December of the current calendar year.  IF you do not receive a tax statement by early December, should e-mail tax@germantown-tn.gov or call (901) 757-7218 to confirm mailing information.  You are also responsible to pay Shelby County taxes.  Below is the online link you to pay for further information or online payments.
+
+https://egovcent.aspgov.com/germc2gtx/Index.jsp
+
+Town of Collierville Tennessee- Only if you property is located in Collierville.  (Zip code is 38017)
+Taxes are due the same time as Shelby County. The taxes are due in October but not considered late until the last day in February of the following year.  A convenience fee is assessed for credit card, debit card, and e-check transactions.  You are also responsible to pay Shelby County taxes.  Below is the online link you to pay for further information or online payments.
+
+http://collierville.tennesseetrustee.org/index.php?site=full
+
+Mississippi:
+
+DeSoto County includes all properties in Southaven, Horn Lake and Olive Branch Mississippi.  This is the only tax that needs to be paid.  Tax bills are sent out mid December and are due by February 1st of the following year.
+
+No online payments are accepted.  Payments need to be mailed in.
+
+If you have NOT received a bill and would like to see how much you owe, then please go to: http://desotoms.info/  Click on Tax Assessor and chose Search by Property Address.  A list will appear then click on the address you are searching.  Look in the upper right hand corner for Display Tax Receipt Data- click on and the bill will be displayed.
+
+Texas:
+
+Tax bills come out in October.  All Texas taxes are DUE January 30th but considered LATE on January 31st of the following year.  Texas will NOT discuss taking off any interest or penalties!
+** City, county, ISD (school tax) are combined in one tax bill
+
+REMINDER!  There is a convenience fee for using a credit card or debit card.  So chose accordingly.
+
+Dallas/Ft. Worth Properties:
+
+If your property&apos;s zip code starts with &apos;76&apos;, then this is Tarrant County.  Here is the online link of where you can pay these online:
+
+http://www.tarrantcounty.com/
+
+If your property&apos;s zip code starts with &apos;75&apos;, then this is Dallas County.  Here is the online link to where you can pay:
+
+http://www.dallasact.com/act_webdev/dallas/index.jsp
+
+*** The city of Grand Prairie is split between Tarrant and Dallas County.  City of Grand Prairie has Dallas County collect all their taxes. Therefore you may receive 2 tax bills.
+
+Houston Properties:
+
+Here is the online link to where you can pay:
+
+http://www.hctax.net/Property/PropertyTax
+
+Please contact your personal Customer Service representative if you have further questions.
+
+Carol@memphisinvest.com
+Laurie@memphisinvest.com
+Jill@memphisinvest.com
+michellekahle@memphisinvest.com
+Cyndy@memphisinvest.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

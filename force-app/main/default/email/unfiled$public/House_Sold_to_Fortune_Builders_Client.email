@@ -1,0 +1,16 @@
+(Brett & Chris we just sold a house to a Fortune Builders client. Delete this line & forward.)
+
+{!Account.Name} just agreed to purchase the house at {!Opportunity.Name}.
+
+Referred by: {!Account.Referred_by__c}
+Referred by 2nd Tier: {!Account.00N3000000AfvYb} 
+
+Purchase Type: {!Opportunity.Type}
+Sold by {!Opportunity.OwnerFullName}.
+Date Sold: {!Opportunity.CloseDate}
+Purchase Method: {!Opportunity.Purchase_Method__c}
+Lender: {!Opportunity.Lender__c}
+
+Please remove this house from your list of available houses.
+
+If there is no address in the first line of this email then disregard this email.

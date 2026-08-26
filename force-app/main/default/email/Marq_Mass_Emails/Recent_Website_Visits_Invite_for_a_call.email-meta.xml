@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MemphisInvest</letterhead>
+    <name>Recent Website Visits: Invite for a call</name>
+    <style>freeForm</style>
+    <subject>Memphis Invest: Something I can help you with?</subject>
+    <textOnly>Hey {!Lead.FirstName},
+
+I hope you are having a good week so far.
+
+I wanted to reach out because I noticed you had visited our site again recently.
+
+If you would like to set up a call to ask some questions and discuss investment strategies, I would be happy to help.
+
+You can click right here to set up a call with me.
+
+Best,
+
+Marq
+
+--
+
+Marq Cobb
+Memphis Invest, GP
+
+
+
+CLICK HERE TO SCHEDULE A 15 MINUTE CALL WITH ME
+THIS WEEK!
+T: +901.481.6842
+F: +901.201.5803
+E: cobb@memphisinvest.com
+http://www.MemphisInvest.com</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

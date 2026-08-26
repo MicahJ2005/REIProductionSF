@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Vendor Profile Active</name>
+    <style>none</style>
+    <subject>Vendor Profile Activated</subject>
+    <textOnly>{!Account.Name},
+
+This is to inform you that your Vendor Profile has been set to &quot;Active&quot;. For further details, please view your profile.
+
+VendorPortalAccountProfile</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

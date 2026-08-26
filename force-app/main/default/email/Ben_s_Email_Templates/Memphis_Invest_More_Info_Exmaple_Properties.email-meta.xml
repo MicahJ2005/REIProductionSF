@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Blank_Letterhead</letterhead>
+    <name>Memphis Invest: More Info &amp; Exmaple Properties</name>
+    <style>freeForm</style>
+    <subject>Memphis Invest: More Info &amp; Example Properties</subject>
+    <textOnly>As promised, attached you will find a few example properties from each of our markets. We are EXTREMELY conservative with our ROI calculations, and I have included a word doc that covers the areas in which we are extremely conservative to give you some context in that regard.
+
+Also, here is a link you can use to review our company performance data as well as more info about the markets in which we invest.
+
+Please let me know once you are ready to have a second call to help you move forward.
+
+Thanks,
+
+Ben</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

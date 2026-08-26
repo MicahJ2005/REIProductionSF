@@ -1,0 +1,10 @@
+{!Opportunity.Opportunity_Details__c}
+
+{!Opportunity.Account}
+{!Opportunity.Contact__c}
+{!Opportunity.Contact_Phone__c}
+{!Opportunity.Contact_Email__c}
+
+
+{!Opportunity.Opportunity_Complete_Address__c}
+{!Opportunity.Occupancy__c}

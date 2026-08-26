@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>HTML Version of House Is Sold Alert</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Blank_Letterhead</letterhead>
+    <name>House Is Sold Alert HTML</name>
+    <style>freeForm</style>
+    <subject>House Sold Alert - {!Opportunity.Name} - {!Opportunity.Market__c}</subject>
+    <textOnly>{!Opportunity.OwnerFullName} just sold the house at {!Opportunity.Name}.  Please remove this house from your list of available houses.
+
+House: {!Opportunity.Name}
+Market:  {!Opportunity.Market__c}
+Year Built:  {!Opportunity.Year_Built__c}
+
+Investor:  {!Opportunity.Account}
+Referred by: {!Opportunity.Referred_by__c}
+Sale Date:  {!Opportunity.CloseDate}
+Sale Amount: {!Opportunity.Final_Contract_Price__c}
+Purchase Method:  {!Opportunity.Purchase_Method__c}
+Lender:  {!Opportunity.Lender_Name__c}
+Opportunity Link:  {!Opportunity.Link}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

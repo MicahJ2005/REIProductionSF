@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Dallas Oct 2014 TY for registering</name>
+    <style>none</style>
+    <subject>Thank you for registering for our Dallas event!</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

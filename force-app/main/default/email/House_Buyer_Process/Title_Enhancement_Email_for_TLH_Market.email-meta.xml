@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MemphisInvest</letterhead>
+    <name>Title Enhancement Email for TLH Market</name>
+    <style>freeForm</style>
+    <subject>{!Opportunity.Opportunity_Complete_Address__c}</subject>
+    <textOnly>Hello {!Opportunity.Title_Company_Attorney__c},
+
+
+We look forward to working with you on this transaction! We will be touching base within {!Opportunity.Title_Company_Days_Allotted__c} business days to confirm title work has been received. Once title work is received please email a copy of the commitment to closings@reination.com. Let us know if anything additional is needed at this time, contact information and contract details provided below.
+
+
+Opportunity Owner: {!Opportunity.OwnerId}
+Total Purchase Cost: ${!Opportunity.Total_Purchase_Cost__c}
+Assignment Fee: ${!Opportunity.Additional_Purchase_Costs__c}
+Contract Closing Date: {!Opportunity.Contract_Closing_Date__c}
+Earnest Money: ${!Opportunity.Earnest_Money__c}
+Earnest Money Held At: {!Opportunity.Earnest_Money_Held_At__c}
+Title Company Attorney: {!Opportunity.Title_Company_Attorney__c}
+Closing Concessions: {!Opportunity.Closing_Concessions_Information__c}
+Occupancy At Closing: {!Opportunity.Occupancy_At_Closing__c}
+
+
+Thank you!
+
+
+REI Nation
+Deidre Sandifer
+closings@reination.com
+(901) 505-0825</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

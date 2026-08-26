@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>PPMG_Logo</letterhead>
+    <name>Move Out Started</name>
+    <style>freeForm</style>
+    <subject>{!Project__c.Market__c} - {!Project__c.Name} - Move Out Started</subject>
+    <textOnly>Hello!
+
+The following Move Out for the {!Project__c.Market__c} Market has been started:
+
+Project: {!Project__c.Name}
+Project Start: {!Project__c.Project_Start__c}
+
+
+Click for the Project record:
+
+https://ppmg.lightning.force.com/{!Project__c.Id}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<div style=""><font face="arial">Contract Price: {!Marketplace__c.Final_Contract_Price__c}</font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial">Purchase Method: {!Marketplace__c.Purchase_Method__c}</font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial">Titling: {!Marketplace__c.Contract_Titling__c}</font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial">Titling &amp; Banking Notes/Details: {!Marketplace__c.Marketplace_Details__c}</font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial">Seller Account: {!Marketplace__c.Seller_Account__c}</font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial">Buyer Account: {!Marketplace__c.Buyer_Account__c}</font></div><div style=""><font face="arial"><br></font></div><div style=""><font face="arial">Link to Marketplace: https://ppmg.lightning.force.com/{!Marketplace__c.Id}</font></div>]]></td>
+</tr>
+</table>

@@ -1,0 +1,7 @@
+{!Lead.OwnerFullName},
+
+{!Lead.Name}  Called in today, and was marked as Lead Call In, 
+This is just a friendly reminder to call them back when you can. 
+
+Thank you, 
+Salesforce and Ethan

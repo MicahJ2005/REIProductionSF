@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>MemphisInvest</letterhead>
+    <name>Lets Schedule A Call</name>
+    <style>freeForm</style>
+    <subject>{!Lead.FirstName}, Lets Schedule a One To One Call!</subject>
+    <textOnly>{!Lead.FirstName},
+
+Memphis Invest is pioneering the turnkey, passive real estate market. With almost 5,000 properties under management in 5 different markets, we are committed to building your portfolio the RIGHT way.
+
+At Memphis Invest, we work closely with you to provide an exceptional experience and are dedicated to building long-term wealth through passive investments.
+
+At this point, I have tried reaching out to you a couple times but I know your time is valuable...
+
+If you are serious about building your passive real estate portfolio, simply click here, to schedule a one on one call with me. 
+
+If I don&apos;t hear from you, do I have your permission to close your file?
+
+Either way, I look forward to hearing from you!
+
+
+Take care,
+
+Joshua
+
+Take care,
+
+Joshua</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

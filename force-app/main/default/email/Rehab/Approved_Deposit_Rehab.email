@@ -1,0 +1,22 @@
+APPROVED DEPOSIT - {!Project__c.Street_Address__c}, {!Project__c.City__c}, {!Project__c.State__c} {!Project__c.Zip_Code__c}
+
+CSR:  {!Project__c.Customer_Service__c}
+Owner:  {!Project__c.View_Account_Name__c}
+
+Primary Applicant:  {!Application__c.Applicant_1__c}
+Phone Number:  {!Application__c.Phone_Number__c}
+Email:  {!Application__c.Email__c}
+
+Security Deposit:  {!Application__c.Deposit_Required__c}
+Deposit in House:  {!Application__c.Depsit_In_House__c}
+Rent Year 1:  {!Project__c.Rent_Year_1__c}
+Rent Year 2:  {!Project__c.Rent_Year_2__c}
+Lease Length:  {!Project__c.Lease_Length__c}
+Expected Lease Closing Date:  {!Application__c.Lease_Closing_Date__c}
+Due at Closing:  {!Application__c.Due_at_Closing__c}
+Leasing Agent:  {!Application__c.Leasing_Agent__c}
+
+Rent Range:  {!Project__c.Rent_Range__c}
+Type:  {!Project__c.RecordType}
+Previous Rent:  {!Project__c.Previous_Rent__c}
+Project Link:  {!Project__c.Id}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Auto-Email sent to leads that Submitted Form &apos;One To One Session Registrations&apos; via Hubspot</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Lead Intro - 1 to 1</name>
+    <style>none</style>
+    <subject>REI Nation: Schedule your 1-to-1 call here!</subject>
+    <textOnly>Thanks for requesting a 1-to-1 call with our team. Your experience as an investor is very important to the Clothier family. These 1 to 1 calls are designed to be informative and to help you get the answers you need.
+
+Please {!User.Time_Trade_Link__c} for a day/time that works well for you.
+
+Before our call, we would love for you to review our  company history page. With 2 decades of experience and over 7,600 properties managed for our clients, there is excellent information to help you prepare for our call.
+
+In addition, many of our Investors are active on our private Facebook group.  The group is a closed group with no solicitations, but regular posts with videos about our Property Management performance level, advice from the owners on timely real estate topics and interviews with our investors on their customer journey and experience.  We would love for you to join us - - - You are personally invited to the REI Nation - Profiting from Passive Real Estate Group.
+
+Looking forward to speaking with you soon.
+
+Sincerely,
+
+REF: {!Lead.Id}
+
+{!User.FirstName} {!User.LastName}
+Email: {!User.Email}
+Phone: {!User.Phone}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>
