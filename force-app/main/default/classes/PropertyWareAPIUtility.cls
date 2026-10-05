@@ -1,13 +1,44 @@
-public with sharing class PropertyWareAPIUtility implements Queueable, Database.AllowsCallouts{
+public without sharing class PropertyWareAPIUtility implements Queueable, Database.AllowsCallouts{
 
     public void execute(QueueableContext ctx) {
         getBuildings();
     }
 
     public static void getBuildings() {
+        PropertyWare_Setting__mdt PWgetBuildingHoursSpanMTD = [
+                                                        SELECT
+                                                            MasterLabel,
+                                                            DeveloperName,
+                                                            IntegerValue__c
+                                                        FROM PropertyWare_Setting__mdt
+                                                        WHERE DeveloperName = 'EndFromHoursAgo'
+                                                        LIMIT 1
+                                                            ];
+
+        PropertyWare_Setting__mdt PWStartFromHoursAgoMTD = [
+                                                            SELECT
+                                                                MasterLabel,
+                                                                DeveloperName,
+                                                                IntegerValue__c
+                                                            FROM PropertyWare_Setting__mdt
+                                                            WHERE DeveloperName = 'StartFromHoursAgo'
+                                                            LIMIT 1
+                                                                ];
+
+        Datetime now = Datetime.now(); // Current datetime
+        Datetime toDateTime = now.addHours(Integer.valueOf(PWgetBuildingHoursSpanMTD.IntegerValue__c)); // set by EndFromHoursAgo Custom Metadata
+        Datetime fromDateTime = now.addHours(Integer.valueOf(PWStartFromHoursAgoMTD.IntegerValue__c)); // set by StartFromHoursAgo Custom Metadata
+
+        getBuildings(fromDateTime, toDateTime);
+    }
+
+    // Same sync as getBuildings(), but against an explicit UTC window instead of the rolling
+    // one derived from the EndFromHoursAgo/StartFromHoursAgo custom metadata. Useful for a
+    // one-off manual backfill (e.g. via Anonymous Apex) for a specific date/time range.
+    public static void getBuildings(Datetime fromDateTime, Datetime toDateTime) {
 
         PropertyWare_Setting__mdt PWPPMGCREDS = [
-                                                SELECT 
+                                                SELECT
                                                     MasterLabel,
                                                     DeveloperName,
                                                     x_propertyware_client_id__c,
@@ -18,39 +49,16 @@ public with sharing class PropertyWareAPIUtility implements Queueable, Database.
                                                 LIMIT 1
                                             ];
 
-        PropertyWare_Setting__mdt PWgetBuildingHoursSpanMTD = [
-                                                        SELECT 
-                                                            MasterLabel,
-                                                            DeveloperName,
-                                                            IntegerValue__c
-                                                        FROM PropertyWare_Setting__mdt
-                                                        WHERE DeveloperName = 'EndFromHoursAgo'
-                                                        LIMIT 1
-                                                            ];
-
-        PropertyWare_Setting__mdt PWStartFromHoursAgoMTD = [
-                                                            SELECT 
-                                                                MasterLabel,
-                                                                DeveloperName,
-                                                                IntegerValue__c
-                                                            FROM PropertyWare_Setting__mdt
-                                                            WHERE DeveloperName = 'StartFromHoursAgo'
-                                                            LIMIT 1
-                                                                ];                                
-
-
         PW_Portfolio__c defaultPortfolio = [SELECT Id, PW_Portfolio_Entity_ID__c FROM PW_Portfolio__c WHERE Name = 'Default PW Portfolio' LIMIT 1];
 
         House__c defaultHouse = [ SELECT Id, Name FROM House__c WHERE Name = 'Default House' LIMIT 1];
 
         Http http = new Http();
         HttpRequest request = new HttpRequest();
-        Datetime now = Datetime.now(); // Current datetime
-        String toDateTime = now.addHours(Integer.valueOf(PWgetBuildingHoursSpanMTD.IntegerValue__c)).formatGMT('yyyy-MM-dd\'T\'HH:mm:ss\'Z\''); // set by EndFromHoursAgo Custom Metadata
-       
-        String fromDateTime = now.addHours(Integer.valueOf(PWStartFromHoursAgoMTD.IntegerValue__c)).formatGMT('yyyy-MM-dd\'T\'HH:mm:ss\'Z\''); // set by StartFromHoursAgo Custom Metadata
+        String toDateTimeStr = toDateTime.formatGMT('yyyy-MM-dd\'T\'HH:mm:ss\'Z\'');
+        String fromDateTimeStr = fromDateTime.formatGMT('yyyy-MM-dd\'T\'HH:mm:ss\'Z\'');
 
-        string dateTimeParameters = '?lastModifiedDateTimeStart='+ EncodingUtil.urlEncode(fromDateTime, 'UTF-8')+'&lastModifiedDateTimeEnd='+ EncodingUtil.urlEncode(toDateTime, 'UTF-8');
+        string dateTimeParameters = '?lastModifiedDateTimeStart='+ EncodingUtil.urlEncode(fromDateTimeStr, 'UTF-8')+'&lastModifiedDateTimeEnd='+ EncodingUtil.urlEncode(toDateTimeStr, 'UTF-8');
         System.debug(dateTimeParameters);
 
         request.setEndpoint('https://api.propertyware.com/pw/api/rest/v1/buildings'+ dateTimeParameters+'&includeDeactivated=true&includeCustomFields=true');
@@ -148,11 +156,6 @@ public with sharing class PropertyWareAPIUtility implements Queueable, Database.
                     bw.numberOfBedrooms  = Integer.valueOf(building.get('numberOfBedrooms'));
                     bw.numberOfBathrooms  = Double.valueOf(building.get('numberOfBathrooms'));
                     bw.totalArea = Double.valueOf(building.get('totalArea'));
-                    
-                    String fullAddress = bw.address + ', ' + bw.city + ', ' + bw.stateRegion + ' ' + bw.postalCode;
-                    String placeId = GooglePlacesService.getPlaceIdFromAddress(fullAddress);
-                    system.debug('placeId'+ placeId);
-                    bw.googlePlaceId = placeId;
 
                     System.debug('id: '+ building.get('id'));
                     System.debug('idNumber: '+ building.get('idNumber'));
@@ -166,6 +169,62 @@ public with sharing class PropertyWareAPIUtility implements Queueable, Database.
 
         System.debug('PWIdAndAddress: '+ PWIdAndAddress);
 
+        resolveGooglePlaceIds(PWIdAndAddress, PWIdAndAddress.keySet(), defaultPortfolio, defaultHouse, PWPPMGCREDS);
+    }
+
+    // Resolves Google Place IDs for `pendingIds`, reusing the value already stored on a
+    // previously synced PW_Building__c whenever possible - the sync window is rolling so the
+    // same buildings come back on most runs, so most runs need zero fresh Google callouts.
+    // Buildings that still need a fresh lookup are attempted while callout budget allows; if the
+    // budget runs out before every pending building has been attempted, the rest are handed off
+    // to a chained Queueable instead of being skipped, so every building eventually gets an
+    // attempt - it just may take another async hop rather than finishing in one transaction.
+    // Once every pending building has been attempted (resolved or genuinely not found), this
+    // hands off to finishSync to upsert Portfolios/Houses/Buildings.
+    public static void resolveGooglePlaceIds(Map<String, PWBuildingWrapper> buildings, Set<String> pendingIds,
+                                              PW_Portfolio__c defaultPortfolio, House__c defaultHouse,
+                                              PropertyWare_Setting__mdt PWPPMGCREDS) {
+        if (buildings.isEmpty() || pendingIds.isEmpty()) {
+            finishSync(buildings, defaultPortfolio, defaultHouse, PWPPMGCREDS);
+            return;
+        }
+
+        Map<String, String> cachedPlaceIdsByEntityId = new Map<String, String>();
+        for (PW_Building__c existingBuilding : [
+            SELECT PW_Building_Entity_ID1__c, Google_Place_ID__c
+            FROM PW_Building__c
+            WHERE PW_Building_Entity_ID1__c IN :pendingIds
+            AND Google_Place_ID__c != null
+        ]) {
+            cachedPlaceIdsByEntityId.put(existingBuilding.PW_Building_Entity_ID1__c, existingBuilding.Google_Place_ID__c);
+        }
+
+        Integer calloutBuffer = 2; // headroom for any other callouts sharing this transaction
+        Set<String> stillPending = new Set<String>();
+        for (String entityId : pendingIds) {
+            PWBuildingWrapper bw = buildings.get(entityId);
+            if (cachedPlaceIdsByEntityId.containsKey(entityId)) {
+                bw.googlePlaceId = cachedPlaceIdsByEntityId.get(entityId);
+            } else if (Limits.getCallouts() < Limits.getLimitCallouts() - calloutBuffer) {
+                String fullAddress = bw.address + ', ' + bw.city + ', ' + bw.stateRegion + ' ' + bw.postalCode;
+                bw.googlePlaceId = GooglePlacesService.getPlaceIdFromAddress(fullAddress);
+                system.debug('placeId: ' + bw.googlePlaceId);
+            } else {
+                stillPending.add(entityId);
+            }
+        }
+
+        if (!stillPending.isEmpty()) {
+            System.debug(LoggingLevel.WARN, 'Callout limit reached; chaining a follow-up job to resolve ' + stillPending.size() + ' remaining Google Place ID(s) instead of skipping them.');
+            System.enqueueJob(new PropertyWareGooglePlaceIdQueueable(buildings, stillPending, defaultPortfolio, defaultHouse, PWPPMGCREDS));
+            return;
+        }
+
+        finishSync(buildings, defaultPortfolio, defaultHouse, PWPPMGCREDS);
+    }
+
+    public static void finishSync(Map<String, PWBuildingWrapper> PWIdAndAddress, PW_Portfolio__c defaultPortfolio,
+                                   House__c defaultHouse, PropertyWare_Setting__mdt PWPPMGCREDS) {
         ///Get Portfolios
         Map<String, PW_Portfolio__c> currentSFPWPortfolioMap = getCurrentPortfolios(PWIdAndAddress, PWPPMGCREDS);
         System.debug('currentSFPWPortfolioMap: '+ currentSFPWPortfolioMap);
@@ -253,6 +312,13 @@ public with sharing class PropertyWareAPIUtility implements Queueable, Database.
         
         system.debug('PropertyWareAPIUtility buildingsToUpsert.size(): '+buildingsToUpsert.size());
         List<Database.UpsertResult> resultsBuildings = Database.upsert(buildingsToUpsert, false);
+        for (Integer i = 0; i < resultsBuildings.size(); i++) {
+            if (!resultsBuildings[i].isSuccess()) {
+                for (Database.Error err : resultsBuildings[i].getErrors()) {
+                    System.debug('Building upsert error: ' + err.getMessage());
+                }
+            }
+        }
 
     }
     
@@ -273,10 +339,11 @@ public with sharing class PropertyWareAPIUtility implements Queueable, Database.
             string portfolioId = defaultPorfolioId;
             string investorOwnerId = null;
             
-            System.debug('googleId from currentSFgooglePlaceIdToPWHouseMap: '+currentSFgooglePlaceIdToPWHouseMap.get(buildings.get(pwBuilding.PW_Building_Entity_ID1__c).googlePlaceID));
+            string incomingGooglePlaceId = buildings.get(pwBuilding.PW_Building_Entity_ID1__c).googlePlaceID;
+            System.debug('googleId from currentSFgooglePlaceIdToPWHouseMap: '+currentSFgooglePlaceIdToPWHouseMap.get(incomingGooglePlaceId));
             System.debug('Building from currentSFPWPortfolioMap: '+currentSFPWPortfolioMap.get(buildings.get(pwBuilding.PW_Building_Entity_ID1__c).portfolioID));
-            if(currentSFgooglePlaceIdToPWHouseMap.containsKey(buildings.get(pwBuilding.PW_Building_Entity_ID1__c).googlePlaceID)) {
-                houseId = currentSFgooglePlaceIdToPWHouseMap.get(buildings.get(pwBuilding.PW_Building_Entity_ID1__c).googlePlaceID).Id;
+            if(String.isNotBlank(incomingGooglePlaceId) && currentSFgooglePlaceIdToPWHouseMap.containsKey(incomingGooglePlaceId)) {
+                houseId = currentSFgooglePlaceIdToPWHouseMap.get(incomingGooglePlaceId).Id;
             }
             if(currentSFPWPortfolioMap.containsKey(buildings.get(pwBuilding.PW_Building_Entity_ID1__c).portfolioID)) {
                 portfolioId = currentSFPWPortfolioMap.get(buildings.get(pwBuilding.PW_Building_Entity_ID1__c).portfolioID).Id;
@@ -359,10 +426,11 @@ public with sharing class PropertyWareAPIUtility implements Queueable, Database.
                 string portfolioId = defaultPorfolioId;
                 string InvestorOwnerId = null;
                 
-                System.debug('googleId from currentSFgooglePlaceIdToPWHouseMap: '+currentSFgooglePlaceIdToPWHouseMap.get(buildings.get(buildingId).googlePlaceID));
+                string incomingGooglePlaceId = buildings.get(buildingId).googlePlaceID;
+                System.debug('googleId from currentSFgooglePlaceIdToPWHouseMap: '+currentSFgooglePlaceIdToPWHouseMap.get(incomingGooglePlaceId));
                 System.debug('Building from currentSFPWPortfolioMap: '+currentSFPWPortfolioMap.get(buildings.get(buildingId).portfolioID));
-                if(currentSFgooglePlaceIdToPWHouseMap.containsKey(buildings.get(buildingId).googlePlaceID)) {
-                    houseId = currentSFgooglePlaceIdToPWHouseMap.get(buildings.get(buildingId).googlePlaceID).Id;
+                if(String.isNotBlank(incomingGooglePlaceId) && currentSFgooglePlaceIdToPWHouseMap.containsKey(incomingGooglePlaceId)) {
+                    houseId = currentSFgooglePlaceIdToPWHouseMap.get(incomingGooglePlaceId).Id;
                 }
                 if(currentSFPWPortfolioMap.containsKey(buildings.get(buildingId).portfolioID)) {
                     portfolioId = currentSFPWPortfolioMap.get(buildings.get(buildingId).portfolioID).Id;
@@ -448,7 +516,9 @@ public with sharing class PropertyWareAPIUtility implements Queueable, Database.
 
         set<String> googleIdSet = new set<string>();
         for(string id: buildings.keySet()){
-            googleIdSet.add(buildings.get(id).googlePlaceId);
+            if(String.isNotBlank(buildings.get(id).googlePlaceId)){
+                googleIdSet.add(buildings.get(id).googlePlaceId);
+            }
         }
 
         List<House__c> pwBuildingsToSync = [SELECT Id , Name, PW_ID_Number__c, Google_Place_ID__c FROM House__c WHERE Google_Place_ID__c IN :googleIdSet];
@@ -461,7 +531,7 @@ public with sharing class PropertyWareAPIUtility implements Queueable, Database.
         }
 
         for(string buildingId: buildings.keySet()){
-            if(!currentBuildingMap.containsKey(buildings.get(buildingId).googlePlaceId)){
+            if(String.isNotBlank(buildings.get(buildingId).googlePlaceId) && !currentBuildingMap.containsKey(buildings.get(buildingId).googlePlaceId)){
                 string bathrooms = String.valueOf(buildings.get(buildingId).numberOfBathrooms);
                 string bathroomTrimmed;
                 switch on bathrooms {

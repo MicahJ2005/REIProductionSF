@@ -43,19 +43,19 @@
                                             <a href="https://www.irs.gov/pub/irs-pdf/fw9.pdf" target="_blank"><u>W-9.pdf</u></a>
                                         </li>
                                         <li>
-                                            <a href="{!$Label.OrgMyURL}/sfc/p/30000000pfXl/a/4V0000005mrp/tiC2.CmdfajeWOM2b0.9fPhzE7OwQ7LShC1aF5zdSpw" target="_blank"><u>Direct Deposit Agreement.pdf</u></a>
+                                            <a href="{!$Label.OrgMyURL}/sfc/p/30000000pfXl/a/PZ00000MJ6OQ/U2LkEzNHuWDck1EtNoL.qakljxPZx7Oz.6SigH4dUQ8" target="_blank"><u>Direct Deposit Agreement.pdf</u></a>
                                         </li>
                                         <li>
-                                            <a href="{!$Label.OrgMyURL}/sfc/p/30000000pfXl/a/4V000000mzn1/F1ASwnntLcaNKiGYe8_mgy1GlFnDTFud7ECgIajv3mc" target="_blank"><u>Insurance Agreement</u></a>
+                                            <a href="{!$Label.OrgMyURL}/sfc/p/30000000pfXl/a/PZ00000MJ1Ry/SrlgvLPWjNvZbsjRkh7sKIpPxpdekT7fwyFaZ_w.RWU" target="_blank"><u>Insurance Agreement</u></a>
                                         </li>
                                         <li>
-                                            <a href="{!$Label.OrgMyURL}/sfc/p/30000000pfXl/a/4V000000mzn0/Zwv2eX8o.AzzHCuG8rPWsKRBsoKZh6b65yUx9UaE4SQ" target="_blank"><u>Hold Harmless Agreement</u></a>
+                                            <a href="{!$Label.OrgMyURL}/sfc/p/30000000pfXl/a/PZ00000MJ6oE/zaBKSsRPyG72NMecK.gQTHRE3VKgNp6Hfkh_ik9tuRg" target="_blank"><u>Hold Harmless Agreement</u></a>
                                         </li>
                                         <li>
                                             <a href="{!$Label.OrgMyURL}/sfc/p/30000000pfXl/a/PZ00000Jkt09/rMlxDJz7sEkf8Fi7bit0Bfz9Y9y7ej8dGvxIDPJ0xeg" target="_blank"><u><apex:outputText value="Invoices & Payment.pdf" /></u></a>
                                         </li>
                                         <li>
-                                            <a href="{!$Label.OrgMyURL}/sfc/p/30000000pfXl/a/PZ00000AffPd/p_5f6NGiTBgbitIxIcMuwNxQ0_6BydE3zspDoK2rlfk" target="_blank"><u><apex:outputText value="Payment Agreement" /></u></a>
+                                            <a href="{!$Label.OrgMyURL}/sfc/p/30000000pfXl/a/PZ00000MJ7dp/QtmLGR5ARqZR2EZSshBbeAshoaXFcLrvH7aW0aNf380" target="_blank"><u><apex:outputText value="Payment Agreement" /></u></a>
                                         </li>
                                     </ul>
                                 </td>
@@ -68,10 +68,10 @@
                                             <a href="{!$Label.OrgMyURL}/sfc/p/30000000pfXl/a/4V0000005mjn/Y6lrcuZ5bknTdjcX6vSYdfOHEk7UImcG74QaL_hkqVc" target="_blank"><u>Draw Checks.pdf</u></a>
                                         </li>
                                         <li>
-                                            <a href="{!$Label.OrgMyURL}/sfc/p/30000000pfXl/a/4V0000005mkM/Bei2go2abXn6zrd5hIbvBtXUMKubZaVArPSSGoOvrXc" target="_blank"><u>Permits.pdf</u></a>
+                                            <a href="{!$Label.OrgMyURL}/sfc/p/30000000pfXl/a/PZ00000MJ7fR/qhL4ZUw71B8zy1M6UprreUQPhlQtUCYZQKNZoIyk_u4" target="_blank"><u>Permits.pdf</u></a>
                                         </li>
                                         <li>
-                                            <a href="{!$Label.OrgMyURL}/sfc/p/30000000pfXl/a/4V000000ADsq/8cfLaobLC0_g0cE0QC74mj5LZwGoff4V.gi.EktLE.k" target="_blank"><u>Vendor Code of Ethics Sheet.pdf</u></a>
+                                            <a href="{!$Label.OrgMyURL}/sfc/p/30000000pfXl/a/PZ00000MJ7Yz/dPinS_JUaY3OolpEV2hzSPPgd6Zc993O4EGPv57fNTA" target="_blank"><u>Vendor Code of Ethics Sheet.pdf</u></a>
                                         </li>
                                         <li>
                                             <a href="{!$Label.OrgMyURL}/sfc/p/30000000pfXl/a/4V0000005mjx/_HvbiqayD4nG5AKDXstuJTJ9.BIPv9s5Ee8f22IpKAU"><u>Jobsite Organization.pdf</u></a>

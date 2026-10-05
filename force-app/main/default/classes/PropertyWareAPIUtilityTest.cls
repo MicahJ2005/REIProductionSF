@@ -366,5 +366,276 @@ private class PropertyWareAPIUtilityTest {
         System.assertEquals(2, result.size(), 'Should still return two maps even with invalid dates');
     }
 
-  
+    // Mock a single portfolio object (not wrapped in an array) so getPortfolioInPW's
+    // JSON parsing succeeds and exercises the new balance/owners parsing logic.
+    private class MockPortfolioResponseGenerator implements HttpCalloutMock {
+        public HTTPResponse respond(HTTPRequest req) {
+            HttpResponse res = new HttpResponse();
+            res.setHeader('Content-Type', 'application/json');
+            res.setStatusCode(200);
+            res.setBody('{' +
+                '"id":"123999",' +
+                '"name":"Sample Portfolio",' +
+                '"active":true,' +
+                '"portfolioBalance":1500.75,' +
+                '"owners":[' +
+                    '{"name":"John Doe"},' +
+                    '{"name":"Jane Smith"}' +
+                ']' +
+            '}');
+            return res;
+        }
+    }
+
+    @isTest
+    static void testGetPortfolioInPWWithBalanceAndOwners() {
+        PropertyWare_Setting__mdt creds = new PropertyWare_Setting__mdt(
+            x_propertyware_client_id__c = 'clientId',
+            x_propertyware_client_secret__c = 'clientSecret',
+            x_propertyware_system_id__c = 'systemId'
+        );
+
+        Test.setMock(HttpCalloutMock.class, new MockPortfolioResponseGenerator());
+
+        Test.startTest();
+        PW_Portfolio__c portfolio = PropertyWareAPIUtility.getPortfolioInPW('123999', creds);
+        PW_Portfolio__c portfolio2 = PropertyWareAPIUtility2.getPortfolioInPW('123999', creds);
+        Test.stopTest();
+
+        System.assertEquals(1500.75, portfolio.PW_Portfolio_Balance__c, 'Balance should be parsed from response');
+        System.assertEquals('John Doe;Jane Smith', portfolio.PW_Portfolio_Owners__c, 'Owner names should be joined');
+
+        System.assertEquals(1500.75, portfolio2.PW_Portfolio_Balance__c, 'Balance should be parsed from response');
+        System.assertEquals('John Doe;Jane Smith', portfolio2.PW_Portfolio_Owners__c, 'Owner names should be joined');
+    }
+
+    @isTest
+    static void testBlankGooglePlaceIdSkipped() {
+        // Existing PW_Building__c already linked to a House, to hit the existing-building branch
+        House__c testHouse = new House__c(Name = 'Blank Place House');
+        insert testHouse;
+
+        PW_Portfolio__c testPortfolio = new PW_Portfolio__c(Name = 'Blank Place Portfolio');
+        insert testPortfolio;
+
+        PW_Building__c existingBuilding = new PW_Building__c(
+            Name = 'Existing Blank Place Building',
+            PW_Building_Entity_ID1__c = 'BLANK1',
+            Google_Place_ID__c = null,
+            PW_Portfolio__c = testPortfolio.Id,
+            House__c = testHouse.Id
+        );
+        insert existingBuilding;
+
+        Map<String, PropertyWareAPIUtility.PWBuildingWrapper> testBuildings = new Map<String, PropertyWareAPIUtility.PWBuildingWrapper>();
+        PropertyWareAPIUtility.PWBuildingWrapper existingWrapper = new PropertyWareAPIUtility.PWBuildingWrapper();
+        existingWrapper.name = 'Existing Blank Place Building';
+        existingWrapper.portfolioID = String.valueOf(testPortfolio.Id);
+        existingWrapper.googlePlaceID = null;
+        testBuildings.put('BLANK1', existingWrapper);
+
+        // Building with no matching existing record, also with a blank googlePlaceId
+        PropertyWareAPIUtility.PWBuildingWrapper newWrapper = new PropertyWareAPIUtility.PWBuildingWrapper();
+        newWrapper.name = 'New Blank Place Building';
+        newWrapper.portfolioID = String.valueOf(testPortfolio.Id);
+        newWrapper.googlePlaceID = '';
+        newWrapper.numberOfBathrooms = 2;
+        testBuildings.put('BLANK2', newWrapper);
+
+        Map<String, PW_Portfolio__c> currentPortfolioMap = new Map<String, PW_Portfolio__c>{
+            String.valueOf(testPortfolio.Id) => testPortfolio
+        };
+        Map<String, House__c> currentHouseMap = new Map<String, House__c>();
+
+        Test.startTest();
+        List<Map<String, PW_Building__c>> result = PropertyWareAPIUtility.getCurrentPWBuildings(
+            testBuildings,
+            testHouse.Id,
+            testHouse.Id,
+            currentPortfolioMap,
+            currentHouseMap
+        );
+
+        Map<String, House__c> houseResult = PropertyWareAPIUtility.getCurrentHouses(testBuildings);
+        Test.stopTest();
+
+        System.assertEquals(2, result.size(), 'Should still return two maps when googlePlaceId is blank');
+        System.assertEquals(0, houseResult.size(), 'No houses should be created or matched for blank googlePlaceId');
+    }
+
+    // Matches the Google Places endpoint used by GooglePlacesService.getPlaceIdFromAddress.
+    private class MockGooglePlaceResponseGenerator implements HttpCalloutMock {
+        public HTTPResponse respond(HTTPRequest req) {
+            HttpResponse res = new HttpResponse();
+            res.setHeader('Content-Type', 'application/json');
+            res.setStatusCode(200);
+            res.setBody('{"candidates":[{"place_id":"resolved_place_id"}],"status":"OK"}');
+            return res;
+        }
+    }
+
+    @isTest
+    static void testResolveGooglePlaceIds_ChainsInsteadOfSkipping() {
+        PW_Portfolio__c defaultPortfolio = new PW_Portfolio__c(
+            Name = 'Default PW Portfolio',
+            PW_Portfolio_Entity_ID__c = 'CHAIN_PORT_1',
+            PW_Active__c = true
+        );
+        insert defaultPortfolio;
+
+        House__c defaultHouse = new House__c(
+            Name = 'Default House Chain',
+            Street_Address__c = '1 Default Way',
+            City__c = 'Default City',
+            State__c = 'TN',
+            Zip_Code__c = '00000',
+            Status__c = 'Managed',
+            Google_Place_ID__c = 'default_place_id'
+        );
+        insert defaultHouse;
+
+        // Already synced with a cached Place ID - should be reused, never re-calling Google.
+        PW_Building__c cachedBuilding = new PW_Building__c(
+            Name = 'Cached Building',
+            PW_Building_Entity_ID1__c = 'CACHED1',
+            Google_Place_ID__c = 'cached_place_id',
+            PW_Portfolio__c = defaultPortfolio.Id,
+            House__c = defaultHouse.Id
+        );
+        insert cachedBuilding;
+
+        PropertyWare_Setting__mdt creds = new PropertyWare_Setting__mdt(
+            x_propertyware_client_id__c = 'clientId',
+            x_propertyware_client_secret__c = 'clientSecret',
+            x_propertyware_system_id__c = 'systemId'
+        );
+
+        Map<String, PropertyWareAPIUtility.PWBuildingWrapper> buildings = new Map<String, PropertyWareAPIUtility.PWBuildingWrapper>();
+
+        PropertyWareAPIUtility.PWBuildingWrapper cachedWrapper = new PropertyWareAPIUtility.PWBuildingWrapper();
+        cachedWrapper.buildingEntityId = 'CACHED1';
+        cachedWrapper.name = 'Cached Building';
+        cachedWrapper.active = true;
+        cachedWrapper.publishedForRent = true;
+        cachedWrapper.address = '1 Cached Ln';
+        cachedWrapper.city = 'Sample City';
+        cachedWrapper.stateRegion = 'TN';
+        cachedWrapper.postalCode = '90210';
+        cachedWrapper.portfolioID = 'CHAIN_PORT_1';
+        buildings.put('CACHED1', cachedWrapper);
+
+        // Genuinely new building with no cached Place ID - this is the one that can't fit under
+        // the callout budget in the first pass and must be chained rather than skipped.
+        PropertyWareAPIUtility.PWBuildingWrapper newWrapper = new PropertyWareAPIUtility.PWBuildingWrapper();
+        newWrapper.buildingEntityId = 'NEW1';
+        newWrapper.name = 'New Building';
+        newWrapper.active = true;
+        newWrapper.publishedForRent = true;
+        newWrapper.address = '2 New Ln';
+        newWrapper.city = 'Sample City';
+        newWrapper.stateRegion = 'TN';
+        newWrapper.postalCode = '90210';
+        newWrapper.portfolioID = 'CHAIN_PORT_1';
+        buildings.put('NEW1', newWrapper);
+
+        Test.setMock(HttpCalloutMock.class, new MockGooglePlaceResponseGenerator());
+
+        Test.startTest();
+
+        // Burn almost the entire per-transaction callout budget before resolving, so 'NEW1'
+        // can't fit and has to be handed off to a chained job instead of being left blank.
+        for (Integer i = 0; i < 99; i++) {
+            GooglePlacesService.getPlaceIdFromAddress('999 Filler Ave #' + i);
+        }
+
+        PropertyWareAPIUtility.resolveGooglePlaceIds(buildings, buildings.keySet(), defaultPortfolio, defaultHouse, creds);
+
+        Test.stopTest(); // runs the chained job, which resolves 'NEW1' and finishes the sync
+
+        PW_Building__c cachedResult = [SELECT Google_Place_ID__c FROM PW_Building__c WHERE PW_Building_Entity_ID1__c = 'CACHED1'];
+        System.assertEquals('cached_place_id', cachedResult.Google_Place_ID__c, 'Cached building should keep its existing Place ID without a fresh callout');
+
+        PW_Building__c newResult = [SELECT Google_Place_ID__c FROM PW_Building__c WHERE PW_Building_Entity_ID1__c = 'NEW1'];
+        System.assertEquals('resolved_place_id', newResult.Google_Place_ID__c, 'New building should be resolved via the chained job rather than left blank');
+    }
+
+    @isTest
+    static void testResolveGooglePlaceIds_ChainsInsteadOfSkipping2() {
+        PW_Portfolio__c defaultPortfolio = new PW_Portfolio__c(
+            Name = 'Default PW Portfolio',
+            PW_Portfolio_Entity_ID__c = 'CHAIN_PORT_2',
+            PW_Active__c = true
+        );
+        insert defaultPortfolio;
+
+        House__c defaultHouse = new House__c(
+            Name = 'Default House Chain2',
+            Street_Address__c = '1 Default Way',
+            City__c = 'Default City',
+            State__c = 'TN',
+            Zip_Code__c = '00000',
+            Status__c = 'Managed',
+            Google_Place_ID__c = 'default_place_id2'
+        );
+        insert defaultHouse;
+
+        PW_Building__c cachedBuilding = new PW_Building__c(
+            Name = 'Cached Building 2',
+            PW_Building_Entity_ID1__c = 'CACHED2',
+            Google_Place_ID__c = 'cached_place_id2',
+            PW_Portfolio__c = defaultPortfolio.Id,
+            House__c = defaultHouse.Id
+        );
+        insert cachedBuilding;
+
+        PropertyWare_Setting__mdt creds = new PropertyWare_Setting__mdt(
+            x_propertyware_client_id__c = 'clientId',
+            x_propertyware_client_secret__c = 'clientSecret',
+            x_propertyware_system_id__c = 'systemId'
+        );
+
+        Map<String, PropertyWareAPIUtility2.PWBuildingWrapper> buildings = new Map<String, PropertyWareAPIUtility2.PWBuildingWrapper>();
+
+        PropertyWareAPIUtility2.PWBuildingWrapper cachedWrapper = new PropertyWareAPIUtility2.PWBuildingWrapper();
+        cachedWrapper.buildingEntityId = 'CACHED2';
+        cachedWrapper.name = 'Cached Building 2';
+        cachedWrapper.active = true;
+        cachedWrapper.publishedForRent = true;
+        cachedWrapper.address = '1 Cached Ln';
+        cachedWrapper.city = 'Sample City';
+        cachedWrapper.stateRegion = 'TN';
+        cachedWrapper.postalCode = '90210';
+        cachedWrapper.portfolioID = 'CHAIN_PORT_2';
+        buildings.put('CACHED2', cachedWrapper);
+
+        PropertyWareAPIUtility2.PWBuildingWrapper newWrapper = new PropertyWareAPIUtility2.PWBuildingWrapper();
+        newWrapper.buildingEntityId = 'NEW2';
+        newWrapper.name = 'New Building 2';
+        newWrapper.active = true;
+        newWrapper.publishedForRent = true;
+        newWrapper.address = '2 New Ln';
+        newWrapper.city = 'Sample City';
+        newWrapper.stateRegion = 'TN';
+        newWrapper.postalCode = '90210';
+        newWrapper.portfolioID = 'CHAIN_PORT_2';
+        buildings.put('NEW2', newWrapper);
+
+        Test.setMock(HttpCalloutMock.class, new MockGooglePlaceResponseGenerator());
+
+        Test.startTest();
+
+        for (Integer i = 0; i < 99; i++) {
+            GooglePlacesService.getPlaceIdFromAddress('999 Filler Ave #' + i);
+        }
+
+        PropertyWareAPIUtility2.resolveGooglePlaceIds(buildings, buildings.keySet(), defaultPortfolio, defaultHouse, creds);
+
+        Test.stopTest();
+
+        PW_Building__c cachedResult = [SELECT Google_Place_ID__c FROM PW_Building__c WHERE PW_Building_Entity_ID1__c = 'CACHED2'];
+        System.assertEquals('cached_place_id2', cachedResult.Google_Place_ID__c, 'Cached building should keep its existing Place ID without a fresh callout');
+
+        PW_Building__c newResult = [SELECT Google_Place_ID__c FROM PW_Building__c WHERE PW_Building_Entity_ID1__c = 'NEW2'];
+        System.assertEquals('resolved_place_id', newResult.Google_Place_ID__c, 'New building should be resolved via the chained job rather than left blank');
+    }
 }
